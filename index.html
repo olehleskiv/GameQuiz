@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+	<title>Lesson	12</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap-theme.css">
+
+ </head>
+ <body class="container" onkeydown="myCar.move(event.keyCode,20);">
+ 	<div id="mainContainer">
+		<div class="row">
+			<div id="alert"></div>
+			<div class="input-group input-group-lg">
+			  <span class="input-group-addon">Milage <span class="glyphicon glyphicon-road"></span></span>
+			  <p id="milage" class="form-control"></p>
+			  <span class="input-group-addon">Passangers <span class="glyphicon glyphicon-user"></span></span>
+			  <p id="passengers" class="form-control"></p>
+			  <span class="input-group-addon ">Gas <span class="glyphicon glyphicon-tint"></span></span>
+			  <p id="gas" class="form-control"></p>
+			</div>
+		</div>
+		<div id="main">
+		</div>
+
+
+
+
+
+		<!-- Game Modal -->
+		<div class="modal fade" id="game" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div id="gameHere">
+		        	<div><img alt="you" class="smallGameImg" src="img/car.png"><img style="float:right" alt="enemy" class="smallGameImg" src="img/badCarBack.png"></div>
+
+		        		<table class="helth">
+						<tr>
+							<td>
+						  		<span class="input-group-addon">your Gas <span class="glyphicon glyphicon-tint"></span></span>
+							</td>
+							<td>
+							  <span class="input-group-addon ">enemy Gas <span class="glyphicon glyphicon-tint"></span></span>
+							</td>
+					
+						</tr>
+						<tr>
+							<td><p id="myHelth"></p></td>
+							<td><p id="enemyHelth"></p></td>
+						</tr>
+						</table>
+					<form id="hitButtons">
+						<button type="button" name="button1" value="1" onclick="hit(this.form.button1.value)"class="btn btn-primary">Hit him with a steering wheel</button>
+						<button type="button" name="button2"value="2" onclick="hit(this.form.button2.value)"class="btn btn-warning">Hit him with a wheel</button>
+						<button type="button" name="button3"value="3" onclick="hit(this.form.button3.value)"class="btn btn-info">Super signal hit</button>
+					</form>
+					<div id="gameRes"></div>
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">Run Away?</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+
+
+	</div>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="file.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+ </body>
+</html>

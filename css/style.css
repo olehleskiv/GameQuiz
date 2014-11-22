@@ -1,0 +1,139 @@
+	#mainContainer {
+		background: url("../img/roads.png");
+	    margin: auto;
+	    min-width: 1224px;
+	    position: relative;
+	    width: 1224px;
+	    background-size: 100%;
+	    height: 740px;
+	    background-repeat: no-repeat;
+	    background-position: 0px 66px;
+	}
+	[draggable] {
+	  -moz-user-select: none;
+	  -khtml-user-select: none;
+	  -webkit-user-select: none;
+	  user-select: none;
+	  /* Required to make elements draggable in old WebKit */
+	  -khtml-user-drag: element;
+	  -webkit-user-drag: element;
+	}
+	.over {
+		opacity:0.5;
+	    border: 2px dashed #000 !important;
+	    position: relative;
+	}
+	.tree {
+		width:100px;
+		height:150px;
+		position:absolute;
+		background-position: center;
+	}
+	#car {
+		position:absolute !important;
+		background: url('../img/car.png');
+		z-index: 1;
+		width:150px;
+		height:65px;
+	}
+	#enemyCar {
+		background-image: url("../img/badCar.png");
+	    background-repeat: no-repeat;
+	    height: 80px;
+	    left: 100px;
+	    position: absolute !important;
+	    top: 650px !important;
+	    width: 150px;
+	}
+	#controlls {
+		top: 250px;
+	    position: relative;
+	    margin:0px auto auto;
+	    width:150px;
+	    height:150px;
+	    background:url('../img/keys.png');
+	    background-size: 100%;
+	}
+	#instruction {
+	    font-size: 150%;
+	    position: absolute;
+	    text-align: center;
+	    text-shadow: 1px 1px 5px gray;
+	    top: 125px;
+	    width: 150px;
+	    background: lightgreen;
+	    border-radius: 5px;
+	}
+	#gastation {
+		position: absolute;
+		top:30px;
+		right:260px;
+		width:270px;
+		height:270px;
+		background:url('../img/gas_station.png');
+		background-size:270px;
+		background-repeat: no-repeat;
+	}
+	#gasMenu {
+		font-size: 150%;
+	    text-align: center;
+	    width: 200px;
+	    margin-left: 259px;
+	    margin-top: 80px;
+	    visibility: hidden;
+	}
+	#gasMenu button {
+	    width: 30%;
+	    display: block;
+	    margin: auto;
+	    margin-top: 5px;
+	}
+	#busStop  {
+		width: 250px;
+	    height: 150px;
+	    position: absolute;
+	    background: url(img/busstop.png);
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+	    top: 118px;
+	    left: 330px;
+	    z-index: -1;
+	}
+	#alert {
+	    background-color: #f2dede;
+	    border-color: #ebccd1;
+	    color: #a94442;
+	    width: 250px;
+	    top: 50px;
+	    margin: auto;
+	    position: absolute;
+	    left: 400px;
+	}
+	#confirmPlay {
+		width: 250px;
+	    height: 100px;
+	    position: absolute;
+	    top: 550px;
+	    left: 400px;
+	    visibility:hidden;
+	}
+	#confirmPlay button {
+		display: block;
+	    margin: auto;
+	    width: 150px;
+	    margin-top: 5px ;
+	}
+	.smallGameImg {
+		width:100px;
+	}
+	.helth {
+		width: 100%;
+		text-align: center;
+	}
+	.human {
+		background-size: 100%;
+		position:absolute;
+		height:100px;
+		width:50px;
+		cursor:pointer;
+	}
