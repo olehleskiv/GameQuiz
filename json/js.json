@@ -184,7 +184,7 @@
 		},
 		{
 		"ID": 15,
-		"title": "What is the result of the code?<br><pre>if (!("a" in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
+		"title": "What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
 		"variants": [
 			"1",
 			"null",
@@ -264,7 +264,7 @@
 		"ID": 20,
 		"title": " Alert helps find errors by...",
 		"variants": [
-			"displaying current values of variables"
+			"displaying current values of variables",
 			"indicating execution path", 
 			"pausing execution",
 			"restarting execution",
@@ -277,7 +277,7 @@
 		"ID": 21,
 		"title": " What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));</pre>",
 		"variants": [
-			"13"
+			"13",
 			"12", 
 			"9",
 			"11",
@@ -290,7 +290,7 @@
 		"ID": 22,
 		"title": " What is the result of the string?<br><pre>+'1' + 1 + '1'</pre>",
 		"variants": [
-			"'21'"
+			"'21'",
 			"'111'", 
 			"21",
 			"11",
