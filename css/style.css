@@ -28,6 +28,11 @@ body {
 	text-align: center;
     margin-top: 100px;
 }
+.topMenu {
+    margin-top: 10px;
+    float: right;
+    margin-left: 15px;
+}
 #backButton {
 	margin-top: 15px;
 }
@@ -104,4 +109,8 @@ body {
     height:80px;
     background:url('../img/people/walker.png');
     background-position: center !important;
+}
+#addNewQuestion {
+    margin-top: 50px;
+    display:none;   
 }
