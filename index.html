@@ -14,6 +14,19 @@
  <body>
 
 
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_PI/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -27,7 +40,8 @@
 			  </button>
 			  <ul id="mainMenu" class="dropdown-menu" role="menu">
 			    <li><a href="#aboutus">About us</a></li>
-			    <li><a href="#contacts">Contacts</a></li>
+			    <li><a href="/data/quiz.json">Get JSON</a></li>
+			     <li><a href="#admin">Admin</a></li>
 				<li class="divider"></li>
 			    <li><a href="#addNewQuestion">Add new question</a></li>
 			  </ul>
@@ -44,16 +58,22 @@
 		<div class="row">
 
 		  <div class="col-md-6">
-		  	<h1>Front End</h1>
-		  	<h2>Check you knowledge</h2>
-		  	<p>We have created our interactive Front end test! You think you are smart?
-		  		Let's check it out!</p>
+		  	<div class="heading">
+		  		<h1>Front End</h1>
+		  	</div>
+		    <div class="mainInfo">
+			  	<p>Check your knowledge</p>
+			  	<p>We have created our interactive Front end tests! You think you are smart?
+			  		Let's check it out!</p>
+		  	</div>
 		  	<div class="startButton">
 		  		<button id="playButton" href="#gamePage" type="button" class="btn btn-success btn-lg">Start!</button>
-
-
 		  	</div>
-		  </div>
+		  	<div class="socilaMblock">
+				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+				<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFrontEnd" class="twitter-hashtag-button" data-dnt="true">Tweet #LearnFrontEnd</a>
+			</div>
+			</div>
 
 		  <div class="col-md-6">
 		  	<div>
@@ -124,6 +144,8 @@
 	</div>
 	<div class="container" id="addNewQuestion">
 		<div class="row">
+			<div id="result">
+			</div>
 		  <section class="col-md-8">
 		  		<h2>Add new question</h2>
 				<form role="form" id="addQuestion">
@@ -170,38 +192,36 @@
 				    </div><!-- /input-group -->
 
 				  <p>Category:</p>
-
+					<div>
 					   <label class="radio-inline">
-						  <input type="radio" name="category" id="optionsHTML" value="option1"> HTML
+						  <input type="radio" name="category" value="html"> HTML
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="category" id="optionsCSS" value="option2"> CSS
+						  <input type="radio" name="category" value="css"> CSS
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="category" id="optionsJavaScript" value="option3"> JavaScript
+						  <input type="radio" name="category" value="js"> JavaScript
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="category" id="optionsOOP" value="option3"> OOP
+						  <input type="radio" name="category" value="oop"> OOP
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="category" id="optionsJquery" value="option3"> Jquery/Ajax
+						  <input type="radio" name="category" value="jq"> Jquery/Ajax
 						</label>
-
 					</div>
-
 					<br>
-				  <button type="button" id="sendQuestions" class="btn btn-success">Submit</button>
+				  		<button type="button" id="sendQuestions" class="btn btn-success">Submit</button>
+					
 				</form>
 		  </section>
-		  <div class="col-md-4">
-		  	
-		  </div>
+		  <section class="col-md-4">
+		  		<img class="addQuizDude"alt="smart dude" src="img/people/add_quiz.png">
+		  </section>
 		</div>
 	</div><!-- end add new question container -->
-	<div>
-		<?php include('/php/add_question.php'); ?>
-	</div>
-
+	<div id="admin">
+		
+	</div><!-- end admin container -->
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/route.js"></script>

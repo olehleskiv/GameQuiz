@@ -15,19 +15,18 @@
 
 	function router(){
 		var link = $(this).attr('href');
-		var page,
-			addPage;
+		var page;
 
 		link = link.slice(1, link.length);
 
-		var pages = ['mainPage','gamePage','addNewQuestion'];
+		var pages = ['mainPage','gamePage','addNewQuestion','admin'];
 
 		for (var i = 0; i < pages.length; i++) {
 			if(pages[i] == link) {
-				var page = document.getElementById(pages[i]);
+				page = document.getElementById(pages[i]);
 				page.style.display = 'block';
 			} else {
-				var page = document.getElementById(pages[i]);
+				page = document.getElementById(pages[i]);
 				page.style.display = 'none';
 			}
 		}
