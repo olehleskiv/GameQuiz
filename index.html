@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+	<title>Learn JS</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap-theme.css">
+  	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+ </head>
+ <body>
+
+
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_PI/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" id="goHome" href="#mainPage">Check your knowledge</a>
+			</div>
+			<button id="backButton" style="visibility:hidden" type="button" class="btn btn-warning btn-xs" >Main page</button>
+
+			<div class="btn-group top topMenu">
+			  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			    Menu <span class="caret"></span>
+			  </button>
+			  <ul id="mainMenu" class="dropdown-menu" role="menu">
+			    <li><a href="#aboutus">About us</a></li>
+			    <li><a href="/data/quiz.json">Get JSON</a></li>
+			     <li><a href="#admin">Admin</a></li>
+				<li class="divider"></li>
+			    <li><a href="#addNewQuestion">Add new question</a></li>
+			  </ul>
+			</div>
+
+			<ul class="socialBlock">
+				<li><a href="#"><img alt="fb" src="img/fb.png"></a>
+				<li><a href="#"><img alt="tw" src="img/tw.png"></a>
+				<li><a href="#"><img alt="git" src="img/git.png"></a>
+			</ul>
+		</div>
+	</nav>
+	<div id="mainPage" class="container mainContainer">
+		<div class="row">
+
+		  <div class="col-md-6">
+		  	<div class="heading">
+		  		<h1>Front End</h1>
+		  	</div>
+		    <div class="mainInfo">
+			  	<p>Check your knowledge</p>
+			  	<p>We have created our interactive Front end tests! You think you are smart?
+			  		Let's check it out!</p>
+		  	</div>
+		  	<div class="startButton">
+		  		<button id="playButton" href="#gamePage" type="button" class="btn btn-success btn-lg">Start!</button>
+		  	</div>
+		  	<div class="socilaMblock">
+				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+				<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFrontEnd" class="twitter-hashtag-button" data-dnt="true">Tweet #LearnFrontEnd</a>
+			</div>
+			</div>
+
+		  <div class="col-md-6">
+		  	<div>
+			  	<img class="mainImages" alt="html" src="img/html.png">
+			  	<img class="mainImages" alt="css" src="img/css.png">
+			  	<img class="mainImages" alt="javascript" src="img/js.png">
+		  	</div>
+		  	<div class="oopjqueryblocks">
+		  		<img class="mainImagesOOP" alt="OOP" src="img/oop.png">
+		  	</div>
+		  	<div class="oopjqueryblocks">
+		  		<img class="mainImages" alt="jquery" src="img/jquery.png">
+		  	</div>
+		  	
+		  </div>
+		</div>
+	</div>
+
+
+	<div id="gamePage" class="container" style="display:none">
+		<div class="progressStipes">
+			<div class="row">
+			  <div class="col-md-4">
+			  	HTML
+			  	<div class="progress">
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+				    <span class="sr-only">40% Complete (success)</span>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+			  	CSS
+			  	<div class="progress">
+				  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+				    <span class="sr-only">20% Complete</span>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+			  	JavaScript
+			  	<div class="progress">
+				  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				    <span class="sr-only">60% Complete (warning)</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+			  	jQuery, Ajax
+			  	<div class="progress">
+				  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				    <span class="sr-only">80% Complete (danger)</span>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4"></div>
+			  <div class="col-md-4">
+			  	OOP
+			  	<div class="progress">
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+				    <span class="sr-only">40% Complete (success)</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="addNewQuestion">
+		<div class="row">
+			<div id="result">
+			</div>
+		  <section class="col-md-8">
+		  		<h2>Add new question</h2>
+				<form role="form" id="addQuestion">
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Question</label>
+				    <textarea class="form-control" name="question" rows="3" placeholder="Question"></textarea>
+				  </div>
+					
+					<p>Answers:
+						(Dont forget to choose the right one)</p>
+				    <div class="input-group">
+				      <span class="input-group-addon">
+				        <input name="correct"  type="radio" value="1">
+				      </span>
+				      <input type="text" class="form-control" id="answer1" name="answer1" placeholder="answer 1">
+				    </div><!-- /input-group -->
+
+					<div class="input-group">
+				      <span class="input-group-addon">
+				        <input name="correct" type="radio" value="2">
+				      </span>
+				      <input type="text" class="form-control" id="answer2" name="answer2" placeholder="answer 2">
+				    </div><!-- /input-group -->
+
+					<div class="input-group">
+				      <span class="input-group-addon">
+				        <input name="correct" type="radio" value="3">
+				      </span>
+				      <input type="text" class="form-control" id="answer3" name="answer3" placeholder="answer 3">
+				    </div><!-- /input-group -->
+
+					<div class="input-group">
+				      <span class="input-group-addon">
+				        <input name="correct"  type="radio" value="4">
+				      </span>
+				      <input type="text" class="form-control" id="answer4" name="answer4" placeholder="answer 4">
+				    </div><!-- /input-group -->
+
+					<div class="input-group">
+				      <span class="input-group-addon">
+				        <input name="correct" type="radio" value="5">
+				      </span>
+				      <input type="text" class="form-control" id="answer5" name="answer5" placeholder="answer 5">
+				    </div><!-- /input-group -->
+
+				  <p>Category:</p>
+					<div>
+					   <label class="radio-inline">
+						  <input type="radio" name="category" value="html"> HTML
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="category" value="css"> CSS
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="category" value="js"> JavaScript
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="category" value="oop"> OOP
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="category" value="jq"> Jquery/Ajax
+						</label>
+					</div>
+					<br>
+				  		<button type="button" id="sendQuestions" class="btn btn-success">Submit</button>
+					
+				</form>
+		  </section>
+		  <section class="col-md-4">
+		  		<img class="addQuizDude"alt="smart dude" src="img/people/add_quiz.png">
+		  </section>
+		</div>
+	</div><!-- end add new question container -->
+	<div id="admin">
+		
+	</div><!-- end admin container -->
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/route.js"></script>
+	<script src="js/world.js"></script>
+	<script src="js/human.js"></script>
+	<script src="js/addQuestion.js"></script>
+ </body>
+</html>
