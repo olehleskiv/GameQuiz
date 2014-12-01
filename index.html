@@ -13,14 +13,12 @@
  </head>
  <body>
 
-
-<div id="fb-root"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_PI/sdk.js#xfbml=1&version=v2.0";
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -70,7 +68,7 @@
 		  		<button id="playButton" href="#gamePage" type="button" class="btn btn-success btn-lg">Start!</button>
 		  	</div>
 		  	<div class="socilaMblock">
-				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+				<div class="fb-share-button" data-href="https://learnfrontend.tk" data-layout="button"></div>
 				<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFrontEnd" class="twitter-hashtag-button" data-dnt="true">Tweet #LearnFrontEnd</a>
 			</div>
 			</div>
@@ -141,6 +139,27 @@
 			  </div>
 			</div>
 		</div>
+
+
+
+<!-- Modal -->
+<div id="gameConfirm"class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content my-confirm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gameConfirmTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        <button type="button" id="confirmStart" data-dismiss="modal" class="btn btn-primary">Yes</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
 	</div>
 	<div class="container" id="addNewQuestion">
 		<div class="row">
@@ -222,6 +241,30 @@
 	<div id="admin">
 		
 	</div><!-- end admin container -->
+	
+
+
+	<!-- QUIZ SECTION+ -->
+	<div class="container" id="htmlQuiz">
+		<h2>HTML quiz here!</h2>
+	</div><!-- end html quiz -->
+
+	<div class="container" id="cssQuiz">
+		<h2>CSS quiz here!</h2>
+	</div><!-- end css quiz -->
+
+	<div class="container" id="jsQuiz">
+		<h2>JS quiz here!</h2>
+	</div><!-- end js quiz -->
+
+	<div class="container" id="oopQuiz">
+		<h2>OOP quiz here!</h2>
+	</div><!-- end oop quiz -->
+
+	<div class="container" id="jqQuiz">
+		<h2>jQuery/Ajax quiz here!</h2>
+	</div><!-- end jQuery/Ajax quiz -->
+
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/route.js"></script>
