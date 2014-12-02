@@ -79,6 +79,14 @@
         width: 100%;
         z-index: 10;
     }
+    #cssBuilding:hover,
+    #htmlBuilding:hover,
+    #javascriptBuilding:hover,
+    #oopBuilding:hover,
+    #jqueryBuilding:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
     #cssBuilding {
     	background: url("../img/world/css.png");
         float:right;

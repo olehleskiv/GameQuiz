@@ -5,19 +5,19 @@ zIndexCheck = function(position) {		//Z-index controll, visibility of
 										//of the buildings
 	var index;
 	if(position > 250) {
-		index =  1;
+		index =  2;
 	} else if(position < 250){
-		index = 0;
-	}
-	if(position > 400) {
-		index = 2;
-	} else if(position < 400 && position > 330){
 		index = 1;
 	}
-	if(position > 500) {
+	if(position > 400) {
 		index = 3;
-	} else if(position < 500 && position > 400){
+	} else if(position < 400 && position > 330){
 		index = 2;
+	}
+	if(position > 500) {
+		index = 4;
+	} else if(position < 500 && position > 400){
+		index = 3;
 	}
 	return index;
 };
@@ -157,7 +157,7 @@ Human.prototype.move = function(direction, speed) {
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_down.gif)";
 			if(dudePos.top > 600) {
-				this.humanBody.stepsTop = 600;
+				this.humanBody.stepsTop = 600;								
 			}
 
 			this.humanBody.human.style.zIndex = zIndexCheck(dudePos.top);		//set z-index 
@@ -168,8 +168,8 @@ Human.prototype.move = function(direction, speed) {
 			this.humanBody.stepsTop -= speed;
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_up.gif)";
-			if(dudePos.top < 50) {												
-				this.humanBody.stepsTop = 50;										
+			if(dudePos.top < 50) {
+				this.humanBody.stepsTop = 50;
 			}
 
 			enterBuilding("#mainGuy");
@@ -178,7 +178,6 @@ Human.prototype.move = function(direction, speed) {
 
 			return;
 		}
-		this.function
 };
 
 Human.prototype.stop = function() {
