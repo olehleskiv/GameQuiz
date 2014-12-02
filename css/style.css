@@ -13,6 +13,14 @@
     	float: right;
     	margin: 3px;
     }
+    #htmlQuiz,
+    #cssQuiz,
+    #jsQuiz,
+    #oopQuiz,
+    #jqQuiz {
+        display:none;
+        margin-top: 100px;
+    }
     .mainContainer,
     #htmlQuiz,
     #cssQuiz,
@@ -140,8 +148,8 @@
         position:absolute;
         width:50px;
         height:80px;
-        background:url('../img/people/walker.png');
-        background-position: center !important;
+        background:url('../img/people/walker.gif');
+        background-position: -55px -50px;
     }
     #addNewQuestion {
         margin-top: 50px;
@@ -154,4 +162,37 @@
     .my-confirm {
         top: 100px;
         text-align: center;
+    }
+
+
+
+
+
+
+
+
+    .testButton {
+    top: 200px;
+    left:300px;
+    position: absolute;
+    }
+    .testButton1 {
+    top: 230px;
+    left:300px;
+    position: absolute;
+    }
+    .testButton2 {
+    top: 260px;
+    left:300px;
+    position: absolute;
+    }
+    .testButton3 {
+    top: 290px;
+    left:300px;
+    position: absolute;
+    }
+    .testButton4 {
+    top: 320px;
+    left:300px;
+    position: absolute;
     }

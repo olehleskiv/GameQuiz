@@ -111,7 +111,7 @@ function brain() {
 	this.html = 0;
 	this.css = 0;
 	this.oop = 0;
-	this.jquery = 0;
+	this.jq = 0;
 }
 
 function body() {
@@ -137,8 +137,9 @@ Human.prototype.move = function(direction, speed) {
 		if(direction == 39) {												        // if "->" button is pressed
 			this.humanBody.stepsRight += speed;
 			this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
-			this.humanBody.human.style.background = "url(img/people/walker_right.gif)";
-			if(dudePos.left > 1250) {											   
+			this.humanBody.human.style.background = "url(img/people/walker.gif)";
+			this.humanBody.human.style.backgroundPosition = '-100px -5px';
+			if(dudePos.left > 1250) {
 				this.humanBody.stepsRight = 1150;									
 			}
 			return;
@@ -146,7 +147,8 @@ Human.prototype.move = function(direction, speed) {
 		if(direction == 37) {													// if "<-" button is pressed
 			this.humanBody.stepsRight -= speed;
 			this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
-			this.humanBody.human.style.background = "url(img/people/walker_left.gif)";
+			this.humanBody.human.style.background = "url(img/people/walker.gif)";
+			this.humanBody.human.style.backgroundPosition = '-100px -90px';
 			if(dudePos.left < 100) {
 				this.humanBody.stepsRight = 0;
 			}
@@ -155,7 +157,8 @@ Human.prototype.move = function(direction, speed) {
 		if(direction == 40) {													// if "down" button is pressed
 			this.humanBody.stepsTop += speed;
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
-			this.humanBody.human.style.background = "url(img/people/walker_down.gif)";
+			this.humanBody.human.style.background = "url(img/people/walker.gif)";
+			this.humanBody.human.style.backgroundPosition = '-8px -10px ';
 			if(dudePos.top > 600) {
 				this.humanBody.stepsTop = 600;								
 			}
@@ -167,7 +170,8 @@ Human.prototype.move = function(direction, speed) {
 		if(direction == 38) {													// if "up" button is pressed
 			this.humanBody.stepsTop -= speed;
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
-			this.humanBody.human.style.background = "url(img/people/walker_up.gif)";
+			this.humanBody.human.style.background = 'url(img/people/walker.gif)';
+			this.humanBody.human.style.backgroundPosition = '-10px 85px';
 			if(dudePos.top < 50) {
 				this.humanBody.stepsTop = 50;
 			}
@@ -181,24 +185,110 @@ Human.prototype.move = function(direction, speed) {
 };
 
 Human.prototype.stop = function() {
-	this.humanBody.human.style.background = "url(img/people/walker.png)";
-}
+	this.humanBody.human.style.background = "url(img/people/walker.gif)";
+	this.humanBody.human.style.backgroundPosition = '-55px -50px';
+};
 
 Human.prototype.study = function(name, points) {
-	if(name == "js"){
-
+	if(name == "html"){
+		this.brain.html += points;
+		var bar = document.getElementById('htmlProgress');
+		bar.innerHTML = mainDude.brain.html + "%";
+		bar.style.width = mainDude.brain.html + "%";
 	}
-}
+	if(name == "css"){
+		this.brain.css += points;
+		var bar = document.getElementById('cssProgress');
+		bar.innerHTML = mainDude.brain.css + "%";
+		bar.style.width = mainDude.brain.css + "%";
+	}
+	if(name == "js"){
+		this.brain.js += points;
+		var bar = document.getElementById('jsProgress');
+		bar.innerHTML = mainDude.brain.js + "%";
+		bar.style.width = mainDude.brain.js + "%";
+	}
+	if(name == "jq"){
+		this.brain.jq += points;
+		var bar = document.getElementById('jqProgress');
+		bar.innerHTML = mainDude.brain.jq + "%";
+		bar.style.width = mainDude.brain.jq + "%";
+	}
+	if(name == "oop"){
+		this.brain.oop += points;
+		var bar = document.getElementById('oopProgress');
+		bar.innerHTML = mainDude.brain.oop + "%";
+		bar.style.width = mainDude.brain.oop + "%";
+	}
+};
 
-var mainDude = new Human();														
+var mainDude = new Human();
 			
-mainDude.humanBody.human.setAttribute("id","mainGuy");	
+mainDude.humanBody.human.setAttribute("id","mainGuy");
 mainDude.humanBody.human.style.top = "100px";
 mainDude.humanBody.human.style.left = "730px";
 mainDude.humanBody.stepsTop = 100;
 mainDude.humanBody.stepsRight = 730;
 
 var gameArea = document.getElementById('gamePage');
-document.body.setAttribute("onkeydown","mainDude.move(event.keyCode,5);")
-document.body.setAttribute("onkeyup", "mainDude.stop();")
+document.body.setAttribute("onkeydown","mainDude.move(event.keyCode,5);");
+document.body.setAttribute("onkeyup", "mainDude.stop();");
 
+
+
+
+
+
+
+
+
+//test stydy buttons
+var button = document.createElement('button');
+button.setAttribute('class','testButton');
+button.innerHTML = "study html";
+
+
+button.onclick = function() {
+	mainDude.study('html', 5);
+}
+gameArea.appendChild(button);
+
+var button = document.createElement('button');
+button.setAttribute('class','testButton1');
+button.innerHTML = "study css";
+
+
+button.onclick = function() {
+	mainDude.study('css', 5);
+}
+gameArea.appendChild(button);
+
+var button = document.createElement('button');
+button.setAttribute('class','testButton2');
+button.innerHTML = "study js";
+
+
+button.onclick = function() {
+	mainDude.study('js', 5);
+}
+gameArea.appendChild(button);
+
+var button = document.createElement('button');
+button.setAttribute('class','testButton3');
+button.innerHTML = "study jq";
+
+
+button.onclick = function() {
+	mainDude.study('jq', 5);
+}
+gameArea.appendChild(button);
+
+var button = document.createElement('button');
+button.setAttribute('class','testButton4');
+button.innerHTML = "study oop";
+
+
+button.onclick = function() {
+	mainDude.study('oop', 5);
+}
+gameArea.appendChild(button);

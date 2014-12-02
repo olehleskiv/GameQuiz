@@ -1,12 +1,12 @@
 
 
+(function() {
+
 function Building() {
 	this.id = 'htmlBuilding';
 	this.href = '#htmlQuiz';
 	this.x = 0;
 	this.y = 0;
-	this.z = 0;
-	this.j = 0;
 }
 
 Building.prototype.draw = function() {
@@ -24,7 +24,7 @@ Building.prototype.draw = function() {
 
 	this.building.onclick = function() {
 		var link = $(this).attr('href');
-		console.log(link);
+
 		if(link == '#htmlQuiz') {
 			confirmStartQuiz('html');
 		}
@@ -55,49 +55,55 @@ function cssBuilding(x, y, z, j) {
 	if(arguments[1]) {
 		this.y = y;
 	}
-	if(arguments[2]) {
-		this.z = z;
-	}
-	if(arguments[3]) { this.j = j; }
 }
 
 function htmlBuilding(x, y, z, j) {
 
 	this.id = "htmlBuilding";
 	this.href = '#htmlQuiz';
-	if(arguments[0]) { this.x = x; }
-	if(arguments[1]) { this.y = y; }
-	if(arguments[2]) { this.z = z; }
-	if(arguments[3]) { this.j = j; }
+	if(arguments[0]) { 
+		this.x = x; 
+	}
+	if(arguments[1]) { 
+		this.y = y; 
+	}
 }
 
 function oopBuilding(x, y, z, j) {
 
 	this.id = "oopBuilding";
 	this.href = '#oopQuiz';
-	if(arguments[0]) { this.x = x; }
-	if(arguments[1]) { this.y = y; }
-	if(arguments[2]) { this.z = z; }
-	if(arguments[3]) { this.j = j; }}
+	if(arguments[0]) { 
+		this.x = x; 
+	}
+	if(arguments[1]) { 
+		this.y = y; 
+	}
+
+}
 
 function jqueryBuilding(x, y, z, j) {
 
 	this.id = "jqueryBuilding";
 	this.href = '#jqQuiz';
-	if(arguments[0]) { this.x = x; }
-	if(arguments[1]) { this.y = y; }
-	if(arguments[2]) { this.z = z; }
-	if(arguments[3]) { this.j = j; }
+	if(arguments[0]) { 
+		this.x = x; 
+	}
+	if(arguments[1]) { 
+		this.y = y; 
+	}
 }
 
 function javascriptBuilding(x, y, z, j) {
 
 	this.id = "javascriptBuilding";
 	this.href = '#jsQuiz';
-	if(arguments.x) { this.x = x; }
-	if(arguments.y) { this.y = y; }
-	if(arguments.z) { this.z = z; }
-	if(arguments.j) { this.j = j; }
+	if(arguments.x) { 
+		this.x = x; 
+	}
+	if(arguments.y) { 
+		this.y = y; 
+	}
 }
 htmlBuilding.prototype = new Building();
 
@@ -127,6 +133,6 @@ oopBuild.draw();
 
 
 
-
+})();
 
 
