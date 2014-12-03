@@ -38,8 +38,12 @@ Human.prototype.move = function(direction, speed) {
 		var jsBuildingPos = $("#javascriptBuilding").offset();
 		var jqBuildingPos = $("#jqueryBuilding").offset();
 		var oopBuildingPos = $("#oopBuilding").offset();
+		var left  = 37,
+			up    = 38,
+			right = 39,
+			down  = 40;
 
-		if(direction == 39) {												        // if "->" button is pressed
+		if(direction == right) {												        // if "->" button is pressed
 			this.humanBody.stepsRight += speed;
 			this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_right.gif)";
@@ -48,7 +52,7 @@ Human.prototype.move = function(direction, speed) {
 			}
 			return;
 		}
-		if(direction == 37) {													// if "<-" button is pressed
+		if(direction == left) {													// if "<-" button is pressed
 			this.humanBody.stepsRight -= speed;
 			this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_left.gif)";
@@ -57,7 +61,7 @@ Human.prototype.move = function(direction, speed) {
 			}
 			return;
 		}
-		if(direction == 40) {													// if "down" button is pressed
+		if(direction == down) {													// if "down" button is pressed
 			this.humanBody.stepsTop += speed;
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_down.gif)";
@@ -87,7 +91,7 @@ Human.prototype.move = function(direction, speed) {
 
 			return;
 		}
-		if(direction == 38) {													// if "up" button is pressed
+		if(direction == up) {													// if "up" button is pressed
 			this.humanBody.stepsTop -= speed;
 			this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 			this.humanBody.human.style.background = "url(img/people/walker_up.gif)";
