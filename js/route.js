@@ -19,7 +19,16 @@
 
 		link = link.slice(1, link.length);
 
-		var pages = ['mainPage','gamePage','addNewQuestion','admin'];
+		var pages = ['mainPage', 
+					'gamePage', 
+					'addNewQuestion', 
+					'admin',
+					'htmlQuiz',
+					'cssQuiz',
+					'jsQuiz',
+					'oopQuiz',
+					'jqQuiz'
+					];
 
 		for (var i = 0; i < pages.length; i++) {
 			if(pages[i] == link) {
@@ -45,5 +54,8 @@
 	//to main page
 	var playButton = document.getElementById('goHome');
 	playButton.onclick = router;
+
+	var goToQuizButton = document.getElementById('confirmStart');
+	goToQuizButton.onclick = router;
 
 })();
