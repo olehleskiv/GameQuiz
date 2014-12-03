@@ -1,1 +1,343 @@
-{"jq":[{"title":"..\/data\/quiz..\/data\/quiz","variants":["..\/data\/quiz","..\/data\/quiz..\/data\/quiz","..\/data\/quiz..\/data\/quiz..\/data\/quiz..\/data\/quiz","..\/data\/quiz..\/data\/quiz","..\/data\/quiz..\/data\/quiz..\/data\/quiz"],"correct":"2","active":false},{"title":"wed","variants":["weded","wedwe","dwe","dwed","wedew"],"correct":"5","active":false},{"title":"ewf","variants":["wefe","fwe","fwef","wefwe","fwefwef"],"correct":"4","active":false},{"title":"efwefwefweffe","variants":["ewfewfw","wefwef","wefewfwe","efwefwef","fwefwef"],"correct":"4","active":false}],"js":[{"title":"rfr","variants":["ferfrffer","frfe","rferfer","ferfer","erferf"],"correct":"3","active":false},{"title":"erf","variants":["re","rfer","ferf","erferferferfr","erf"],"correct":"2","active":false},{"title":"wefe","variants":["feef","wef","fwefwef","wefwefwe","wefwefwe"],"correct":"5","active":false},{"title":"wef","variants":["efwef","fwefwef","wef","wefwe","wefwefew"],"correct":"3","active":false},{"title":"wefwefwef","variants":["efwef","fwefwef","wef","wefwe","wefwefew"],"correct":"3","active":false},{"title":"wfeewfe","variants":["wefwef","wef","wfwef","wfe","wefwefew"],"correct":"2","active":false},{"title":"wefef","variants":["ewfe","fwef","wef","wefwef","wefew"],"correct":"4","active":false},{"title":"wefe","variants":["fef","wef","efwefwef","wefwef","wefew"],"correct":"3","active":false}]}
+{"js":
+	[
+		{
+		"ID": 1,
+		"title": "What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();</pre>",
+		"variants": [
+			"object",
+			"array",
+			"arguments",
+			"undefined",
+			"true"
+		],
+		"correct": 0,  
+		"active": true
+		},
+		{
+		"ID": 2,
+		"title": "What is the result of the this code?<br><pre>var f = function g() {<br>return 23;<br>};<br>typeof g();</pre>",
+		"variants": [
+			"number",
+			"undefined",
+			"function",
+			"Error",
+			"object"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 3,
+		"title": "What does the alert below?<br><pre>function aaa() {<br>return {<br>test: 1<br>};<br>}<br>alert(typeof aaa());</pre>",
+		"variants": [
+			"function",
+			"number",
+			"object",
+			"undefined",
+			"Error"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 4,
+		"title": "What is the result of this code?<br><pre>var bar = 1,foo = {};<br>foo: {<br>bar: 2;<br>baz: ++bar;<br>};<br>foo.baz + foo.bar + bar;</pre>",
+		"variants": [
+			"ReferenceError",
+			"undefined",
+			"NaN",
+			"4",
+		"5"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 5,
+		"title": "What is the result of the expression?<br><pre>10 > 9 > 8 === true;</pre>",
+		"variants": [
+			"ReferenceError",
+			"TypeError",
+			"undefined",
+			"true", 
+			"false"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 6,
+		"title": "What is the result of the function?<br><pre>function foo(a, b) {<br>arguments[1] = 2;<br>alert(b);<br>}<br>foo(1);</pre>",
+		"variants": [
+			"ReferenceError",
+			"''",
+			"2",
+			"undefined",
+			"1"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 7,
+		"title": "What is the result of this code?<br><pre> with (function(x, undefined){}) length;</pre>",
+		"variants": [
+			"true",
+			"1",
+ 			"2",
+ 			"undefined",
+ 			"Error"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 8,
+		"title": "What is the result of this function?<br><pre>(function(foo){<br>return typeof foo.bar;<br>})({ foo: { bar: 1 } });</pre>",
+		"variants": [
+			"true",
+			"undefined",
+			"object",
+			"number",
+			"Error"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 9,
+		"title": "What is the result of this code?<br><pre>var x = [typeof x, typeof y][1];<br>typeof typeof x;</pre>",
+		"variants": [
+			"number",
+			"string",
+			"undefined",
+			"object",
+			"Error"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 10,
+		"title": "What is x equels to?<br><pre>  var y = 1, x = y = typeof x;<br>x</pre>",
+		"variants": [
+			"1",
+			"number",
+			"'undefined'",
+			"undefined",
+			"'string'"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 11,
+		"title": "What does this function return?<br><pre>(function(x){<br>delete x;<br>return x;<br>})(1);</pre>",
+		"variants": [
+			"1",
+			"null",
+			"undefined",
+			"Error",
+			"''"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 12,
+		"title": "Why so Java and JavaScript have similar name?",
+		"variants": [
+			"Java Script is a stripped-down version of Java",
+			"The syntax of JavaScript is loosely based on Java syntax",
+			"They both support Object Oriented Programming",
+			"They both are server-side languages",
+			"None of the above"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 13,
+		"title": "What event handler doesn't exist?",
+		"variants": [
+			"onAbort", 
+			"onBlur",
+			"onSelection", 
+			"onFocus", 
+			"onUnload"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 14,
+		"title": "Which of the following is not a valid JavaScript variable name?",
+		"variants": [
+			"2java",
+			"_java_and_java_names",
+			"javaandjava",
+			"$bestvar",
+			"None of the above"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 15,
+		"title": "What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
+		"variants": [
+			"1",
+			"null",
+			"undefined",
+			"Error",
+			"number"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 16,
+		"title": "What is the result of the code?<br><pre>function a(x) {<br>return x * 2;<br>}<br>var a;<br>alert(a);</pre>",
+		"variants": [
+			"0",
+			"null",
+			"undefined",
+			"Error",
+			"the source code of the function"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 17,
+		"title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+		"variants": [
+			"RangeError",
+			"[object Function]",
+			"undefined",
+			"[object Window]",
+			"Object[window]"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 18,
+		"title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+		"variants": [
+			"RangeError",
+			"[object Function]",
+			"undefined",
+			"[object Window]",
+			"Object[window]"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 18,
+		"title": "What will be the return value of the following code?<br><pre>!!~1</pre>",
+		"variants": [
+			"1",
+			"true",
+			"undefined",
+			"false",
+			"NaN"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 19,
+		"title": "What will be the return value of the following code?<br><pre>(true + false) > 2 + true;</pre>",
+		"variants": [
+			"Error",
+			"true",
+			"undefined",
+			"false",
+			"NaN"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 20,
+		"title": " Alert helps find errors by...",
+		"variants": [
+			"displaying current values of variables",
+			"indicating execution path", 
+			"pausing execution",
+			"restarting execution",
+			"all of the above"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 21,
+		"title": " What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));</pre>",
+		"variants": [
+			"13",
+			"12", 
+			"9",
+			"11",
+			"nothing of the above"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 22,
+		"title": " What is the result of the string?<br><pre>+'1' + 1 + '1'</pre>",
+		"variants": [
+			"'21'",
+			"'111'", 
+			"21",
+			"11",
+			"3"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 23,
+		"title": "Which of the below is used in Java script to insert special characters?",
+		"variants": [
+		"&",
+		"\\",
+		"-",
+		"%",
+		"$"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 24,
+		"title": "Which of the below is used in Java script to insert special characters?",
+		"variants": [
+		"&",
+		"\\",
+		"-",
+		"%",
+		"$"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 25,
+		"title": "Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?",
+		"variants": [
+		"call",
+		"apply",
+		"eval",
+		"make",
+		"run"
+		],
+		"correct": 2,
+		"active": true
+		}
+	]
+}
+
