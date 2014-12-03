@@ -13,18 +13,18 @@
  </head>
  <body>
 
+
+<div id="fb-root"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0&appId=309482552592773";
+  js.src = "//connect.facebook.net/en_PI/sdk.js#xfbml=1&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -70,7 +70,7 @@
 		  		<button id="playButton" href="#gamePage" type="button" class="btn btn-success btn-lg">Start!</button>
 		  	</div>
 		  	<div class="socilaMblock">
-				<div class="fb-share-button" data-href="https://learnfrontend.tk" data-layout="button"></div>
+				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
 				<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFrontEnd" class="twitter-hashtag-button" data-dnt="true">Tweet #LearnFrontEnd</a>
 			</div>
 			</div>
@@ -94,31 +94,29 @@
 
 
 	<div id="gamePage" class="container" style="display:none">
-
-		<!--Skills-->
 		<div class="progressStipes">
 			<div class="row">
 			  <div class="col-md-4">
 			  	HTML
 			  	<div class="progress">
-				  <div id="htmlProgress" class="progress-bar progress-bar-success" role="progressbar">
-				    0%
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+				    <span class="sr-only">40% Complete (success)</span>
 				  </div>
 				</div>
 			  </div>
 			  <div class="col-md-4">
 			  	CSS
 			  	<div class="progress">
-				  <div id="cssProgress" class="progress-bar progress-bar-info" role="progressbar">
-				    0% 
+				  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+				    <span class="sr-only">20% Complete</span>
 				  </div>
 				</div>
 			  </div>
 			  <div class="col-md-4">
 			  	JavaScript
 			  	<div class="progress">
-				  <div id="jsProgress" class="progress-bar progress-bar-warning" role="progressbar">
-				    0%
+				  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				    <span class="sr-only">60% Complete (warning)</span>
 				  </div>
 				</div>
 			  </div>
@@ -127,8 +125,8 @@
 			  <div class="col-md-4">
 			  	jQuery, Ajax
 			  	<div class="progress">
-				  <div id="jqProgress" class="progress-bar progress-bar-danger" role="progressbar">
-				    0%
+				  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				    <span class="sr-only">80% Complete (danger)</span>
 				  </div>
 				</div>
 			  </div>
@@ -136,34 +134,13 @@
 			  <div class="col-md-4">
 			  	OOP
 			  	<div class="progress">
-				  <div id="oopProgress" class="progress-bar progress-bar-success" role="progressbar">
-				    0%
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+				    <span class="sr-only">40% Complete (success)</span>
 				  </div>
 				</div>
 			  </div>
 			</div>
 		</div>
-
-
-
-<!-- Modal -->
-<div id="gameConfirm"class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-    <div class="modal-content my-confirm">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="gameConfirmTitle"></h4>
-      </div>
-      <div class="modal-body">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-        <button type="button" id="confirmStart" data-dismiss="modal" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
 	</div>
 	<div class="container" id="addNewQuestion">
 		<div class="row">
@@ -245,32 +222,11 @@
 	<div id="admin">
 		
 	</div><!-- end admin container -->
-	
-
-
-	<!-- QUIZ SECTION -->
-	<div class="container" id="htmlQuiz">
-		<h2>HTML quiz here!</h2>
-	</div><!-- end html quiz -->
-
-	<div class="container" id="cssQuiz">
-		<h2>CSS quiz here!</h2>
-	</div><!-- end css quiz -->
-
-	<div class="container" id="jsQuiz">
-		<h2>JS quiz here!</h2>
-	</div><!-- end js quiz -->
-
-	<div class="container" id="oopQuiz">
-		<h2>OOP quiz here!</h2>
-	</div><!-- end oop quiz -->
-
-	<div class="container" id="jqQuiz">
-		<h2>jQuery/Ajax quiz here!</h2>
-	</div><!-- end jQuery/Ajax quiz -->
-
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script data-main="js/main.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+	<script src="js/route.js"></script>
+	<script src="js/world.js"></script>
+	<script src="js/human.js"></script>
+	<script src="js/addQuestion.js"></script>
  </body>
 </html>
