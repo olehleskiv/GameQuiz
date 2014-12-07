@@ -1,0 +1,14 @@
+{
+  "name": "learnfrontend",
+  "version": "0.0.0",
+  "authors": [
+    "Vitaliy Chorniy <chornij1@gmail.com>"
+  ],
+  "description": "learnfrontend",
+  "main": "js\\jsWork\\main.js",
+  "keywords": [
+    "frontend"
+  ],
+  "license": "MIT",
+  "homepage": "learnfrontend.tk"
+}

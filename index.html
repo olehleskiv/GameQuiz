@@ -5,55 +5,91 @@
 	<title>Learn JS</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
-  	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap-theme.css">
-  	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/result.css">
  </head>
  <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0&appId=309482552592773";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-</script>
-
-
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
+	<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" id="goHome" href="#mainPage">Check your knowledge</a>
 			</div>
-			<button id="backButton" style="visibility:hidden" type="button" class="btn btn-warning btn-xs" >Main page</button>
+			<button id="resultsButton" href="#results" type="button" class="btn btn-warning btn-xs" >Your results</button>
 
-			<div class="btn-group top topMenu">
-			  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-			    Menu <span class="caret"></span>
-			  </button>
-			  <ul id="mainMenu" class="dropdown-menu" role="menu">
-			    <li><a href="#aboutus">About us</a></li>
-			    <li><a href="/data/quiz.json">Get JSON</a></li>
-			     <li><a href="#admin">Admin</a></li>
-				<li class="divider"></li>
-			    <li><a href="#addNewQuestion">Add new question</a></li>
-			  </ul>
+			<div class="collapse navbar-collapse topMenu" id="bs-example-navbar-collapse-1">
+
+			        <ul id="mainMenu" class="nav navbar-nav navbar-right">
+				        <li><a href="#">Link</a></li>
+				        <li class="dropdown">
+				          <a type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#aboutus">About us</a></li>
+						    <li><a href="/data/quiz.json">Get JSON</a></li>
+						     <li><a href="#admin">Admin</a></li>
+							<li class="divider"></li>
+						    <li><a href="#addNewQuestion">Add new question</a></li>
+				          </ul>
+				        </li>
+				      </ul>
 			</div>
 
 			<ul class="socialBlock">
-				<li><a href="#"><img alt="fb" src="img/fb.png"></a>
-				<li><a href="#"><img alt="tw" src="img/tw.png"></a>
-				<li><a href="#"><img alt="git" src="img/git.png"></a>
+				<li><a href="#"><img alt="fb" src="img/fb.png"></a></li>
+				<li><a href="#"><img alt="tw" src="img/tw.png"></a></li>
+				<li><a href="#"><img alt="git" src="img/git.png"></a></li>
 			</ul>
-		</div>
+		</div><!-- /.container-fluid -->
 	</nav>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="goHome" href="#mainPage">LearnFrontEnd</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav desctopMenu">
+        <li><button id="resultsButton" href="#results" type="button" class="btn btn-warning btn-xs">your results</button></li>
+      </ul>
+
+      <ul id="mobileDropDown" class="nav navbar-nav mobileMenu">
+      	<li><a href="#results" >your results</a></li>
+      	<li><a href="#aboutus">About us</a></li>
+		<li><a href="/data/quiz.json">Get JSON</a></li>
+		<li><a href="#admin">Admin</a></li>
+		<li class="divider"></li>
+		<li><a href="#addNewQuestion">Add new question</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right desctopMenu">
+        <li class="social"><a target="blank" href="https://www.facebook.com/pages/Learn-Front-End/1508988496019866?ref=hl"><img alt="fb" src="img/fb.png"></a></li>
+		<li class="social"><a href="#"><img alt="tw" src="img/tw.png"></a></li>
+		<li class="social"><a target="blank"  href="https://github.com/olehleskiv/GameQuiz/tree/master"><img alt="git" src="img/git.png"></a></li>
+        <li id="mainDropDown" class="dropdown">
+          <button id="dropdownMenu1" href="#" class="btn btn-success navbar-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Menu <span class="caret"></span></button>
+          <ul id="mainMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#aboutus">About us</a></li>
+			<li><a href="/data/quiz.json">Get JSON</a></li>
+			<li><a href="#admin">Admin</a></li>
+			<li class="divider"></li>
+			<li><a href="#addNewQuestion">Add new question</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 	<div id="mainPage" class="container mainContainer">
 		<div class="row">
 
@@ -70,6 +106,7 @@
 		  		<button id="playButton" href="#gamePage" type="button" class="btn btn-success btn-lg">Start!</button>
 		  	</div>
 		  	<div class="socilaMblock">
+		  		<div id="fb-root"></div>
 				<div class="fb-share-button" data-href="https://learnfrontend.tk" data-layout="button"></div>
 				<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFrontEnd" class="twitter-hashtag-button" data-dnt="true">Tweet #LearnFrontEnd</a>
 			</div>
@@ -96,6 +133,14 @@
 	<div id="gamePage" class="container" style="display:none">
 
 		<!--Skills-->
+		<div class="row mobileProgress">
+			<p>Your Progress</p>
+			<span id="mobhtmlProgress" class="label label-primary">HTML</span>
+			<span id="mobcssProgress" class="label label-info">CSS</span>
+			<span id="mobjsProgress" class="label label-warning">JavaScript</span>
+			<span id="mobjqProgress" class="label label-danger">jQuery, Ajax</span>
+			<span id="moboopProgress" class="label label-success">OOP</span>
+		</div>
 		<div class="progressStipes">
 			<div class="row">
 			  <div class="col-md-4">
@@ -146,23 +191,26 @@
 
 
 
-<!-- Modal -->
-<div id="gameConfirm"class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-    <div class="modal-content my-confirm">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="gameConfirmTitle"></h4>
-      </div>
-      <div class="modal-body">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-        <button type="button" id="confirmStart" data-dismiss="modal" class="btn btn-primary">Yes</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
+		<!-- game confirm Modal -->
+		<div id="gameConfirm"class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		    <div class="modal-content my-confirm">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="gameConfirmTitle"></h4>
+		      </div>
+		      <div class="modal-body">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+		        <button type="button" id="confirmStart" data-dismiss="modal" class="btn btn-primary">Yes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<div id="startInstruction">
+			<p>use these keys to move the guy</p>
+			<img alt="arrows" src="img/arrowKeys.png" >
+		</div>
 
 	</div>
 	<div class="container" id="addNewQuestion">
@@ -268,9 +316,14 @@
 	<div class="container" id="jqQuiz">
 		<h2>jQuery/Ajax quiz here!</h2>
 	</div><!-- end jQuery/Ajax quiz -->
+	
 
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script data-main="js/main.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+
+	<div class="container" id="results">
+		<h2>Your results here!</h2>
+	</div><!-- end jQuery/Ajax quiz -->
+	
+	<script data-main="js/main.min.js" src="bower_components/requirejs/require.js"></script>
  </body>
 </html>
