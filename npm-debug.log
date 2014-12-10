@@ -1,28 +1,66 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install' ]
+1 verbose cli   'install',
+1 verbose cli   'grunt-contrib-htmlmin',
+1 verbose cli   '--save-dev' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 error install Couldn't read dependencies
-6 error Error: Invalid version: "0.1"
-6 error     at Object.module.exports.fixVersionField (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\node_modules\normalize-package-data\lib\fixer.js:183:13)
-6 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\node_modules\normalize-package-data\lib\normalize.js:30:38
-6 error     at Array.forEach (native)
-6 error     at normalize (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\node_modules\normalize-package-data\lib\normalize.js:29:15)
-6 error     at final (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:342:33)
-6 error     at then (C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:126:33)
-6 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:331:40
-6 error     at evalmachine.<anonymous>:271:14
-6 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:102:5
-6 error     at Object.oncomplete (evalmachine.<anonymous>:107:15)
-7 error If you need help, you may report this *entire* log,
-7 error including the npm and node versions, at:
-7 error     <http://github.com/npm/npm/issues>
-8 error System Windows_NT 6.1.7600
-9 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-10 error cwd c:\OpenServer\domains\learnfrontend
-11 error node -v v0.10.33
-12 error npm -v 1.4.28
-13 verbose exit [ 1, true ]
+5 warn package.json quiz-project@0.1.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'grunt-contrib-htmlmin', null ]
+8 verbose cache add name=undefined spec="grunt-contrib-htmlmin" args=["grunt-contrib-htmlmin",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'grunt-contrib-htmlmin',
+9 verbose parsed url   path: 'grunt-contrib-htmlmin',
+9 verbose parsed url   href: 'grunt-contrib-htmlmin' }
+10 silly lockFile 08d33e23-grunt-contrib-htmlmin grunt-contrib-htmlmin
+11 verbose lock grunt-contrib-htmlmin C:\Users\vcy\AppData\Roaming\npm-cache\08d33e23-grunt-contrib-htmlmin.lock
+12 silly lockFile 08d33e23-grunt-contrib-htmlmin grunt-contrib-htmlmin
+13 silly lockFile 08d33e23-grunt-contrib-htmlmin grunt-contrib-htmlmin
+14 verbose addNamed [ 'grunt-contrib-htmlmin', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 32c28686-grunt-contrib-htmlmin grunt-contrib-htmlmin@
+17 verbose lock grunt-contrib-htmlmin@ C:\Users\vcy\AppData\Roaming\npm-cache\32c28686-grunt-contrib-htmlmin.lock
+18 silly addNameRange { name: 'grunt-contrib-htmlmin', range: '*', hasData: false }
+19 verbose request where is /grunt-contrib-htmlmin
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id a9a124b8cebeab39
+22 verbose url raw /grunt-contrib-htmlmin
+23 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-htmlmin' ]
+24 verbose url resolved https://registry.npmjs.org/grunt-contrib-htmlmin
+25 verbose request where is https://registry.npmjs.org/grunt-contrib-htmlmin
+26 info trying registry request attempt 1 at 04:09:51
+27 http GET https://registry.npmjs.org/grunt-contrib-htmlmin
+28 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
+29 info trying registry request attempt 2 at 04:10:01
+30 http GET https://registry.npmjs.org/grunt-contrib-htmlmin
+31 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+32 info trying registry request attempt 3 at 04:11:13
+33 http GET https://registry.npmjs.org/grunt-contrib-htmlmin
+34 silly lockFile 32c28686-grunt-contrib-htmlmin grunt-contrib-htmlmin@
+35 silly lockFile 32c28686-grunt-contrib-htmlmin grunt-contrib-htmlmin@
+36 error Error: getaddrinfo EAGAIN
+36 error     at errnoException (dns.js:37:11)
+36 error     at Object.onanswer [as oncomplete] (dns.js:124:16)
+37 error If you need help, you may report this *entire* log,
+37 error including the npm and node versions, at:
+37 error     <http://github.com/npm/npm/issues>
+38 error System Windows_NT 6.1.7600
+39 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-contrib-htmlmin" "--save-dev"
+40 error cwd c:\git
+41 error node -v v0.10.33
+42 error npm -v 1.4.28
+43 error syscall getaddrinfo
+44 error code EAGAIN
+45 error errno EAGAIN
+46 verbose exit [ 1, true ]
