@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 		      files: [{                                  // Dictionary of files
 		        expand: true,
 		        cwd: 'app/',                             // Project root
-		        src: '**/*.html',                        // Source
+		        src: '*.html',                        // Source
 		        dest: 'prod/'                            // Destination
 		      }]
 		    }
