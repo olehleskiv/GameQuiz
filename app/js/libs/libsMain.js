@@ -1,7 +1,6 @@
 
-define([
+define([ 'libs/jquery',
 		 'libs/bootstrap.min',
-		 'libs/modernizr', 
 		 'libs/facebook', 
 		 'libs/twitter'], function() {
    

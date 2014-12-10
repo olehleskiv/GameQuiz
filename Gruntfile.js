@@ -10,9 +10,9 @@ module.exports = function(grunt) {
 		    options: {
 		      name: 'main',
 		      include: ['build'],
-		      baseUrl: "js/jsWork",
-		      mainConfigFile: "js/jsWork/build.js",
-		      out: "js/main.min.js"
+		      baseUrl: "app/js",
+		      mainConfigFile: "app/js/build.js",
+		      out: "prod/js/main.min.js"
 		    }
 		  }
 		},
@@ -21,9 +21,9 @@ module.exports = function(grunt) {
 		    dynamic: {
 		        files: [{
 		            expand: true,
-		            cwd: 'img/imgWork/',
+		            cwd: 'app/img/',
 		            src: ['**/*.{png,jpg,gif}'],
-		            dest: 'img/'
+		            dest: 'prod/img/'
 		        }]
 		    }
 		},
@@ -36,21 +36,21 @@ module.exports = function(grunt) {
 	          optimization: 2
 		    },
 		    files: {
-		      "css/result.css": [
-		      "css/less/source1.less", 
-		      "css/less/source2.less",
-		      "css/less/source3.less"]
+		      "prod/css/result.css": [
+		      "app/css/less/source1.less", 
+		      "app/css/less/source2.less",
+		      "app/css/less/source3.less"]
 		    }
 		  }
 		},
 
 		watch: {
 		    scripts: {
-		        files: ['js/jsWork/*.js','js/jsWork/cont/*.js','js/jsWork/libs/*.js','js/jsWork/models/*.js','js/jsWork/views/*.js' ],
+		        files: ['app/js/*.js','app/js/cont/*.js','app/js/libs/*.js','app/js/models/*.js','app/js/views/*.js' ],
 		        tasks: ['requirejs'],
 		    },
 		    styles: {
-		        files: ['css/less/*.less'], // which files to watch
+		        files: ['app/css/less/*.less'], // which files to watch
 		        tasks: ['less'],
 		    }
 		}

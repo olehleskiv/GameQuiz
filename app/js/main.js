@@ -1,5 +1,10 @@
+require.config({
+    paths: {
+        'jquery': 'libs/jquery'
+    }
+});
 
-require([ 'jquery',
+require([ 
 	      'libs/libsMain',
 	      'cont/contMain',
 	      'models/modMain',
