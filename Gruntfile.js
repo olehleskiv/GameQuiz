@@ -39,6 +39,11 @@ module.exports = function(grunt) {
 		      "prod/css/result.css": [
 		      "app/css/less/source1.less", 
 		      "app/css/less/source2.less",
+		      "app/css/less/source3.less"],
+
+		      "app/css/result.css" :[
+		      "app/css/less/source1.less", 
+		      "app/css/less/source2.less",
 		      "app/css/less/source3.less"]
 		    }
 		  }

@@ -1,13 +1,29 @@
 
 
-define(['cont/enterBuilding', 'cont/zIndexCheck'], function(enterBuilding, zIndexCheck) {
+define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(enterBuilding, zIndexCheck, showRes) {
+
 
 	function brain() {
-		this.js = 0;
-		this.html = 0;
-		this.css = 0;
-		this.oop = 0;
-		this.jq = 0;
+		//memorize js
+		this.js = localStorage.getItem('brainJs');
+		showRes('JS', this.js, 'jsProgress', 'mobjsProgress');
+		
+		//memorize html
+		this.html = localStorage.getItem('brainHtml');
+		showRes('HTML', this.html, 'htmlProgress', 'mobhtmlProgress');
+
+		//memorize css
+		this.css = localStorage.getItem('brainCss');
+		showRes('CSS', this.css, 'cssProgress', 'mobcssProgress');
+
+		//memorize oop
+		this.oop = localStorage.getItem('brainOop');
+		showRes('OOP', this.oop, 'oopProgress', 'moboopProgress');
+
+		//memorize jq
+		this.jq = localStorage.getItem('brainJq');
+		showRes('jQuery/ajax', this.jq, 'jqProgress', 'mobjqProgress');
+
 	}
 
 	function body() {
@@ -89,50 +105,37 @@ define(['cont/enterBuilding', 'cont/zIndexCheck'], function(enterBuilding, zInde
 
 	Human.prototype.study = function(name, points) {
 		if(name == "html"){
-			this.brain.html += points;
-			var bar = document.getElementById('htmlProgress'),
-			mobres = document.getElementById('mobhtmlProgress');
+			var result = parseInt(localStorage.getItem('brainHtml')) + points;
+			localStorage.setItem('brainHtml',result);
+			this.brain.html = result;
+			showRes('HTML', result, 'htmlProgress', 'mobhtmlProgress');
 
-			bar.innerHTML = mainDude.brain.html + "%";
-			mobres.innerHTML = "HTML: " + mainDude.brain.jq + "%";
-			bar.style.width = mainDude.brain.html + "%";
 		}
 		if(name == "css"){
-			this.brain.css += points;
-			var bar = document.getElementById('cssProgress'),
-			mobres = document.getElementById('mobcssProgress');
+			var result = parseInt(localStorage.getItem('brainCss')) + points;
+			localStorage.setItem('brainCss',result);
+			this.brain.css = result;
+			showRes('CSS', result, 'cssProgress', 'mobcssProgress');
 
-			bar.innerHTML = mainDude.brain.css + "%";
-			mobres.innerHTML = "CSS: " + mainDude.brain.jq + "%";
-			bar.style.width = mainDude.brain.css + "%";
 		}
 		if(name == "js"){
-			this.brain.js += points;
-			var bar = document.getElementById('jsProgress'),
-			mobres = document.getElementById('mobjsProgress');
-
-			bar.innerHTML = mainDude.brain.js + "%";
-			mobres.innerHTML = "JavaScript: " + mainDude.brain.jq + "%";
-			bar.style.width = mainDude.brain.js + "%";
+			var result = parseInt(localStorage.getItem('brainJs')) + points;
+			localStorage.setItem('brainJs',result);
+			this.brain.js = result;
+			showRes('JS', result, 'jsProgress', 'mobjsProgress');
 		}
 		if(name == "jq"){
-			this.brain.jq += points;
-			var bar = document.getElementById('jqProgress'),
-			mobres = document.getElementById('mobjqProgress');
-
-			bar.innerHTML = mainDude.brain.jq + "%";
-			mobres.innerHTML = "jQuery/Ajax: " + mainDude.brain.jq + "%";
-			bar.style.width = mainDude.brain.jq + "%";
+			var result = parseInt(localStorage.getItem('brainJq')) + points;
+			localStorage.setItem('brainJq',result);
+			this.brain.jq = result;
+			showRes('jQuery/ajax', result, 'jqProgress', 'mobjqProgress');
 
 		}
 		if(name == "oop"){
-			this.brain.oop += points;
-			var bar = document.getElementById('oopProgress'),
-			mobres = document.getElementById('moboopProgress');
-
-			bar.innerHTML = mainDude.brain.oop + "%";
-			mobres.innerHTML = "OOP: " + mainDude.brain.jq + "%";
-			bar.style.width = mainDude.brain.oop + "%";
+			var result = parseInt(localStorage.getItem('brainOop')) + points;
+			localStorage.setItem('brainOop',result);
+			this.brain.oop = result;
+			showRes('jQuery/ajax', result, 'jqProgress', 'mobjqProgress');
 		}
 	};
 
