@@ -1,5 +1,5 @@
 
-define(['models/Human'], function(Human) {
+define(['class/Human'], function(Human) {
 
 	this.mainDude = new Human();
 					

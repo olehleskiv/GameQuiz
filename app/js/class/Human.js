@@ -4,8 +4,16 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 
 
 	function brain() {
+		if(!localStorage.getItem('brainJs')) {
+			localStorage.setItem('brainJs','0')
+			localStorage.setItem('brainHtml','0')
+			localStorage.setItem('brainCss','0')
+			localStorage.setItem('brainOop','0')
+			localStorage.setItem('brainJq','0')
+		}
+		
 		//memorize js
-		this.js = localStorage.getItem('brainJs');
+		this.js = parseInt(localStorage.getItem('brainJs'));
 		showRes('JS', this.js, 'jsProgress', 'mobjsProgress');
 		
 		//memorize html
@@ -135,7 +143,7 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			var result = parseInt(localStorage.getItem('brainOop')) + points;
 			localStorage.setItem('brainOop',result);
 			this.brain.oop = result;
-			showRes('jQuery/ajax', result, 'jqProgress', 'mobjqProgress');
+			showRes('jQuery/ajax', result, 'oopProgress', 'moboopProgress');
 		}
 	};
 

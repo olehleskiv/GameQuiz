@@ -10,7 +10,7 @@ define([], function(showRes) {
 	//	- id - id of the progress bar to instert
 	//	- idMob - id the mobile result span
 
-	
+
 	function showRes(name, amount, id, idMob) {
 		var bar = document.getElementById(id),
 		mobres = document.getElementById(idMob);

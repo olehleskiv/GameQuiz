@@ -1,8 +1,8 @@
 require.config({
 	deps: ['main'],
-    baseUrl: 'js/*',
+    baseUrl: 'js/',
 
     paths: {
-        'jquery': 'https://code.jquery.com/jquery-1.11.1.min'
+        'jquery': 'libs/jquery'
     }
 });

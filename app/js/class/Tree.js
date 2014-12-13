@@ -15,8 +15,8 @@ define([], function() {
 		this.tree.style.position = "absolute";
 		this.tree.style.background = 'url(' + this.background + ')';
 		this.tree.style.zIndex = ind;
-		this.tree.style.marginTop = x + "px";
-		this.tree.style.marginLeft= y + "px";
+		this.tree.style.top = x + "px";
+		this.tree.style.left= y + "px";
 
 
 		block.appendChild(this.tree);

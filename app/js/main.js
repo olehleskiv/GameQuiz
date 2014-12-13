@@ -1,15 +1,11 @@
-require.config({
-});
 
-require([ 
-	      'libs/libsMain',
+
+require([ 'libs/libsMain',
 	      'cont/contMain',
-	      'models/modMain',
+	      'class/modMain',
 	      'views/viewMain',
-	      ], 
-
-	      function($, route, world, quiz_maker, addQuestion, mainHero) {
+	      ], function($, route, world, quiz_maker, addQuestion, mainHero) {
    
-	return console.log('success');
+	return console.log('requre js success');
 
 });

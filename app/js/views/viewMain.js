@@ -1,6 +1,5 @@
 
-define([
-		 'views/buildingsCreate',
+define([ 'views/buildingsCreate',
 		 'views/mainHero',
 		 'views/treesCreate'
 		 ], function() {

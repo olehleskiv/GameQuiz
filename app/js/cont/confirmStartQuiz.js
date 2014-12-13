@@ -1,5 +1,5 @@
 
-define([], function(confirmStartQuiz) { 
+define(['jquery'], function($, confirmStartQuiz) { 
 
 	function confirmStartQuiz(name) {									//this function fires when enterBuilding
 																		//function indicates that the hero entered

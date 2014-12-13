@@ -4,6 +4,6 @@ define([ 'libs/jquery',
 		 'libs/facebook', 
 		 'libs/twitter'], function() {
    
-	return console.log('libs success');
+	console.log('libs success');
 
 });

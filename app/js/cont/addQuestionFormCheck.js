@@ -1,4 +1,4 @@
-(function() {
+define(['jquery'], function($, confirmStartQuiz) { 
 
 	$(".input-group input:radio").attr('disabled',true);
 
@@ -42,4 +42,4 @@
 		}
 	});
 	
-})();
+});

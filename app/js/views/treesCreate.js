@@ -1,5 +1,5 @@
 
-define(['models/Tree'], function(Tree) { 
+define(['class/Tree'], function(Tree) { 
 
 	function tree1(x, y) {
 
@@ -44,14 +44,14 @@ define(['models/Tree'], function(Tree) {
 	var tree2 = new tree2();
 	var tree3 = new tree3();
 
-	tree1.draw(100, 50, 4);
-	tree3.draw(-325, 230, 0);
-	tree3.draw(115, 250, 4);
-	tree2.draw(100, 400, 4);
-	tree2.draw(-150, 250, 1);
-	tree1.draw(85, 700, 4);
-	tree1.draw(-125, 770, 1);
-	tree1.draw(-370, 820, 0);
-	tree2.draw(110, 950, 4);
+	tree1.draw(520, 50, 4);
+	tree3.draw(325, 230, 0);
+	tree3.draw(535, 250, 4);
+	tree2.draw(520, 400, 4);
+	tree2.draw(150, 250, 1);
+	tree1.draw(505, 700, 4);
+	tree1.draw(125, 770, 1);
+	tree1.draw(370, 820, 0);
+	tree2.draw(530, 950, 4);
 
 });

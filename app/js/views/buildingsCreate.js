@@ -1,5 +1,5 @@
 
-define(['models/Building'], function(Building) { 
+define(['class/Building'], function(Building) { 
 
 	function cssBuilding(x, y, z, j) {
 

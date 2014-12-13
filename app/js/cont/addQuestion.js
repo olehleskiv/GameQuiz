@@ -1,5 +1,5 @@
 
-(function() {
+define(['jquery'], function($) { 
 
 
 	var submitButton = document.getElementById('sendQuestions');			// get form
@@ -110,4 +110,4 @@
 		mainAddQuestionForm.appendChild(postNewDiv);
 	}
 
-})();
+});
