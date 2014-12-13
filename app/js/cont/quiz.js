@@ -1,10 +1,10 @@
-//define(['jquery'], function($, createQuiz) { 
+define(['jquery'], function($, createQuiz) { 
 
 function createQuiz(name, quizContainerId) {
     var quizURL = 'data/quiz.json';
-    
+
     var JSONobject = $.getJSON(quizURL, function(data) {
-        var subjectQuiz = JSONobject["responseJSON"].js;
+        var subjectQuiz =  getQuizName(name, JSONobject["responseJSON"]);        //JSONobject["responseJSON"].js;
         var quiz = randomQuizQuestions(subjectQuiz);
         var currentquestion = 0,
             maxQuest = 25;
@@ -19,11 +19,16 @@ function createQuiz(name, quizContainerId) {
         function init() {
             if (typeof quiz !== "undefined") {
                 //var id = 'js' + 'Quiz';
-                var container = document.createElement('div'),
+                var container = document.getElementById('frame'),
                     pager = document.createElement('p'),
                     questionTitle = document.createElement('h2'),
-                    variants = document.createElement('ul');
-                var quizContainer = document.getElementById(quizContainerId);
+                    variants = document.createElement('ul'),
+                    quizContainer = document.getElementById(quizContainerId);
+                
+                if (!container) {
+                    var container = document.createElement('div');
+                }
+                container.innerHTML = '';
 
                 container.setAttribute('id', 'frame');
                 pager.setAttribute('id','pager');
@@ -44,8 +49,35 @@ function createQuiz(name, quizContainerId) {
                 scoreCount();
             }
         }
-    
-    
+
+
+    ////////////////////////////////////////////////////////
+    //This function defines appropriate name of the quiz  //
+    //from the JSON object                                //
+    ////////////////////////////////////////////////////////
+    function getQuizName(name, object) {
+        var quizName = '';
+        switch(name) {
+            case 'html':
+            quizName = object.html;
+            break;
+            case 'css':
+            quizName = object.css;
+            break;
+            case 'js':
+            quizName = object.js;
+            break;
+            case 'oop':
+            quizName = object.oop;
+            break;
+            case 'jq':
+            quizName = object.jq;
+            break;
+        }
+        return quizName;
+    }
+
+
     ////////////////////////////////////////////////////////
     //This function gets the object from JSON and shuffles//
     //it in random order                                  //
@@ -90,12 +122,15 @@ function createQuiz(name, quizContainerId) {
     //////////////////////////////////////////////////////////
         function nextQuestion() {
             var questionTitle = document.getElementById('question');
-                questionTitle.innerHTML = quiz[currentquestion].title;
+            if (quiz[currentquestion].active == true) {
+                    questionTitle.innerHTML = quiz[currentquestion].title;
+                }
             var questionNumber = document.getElementById('pager');
                 questionNumber.innerHTML = 'Question ' + (currentquestion + 1) + ' of ' + maxQuest;
             
             addQuestionVariants(quiz[currentquestion].variants);
             scoreCount();
+
          }
     
     
@@ -155,6 +190,7 @@ function createQuiz(name, quizContainerId) {
 
     });
 }
-//return createQuiz;
-//});
-    
+
+return createQuiz;
+});
+
