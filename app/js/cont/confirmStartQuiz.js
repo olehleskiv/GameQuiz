@@ -1,5 +1,5 @@
 
-define(['jquery'], function($, confirmStartQuiz) { 
+define(['jquery', 'cont/quiz'], function($, confirmStartQuiz) { 
 
 	function confirmStartQuiz(name) {									//this function fires when enterBuilding
 																		//function indicates that the hero entered
@@ -13,11 +13,20 @@ define(['jquery'], function($, confirmStartQuiz) {
 		$('#gameConfirm').on('show.bs.modal', function (e) {
 			document.body.setAttribute("onkeydown","return false");						//disable keyboard
 			var title = document.getElementById('gameConfirmTitle');
-			title.innerHTML = 'do you want to start ' + name + ' quiz?';
+			title.innerHTML = 'Do you want to start ' + name + ' quiz?';
 
 			var startButton = document.getElementById('confirmStart');
 			startButton.setAttribute('href','#' + name + 'Quiz');
+			var quizContainer = name + 'Quiz';
+			createQuiz(name, quizContainer);
+
+			// startButton.onclick = function() {
+			// // 	console.log('on');
+			//  	createQuiz(name, quizContainer);
+			//  };
 		});
+
+
 
 		//this function enables the keyboard
 		//after pop up is closed
