@@ -1,8 +1,13 @@
 define(['jquery'], function($, confirmStartQuiz) { 
 
-	$(".input-group input:radio").attr('disabled',true);
+	$(".input-group input:radio").attr('disabled',true);		//disable all radio buttons
 
-	$( ".variant1 input:text" ).change(function() {
+	////////////////////////////////////////////////////////////////
+	//function will change the radio button to 'disabled' = false
+	//after there is some text entered in the appropriate input
+	////////////////////////////////////////////////////////////////
+
+	$( ".variant1 input:text" ).change(function() {		
 		if(!!this.value) {
 			$(".variant1 input:radio").attr('disabled',false);
 		} else {

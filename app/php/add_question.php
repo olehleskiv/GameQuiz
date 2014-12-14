@@ -12,7 +12,7 @@
 			$question['var5']
 		),
 		correct => $question['correct'],
-		active => false,
+		active => true,
 	);
 
 	$json = file_get_contents('../data/quiz.json'); // getting the json file
