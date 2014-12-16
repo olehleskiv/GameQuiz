@@ -5,20 +5,26 @@ define([], function(enterBuilding) {
 											//main caracter in front and behind
 											//of the buildings
 		var index;
-		if(position > 250) {
-			index =  1;
+		if(position > 250 && position < 400) {
+			index =  2;
+			console.log("index1")
 		} else if(position < 250){
-			index = 0;
-		}
-		if(position > 400) {
-			index = 2;
-		} else if(position < 400 && position > 330){
 			index = 1;
+			console.log("index0")
 		}
-		if(position > 500) {
+		else if(position > 400 && position < 500) {
 			index = 3;
-		} else if(position < 500 && position > 400){
+			console.log("index2")
+		} else if(position < 400 && position > 330){
 			index = 2;
+			console.log("index1")
+		}
+		else if(position > 500) {
+			index = 4;
+			console.log("index3")
+		} else if(position < 500 && position > 400){
+			index = 3;
+			console.log("index2")
 		}
 		return index;
 	};

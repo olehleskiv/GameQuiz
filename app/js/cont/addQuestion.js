@@ -27,7 +27,7 @@ define(['jquery'], function($) {
 				message("please enter minimum 2  anwser variants", true);
 			} else
 			if(correct === "") {
-				message("please enter correct answer", true);
+				message("please choose correct answer", true);
 			} else
 			if(category === "") {
 				message("please choose category", true);
@@ -101,7 +101,9 @@ define(['jquery'], function($) {
 		postNew.setAttribute("class","btn btn-primary resetForm");
 		postNew.setAttribute("type","button");
 		postNew.onclick = function() {
-			mainAddQuestionForm.reset();
+			$(".input-group input:radio").attr('disabled',true);			//disable all radio buttons
+			$(".errorBlock").remove();										//remove error block(if exists)
+			mainAddQuestionForm.reset();									//reset the form
 			$(".resetForm").hide();
 			$("#sendQuestions").show();
 		};

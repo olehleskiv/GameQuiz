@@ -1,6 +1,9 @@
-define(['jquery'], function($, createQuiz) { 
+define(['jquery','views/mainHero'], function($, mainDude, createQuiz ) { 
 
 function createQuiz(name, quizContainerId) {
+
+    
+
     var quizURL = 'data/quiz.json';
 
     var JSONobject = $.getJSON(quizURL, function(data) {
@@ -150,7 +153,9 @@ function createQuiz(name, quizContainerId) {
     
     //////////////////////////////////////////////////////////
     //Function to count and show the results of quiz
+    //and to instert the result into the game page progress bar
     //////////////////////////////////////////////////////////
+
          function endQuiz() {
             var questionTitle = document.getElementById('question');
                 questionTitle.innerHTML = 'You got ' + score + ' out of ' + maxQuest + ' correct.';
@@ -159,9 +164,11 @@ function createQuiz(name, quizContainerId) {
     
             var result = document.createElement('h2');
                 result.className = 'result';
-                result.innerHTML = Math.round(score / maxQuest * 100) + '%';
-                
+            var res = Math.round(score / maxQuest * 100);
+                result.innerHTML = res + '%';                
                 questionTitle.appendChild(result);
+
+                this.mainDude.study(name, res);
          }
     
     

@@ -5,7 +5,7 @@
     "Vitaliy Chorniy <chornij1@gmail.com>"
   ],
   "description": "learnfrontend",
-  "main": "js\\jsWork\\main.js",
+  "main": "js\\main.js",
   "keywords": [
     "frontend"
   ],

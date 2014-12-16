@@ -16,7 +16,7 @@ define([], function(showRes) {
 		mobres = document.getElementById(idMob);
 
 		bar.innerHTML = amount + "%";
-		mobres.innerHTML = name + amount + "%";
+		mobres.innerHTML = name + " " +  amount + " %";
 		bar.style.width = amount + "%";
 	}
 

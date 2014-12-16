@@ -27,7 +27,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav desctopMenu">
 	        <li><button id="resultsButton" href="#results" type="button" class="btn btn-warning btn-xs topLeftButtons">your results</button></li>
-	        <li><button id="reset" type="button" class="btn btn-primary btn-xs topLeftButtons">reset results</button></li>
+	        <li><button id="resetButton" type="button" class="btn btn-primary btn-xs topLeftButtons">reset results</button></li>
 	      </ul>
 
 	      <ul id="mobileDropDown" class="nav navbar-nav mobileMenu">
@@ -103,11 +103,11 @@
 		<!--Skills-->
 		<div class="row mobileProgress">
 			<p>Your Progress</p>
-			<span id="mobhtmlProgress" class="label label-primary">HTML</span>
-			<span id="mobcssProgress" class="label label-info">CSS</span>
-			<span id="mobjsProgress" class="label label-warning">JavaScript</span>
-			<span id="mobjqProgress" class="label label-danger">jQuery, Ajax</span>
-			<span id="moboopProgress" class="label label-success">OOP</span>
+			<h5><span id="mobhtmlProgress" class="label label-primary">HTML</span></h5>
+			<h5><span id="mobcssProgress" class="label label-info">CSS</span></h5>
+			<h5><span id="mobjsProgress" class="label label-warning">JavaScript</span></h5>
+			<h5><span id="mobjqProgress" class="label label-danger">jQuery, Ajax</span></h5>
+			<h5><span id="moboopProgress" class="label label-success">OOP</span></h5>
 		</div>
 		<div class="progressStipes">
 			<div class="row">
@@ -176,25 +176,27 @@
 		</div>
 		
 		<div id="startInstruction">
-			<p>use these keys to move the guy</p>
+			<p>use arrow keys to move the guy</p>
 			<img alt="arrows" src="img/arrowKeys.png" >
 		</div>
 
 	</div>
 	<div class="container" id="addNewQuestion">
 		<div class="row">
-			<div id="result">
-			</div>
+
+		<div id="result">
+			
+		</div>
+
 		  <section class="col-md-8">
 		  		<h2>Add new question</h2>
 				<form role="form" id="addQuestion">
 				  <div class="form-group">
-				    <label for="exampleInputEmail1">Question</label>
+				    <p><b>Question</b></p>
 				    <textarea class="form-control" name="question" rows="3" placeholder="Question"></textarea>
 				  </div>
 					
-					<p>Answers:
-						(Dont forget to choose the right one)</p>
+					<p><b>Answers:(Dont forget to choose the right one)</b></p>
 				    <div class="input-group variant1">
 				      <span class="input-group-addon">
 				        <input class="" name="correct"  type="radio" value="1">
@@ -229,8 +231,9 @@
 				      </span>
 				      <input type="text" class="form-control" id="answer5" name="answer5" placeholder="answer 5">
 				    </div><!-- /input-group -->
+					<br>
 
-				  <p>Category:</p>
+				 	<p><b>Category:</b></p>
 					<div>
 					   <label class="radio-inline">
 						  <input type="radio" name="category" value="html"> HTML
@@ -258,6 +261,8 @@
 		  </section>
 		</div>
 	</div><!-- end add new question container -->
+
+	
 	<div id="admin">
 		
 	</div><!-- end admin container -->
@@ -266,23 +271,23 @@
 
 	<!-- QUIZ SECTION -->
 	<div class="container" id="htmlQuiz">
-		<h2>HTML quiz here!</h2>
+		<h2 class="quizTitle">HTML quiz</h2>
 	</div><!-- end html quiz -->
 
 	<div class="container" id="cssQuiz">
-		<h2>CSS quiz here!</h2>
+		<h2 class="quizTitle">CSS quiz</h2>
 	</div><!-- end css quiz -->
 
 	<div class="container" id="jsQuiz">
-		<h2>JS quiz here!</h2>
+		<h2 class="quizTitle">JS quiz</h2>
 	</div><!-- end js quiz -->
 
 	<div class="container" id="oopQuiz">
-		<h2>OOP quiz here!</h2>
+		<h2 class="quizTitle">OOP quiz</h2>
 	</div><!-- end oop quiz -->
 
 	<div class="container" id="jqQuiz">
-		<h2>jQuery/Ajax quiz here!</h2>
+		<h2 class="quizTitle">jQuery/Ajax quiz</h2>
 	</div><!-- end jQuery/Ajax quiz -->
 	
 
@@ -292,6 +297,22 @@
 		<h2>Your results here!</h2>
 	</div><!-- end jQuery/Ajax quiz -->
 	
+		<!-- reset confirm Modal -->
+		<div id="resetConfirm" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+		   <div class="modal-dialog">
+		    <div class="modal-content my-confirm">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="gameConfirmTitle">Are you sure?</h4>
+		      </div>
+		      <div class="modal-body">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+		        <button type="button" id="reset" data-dismiss="modal" class="btn btn-primary">Yes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 	<script data-main="js/main.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
  </body>
 </html>

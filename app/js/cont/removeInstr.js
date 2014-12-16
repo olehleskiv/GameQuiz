@@ -6,4 +6,5 @@
 		document.getElementById('startInstruction').style.display = "none";
 	}
 
+
 })();
