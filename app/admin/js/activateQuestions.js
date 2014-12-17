@@ -1,40 +1,37 @@
-var quizURL = '../data/quiz.json';
+var quizURL = '../../data/quiz.json';
 
 
     var JSONObject = $.getJSON(quizURL, function(data) {
-        // var quizArray = [];
+        var quizArray = [];
+        var quizNames = ['JavaScript', 'OOP', 'CSS', 'HTML', 'JQuery'];
 
-        // for (i in data) {
-        //     quizArray.push(data[i]);
-        // }
-        // console.log(quizArray[1][0]);
-        // console.log(quizArray.length);
+        for (i in data) {
+            quizArray.push(data[i]);
+        }
+        console.log(quizArray);
+        console.log(data);
 
 
-    	data = JSONObject["responseJSON"].js;
-    	var objectArray = new Array();
-
-		for (i in data) {
-			objectArray.push(data[i]);
-		}
 
         function createAllTables() {
             for (var i = 0; i < quizArray.length; i++ ) {
-                    renderTable(quizArray[i]);
+                renderTable(quizArray[i], quizNames[i]);
             }
             
         }
 
-	function renderTable(objectQuizArray) {
+	function renderTable(objectQuizArray, quizName) {
+        var name = quizName,
+            objectArray = objectQuizArray;
 
         var tableTemplate = '<thead>'+
             '<tr>'+
-                '<td>ID</td>'+
-                '<td>Question</td>'+
-                '<td>Variants</td>'+
-                '<td>Corect</td>'+
-                '<td>Status</td>'+
-                '<td>Activate</td>'+
+                '<th>ID</th>'+
+                '<th>Question</th>'+
+                '<th>Variants</th>'+
+                '<th>Corect</th>'+
+                '<th>Status</th>'+
+                '<th>Activate</th>'+
             '</tr>'+
         '</thead>'+
 
@@ -61,16 +58,19 @@ var quizURL = '../data/quiz.json';
 		var table = document.createElement('table'),
             compiledTemplate = _.template(tableTemplate),
             readyHtml = compiledTemplate({ object : objectArray }); 
+        var header = document.createElement('h1');
+            header.innerHTML = name + ' quiz';
 
 		table.className = 'table';
 		//table.setAttribute('id', 'quiz-table');
         table.className = 'responstable';
         table.innerHTML = readyHtml;
 
+        document.body.appendChild(header);
 		document.body.appendChild(table);
 	}
 
-	renderTable();
+    createAllTables();
 });
 
 
