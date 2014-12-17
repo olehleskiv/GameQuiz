@@ -9,6 +9,7 @@ define(['jquery'], function($) {
 		$(".errorBlock").remove();										//remove error block(if exists)
 
 		var title = this.form.question.value,							//getting values from the form
+			code = this.form.mycode.value,
 			var1 = this.form.answer1.value,
 			var2 = this.form.answer2.value,
 			var3 = this.form.answer3.value,
@@ -17,6 +18,7 @@ define(['jquery'], function($) {
 			correct = this.form.correct.value,
 			category = this.form.category.value;
 
+			title = title + "<pre>" + code + "</pre>";
 			//
 			// All fields in form are required
 			//

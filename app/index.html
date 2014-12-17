@@ -34,7 +34,7 @@
 	      	<li><a href="#results" >your results</a></li>
 	      	<li><a href="#aboutus">About us</a></li>
 			<li><a href="/data/quiz.json">Get JSON</a></li>
-			<li><a href="#admin">Admin</a></li>
+			<li><a href="admin.html">Admin</a></li>
 			<li class="divider"></li>
 			<li><a href="#addNewQuestion">Add new question</a></li>
 	      </ul>
@@ -48,7 +48,7 @@
 	          <ul id="mainMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 	            <li><a href="#aboutus">About us</a></li>
 				<li><a href="./data/quiz.json">Get JSON</a></li>
-				<li><a href="#admin">Admin</a></li>
+				<li><a href="admin.html">Admin</a></li>
 				<li class="divider"></li>
 				<li><a href="#addNewQuestion">Add new question</a></li>
 	          </ul>
@@ -195,39 +195,44 @@
 				    <p><b>Question</b></p>
 				    <textarea class="form-control" name="question" rows="3" placeholder="Question"></textarea>
 				  </div>
-					
+
+				 <div class="form-group">
+				    <p><b>code</b></p>
+				    <textarea class="form-control" name="mycode" rows="3" placeholder="code"></textarea>
+				  </div>
+
 					<p><b>Answers:(Dont forget to choose the right one)</b></p>
 				    <div class="input-group variant1">
 				      <span class="input-group-addon">
-				        <input class="" name="correct"  type="radio" value="1">
+				        <input class="" name="correct"  type="radio" value="0">
 				      </span>
 				      <input type="text" class="form-control" id="answer1" name="answer1" placeholder="answer 1">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant2">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="2">
+				        <input name="correct" type="radio" value="1">
 				      </span>
 				      <input type="text" class="form-control" id="answer2" name="answer2" placeholder="answer 2">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant3">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="3">
+				        <input name="correct" type="radio" value="2">
 				      </span>
 				      <input type="text" class="form-control" id="answer3" name="answer3" placeholder="answer 3">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant4">
 				      <span class="input-group-addon">
-				        <input name="correct"  type="radio" value="4">
+				        <input name="correct"  type="radio" value="3">
 				      </span>
 				      <input type="text" class="form-control" id="answer4" name="answer4" placeholder="answer 4">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant5">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="5">
+				        <input name="correct" type="radio" value="4">
 				      </span>
 				      <input type="text" class="form-control" id="answer5" name="answer5" placeholder="answer 5">
 				    </div><!-- /input-group -->
@@ -262,7 +267,6 @@
 		</div>
 	</div><!-- end add new question container -->
 
-	
 
 
 	<!-- QUIZ SECTION -->
