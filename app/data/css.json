@@ -1,0 +1,331 @@
+{"css":
+	[
+		{
+		"ID": 1,
+		"title": "What does CSS stand for?",
+		"variants": [
+			"Creative Style Sheets",
+			"Computer Style Sheets",
+			"Cascading Style Sheets",
+			"Cascade Style Sheets ",
+			"Colorful Style Sheets"
+		],
+		"correct": 2,  
+		"active": true
+		},
+		{
+		"ID": 2,
+		"title": "Which prefix do you need to get CSS3 properties to work on older Mozilla Firefox browsers?",
+		"variants": [
+			"-webkit-",
+			"-gecko-",
+			"-www-",
+			"-o-",
+			"-moz-"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 3,
+		"title": "What are the first three values of text-shadow in order?",
+		"variants": [
+			"vertical, blur, horizontal ",
+			"blur, vertical, horizontal ",
+			"vertical, horizontal, blur",
+			"horizontal, vertical, blur ",
+			"horizontal, blur, vertical "
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 4,
+		"title": "How would you declare a media query to fit an iPhone?",
+		"variants": [
+			"@media only screen and (max-width: 480px) { }",
+			"@media only screen and (max-width: 720px) { } ",
+			"@media only screen and (min-width: 480px) { }",
+			"@media only screen and (min-width: 320px) { }",
+			"@media only screen and (min-width: 520px) { }"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 5,
+		"title": " What are the two ways to create an object in flash?",
+		"variants": [
+			"drawing a rectangle, copy from another object",
+			"convert to symbol, place an image on the stage",
+			"place an image on the stage, using ActionScript",
+			"convert to symbol, using ActionScript"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 6,
+		"title": "What does a CSS reset do?",
+		"variants": [
+			"Resets the whole computer ",
+			"Sets all the element properties to 0",
+			"Makes your browser crash",
+			"Deletes all your other CSS files"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 7,
+		"title": "Which set of numbers is not a hexadecimal color?",
+		"variants": [
+			"#00FF00",
+			"#A0A0A0",
+ 			"#FFFFFF",
+ 			"#EEE",
+ 			"#00G66R"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 8,
+		"title": "Which properties are used to position objects?",
+		"variants": [
+			"top, left, right, bottom, center",
+			"head, body, right, middle, side",
+			"up, down, left, right, middle",
+			"inside, outside, forward, backward, center",
+			"left, up, right, down, middle"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 9,
+		"title": "How to add text shadow using CSS3?",
+		"variants": [
+			"font: shadowed 5px 5px 5px grey;",
+			"font-shadow: 5px 5px 5px grey;",
+			"text-shadow: 5px 5px 5px grey;",
+			"shadow: text 5px 5px 5px grey;",
+			"shadow: font 5px 5px 5px grey;"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 10,
+		"title": "What does RGBa mean?",
+		"variants": [
+			"Review Get assistance Back-up your information acquire proof",
+			"Red Green Blue alpha",
+			"Red Gray Brown alpha",
+			"Red Gold Black alpha",
+			"Red Green Blue aqua"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 11,
+		"title": "Using CSS transitions means you dont have to use",
+		"variants": [
+			"css",
+			"flash",
+			"javascript",
+			"flash or javascript"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 12,
+		"title": "What is this CSS code suppose to do to an element?<br><pre>div {<br>transition: width 2s;<br>}<br>div:hover {<br>	width: 300px;<br>}</pre>",
+		"variants": [
+			"Make bigger",
+			"Expand the width",
+			"Increase the size",
+			"Make smaller",
+			"Reduces the width"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 13,
+		"title": "What are the four parameters for an cubic-bezier?",
+		"variants": [
+			"A1(x), A1(y), A2(x), A2(y)", 
+			"B1(x), B1(y), B2(x), B2(y)",
+			"P1(x), P1(y), P2(x), P2(y)", 
+			"C1(x), C1(y), C2(x), C2(y)", 
+			"R1(x), R1(y), R2(x), R2(y)"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 14,
+		"title": "Overflow:hidden; does what?",
+		"variants": [
+			"Makes a scroll bar appear",
+			"Hides overhanging content",
+			"Makes the page disappear",
+			"It does nothing",
+			"None of the above"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 15,
+		"title": "Among which module/modules is/are supported by CSS3?",
+		"variants": [
+			"2D/3D Transformations",
+			"Animations",
+			"Multiple Column Layout",
+			"User Interface",
+			"All the above"
+		],
+		"correct": 4,
+		"active": true
+		},
+		{
+		"ID": 16,
+		"title": "What browser supports -webkit-?",
+		"variants": [
+			"Safari",
+			"GoogleChrome",
+			"Both (GoogleChrome) and (Safari)",
+			"Internet-Explorer",
+			"None of the above"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 17,
+		"title": "Which transform uses pixels?",
+		"variants": [
+			"Skew",
+			"Scale",
+			"Rotate",
+			"Translate"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 18,
+		"title": "Choose one non-CSS methods of presenting content and effects that existed before CSS3?",
+		"variants": [
+			"CSS",
+			"Chuck Norris",
+			"Apache",
+			"Photoshop"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 18,
+		"title": "Before CSS3, what determined the size of the background image?",
+		"variants": [
+			"Whatever Google said was best",
+			"default browser setting",
+			"the actual image size",
+			"the background property in the style sheet"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 19,
+		"title": "Name two new properties for presenting text in CSS3:",
+		"variants": [
+			"block-text and line-text",
+			"text-shadow and word-wrap",
+			"word-shadow and word-wrap",
+			"text-shadow and text-wrap",
+			"font-shadow and line-text"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 20,
+		"title": "Which statements are true about browser support for 2d transform?",
+		"variants": [
+			"All browsers support it if you download a plugin",
+			"All browsers support it in their newest versions, with prefixes", 
+			"Only Internet Explorer supports it, with the -$$$- prefix"
+		],
+		"correct": 1,
+		"active": true
+		},
+		{
+		"ID": 21,
+		"title": "Which animation uses the how ever mount done it will change the background?",
+		"variants": [
+			"@Keyframes",
+			"Animation", 
+			"Background percent",
+			"Background position",
+			"Nothing of the above"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 22,
+		"title": "In Link Transition which code lets you have a 2s ease in with a color of blue hover state?",
+		"variants": [
+			"Transition:blue 2s easein",
+			"Transition:blue 2second ease-in", 
+			"Transition:blue 2second ease-in",
+			"Transition:blue 2s ease-in",
+			"Transition:blue 2 ease-in"
+		],
+		"correct": 3,
+		"active": true
+		},
+		{
+		"ID": 23,
+		"title": "If you have multiple transitions how would you format it?",
+		"variants": [
+			"#t1 t2{ }",
+			"#t1t2{ }",
+			"#t1 #t2{ }",
+			"#t1#t2{ }"
+		],
+		"correct": 2,
+		"active": true
+		},
+		{
+		"ID": 24,
+		"title": "Is this a valid declaration, under CSS3?<br><pre>box-shadow: 1px 1px 10px 0px rgba(0,0,0,0);</pre>",
+		"variants": [
+			"True",
+			"False"
+		],
+		"correct": 0,
+		"active": true
+		},
+		{
+		"ID": 25,
+		"title": "If you have a container of 300px all around, which size <p> will fit in the container?",
+		"variants": [
+			"p{ width:250px; height:200px; }",
+			"p{ width:200px; height:500; }",
+			"p{ width:301px; height:259px; }",
+			"p{ width:500px; height:500px; }",
+			"p{ width:299px; height:299px; }"
+		],
+		"correct": 0,
+		"active": true
+		}
+	]
+}
+
