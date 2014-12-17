@@ -16,9 +16,14 @@
 	</head>
 
 	<body>
-		<h1>Hello Admin!</h1>
+		<h1>Hello Admin! </h1>
+		<span class="admin-tip">You can activate user's questions on this page</span>
+		<a href="#" class="scrollToTop"></a>
+		
+		<form id="quiz-form" action="changeStatus.php" method="post">
+			<input type="submit" class="submit-button" id="save" value="Save changes">
+		</form>
 
-	<input type="button" id="save" value="Save changes">
 		<script src="../js/activateQuestions.js"></script>
 	</body>
 </html>
