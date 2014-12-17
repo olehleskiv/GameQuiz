@@ -8,7 +8,7 @@
 		if (($name == $admin_name) & ($pass == $admin_pass)) {
 			$_SESSION['name']="name"; 
 			$_SESSION['pass']="pass"; 
-			header("location:admin.php");
+			header("location:adminPage.php");
 		}
 
 	else echo 'Bad login or pass!';
