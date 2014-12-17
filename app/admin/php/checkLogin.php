@@ -6,8 +6,8 @@
 	$admin_pass = "04041992";
 	
 		if (($name == $admin_name) & ($pass == $admin_pass)) {
-			$_SESSION['name']="name"; 
-			$_SESSION['pass']="pass"; 
+			$_SESSION['name'] = "name"; 
+			$_SESSION['pass'] = "pass"; 
 			header("location:adminPage.php");
 		}
 
