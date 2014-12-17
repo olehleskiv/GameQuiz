@@ -4,6 +4,6 @@ define([ 'views/buildingsCreate',
 		 'views/treesCreate'
 		 ], function() {
    
-	return console.log('libs success');
+	return console.log('views success');
 
 });

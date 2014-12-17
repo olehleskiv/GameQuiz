@@ -8,7 +8,7 @@ define([
 		 'cont/zIndexCheck',
 		 'cont/removeInstr',
 		 'cont/mobileFunc'], function() {
-   
-	return console.log('libs success');
+
+	return console.log('controllers success');
 
 });

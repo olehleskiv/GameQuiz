@@ -11,13 +11,17 @@
 
 //
 ///////////////////////////////////////////////
-(function() {
+define(['jquery'], function($, router) { 
 
-	function router(){
+	function router(url){
 		var link = $(this).attr('href');
 		var page;
 
-		link = link.slice(1, link.length);
+		if(link) {
+			var link = link.slice(1, url.length);
+		} else if(url){
+			var url = url.slice(1, url.length);
+		}
 
 		var pages = ['mainPage', 
 					'gamePage', 
@@ -31,14 +35,23 @@
 					];
 
 		for (var i = 0; i < pages.length; i++) {
-			if(pages[i] == link) {
-				page = document.getElementById(pages[i]);
-				page.style.display = 'block';
-			} else {
-				page = document.getElementById(pages[i]);
-				page.style.display = 'none';
-			}
+			page = document.getElementById(pages[i]);
+			page.style.display = 'none';
+
 		}
+			
+			
+
+			if(link){
+				document.getElementById(link).style.display = 'block';
+				window.location.href = window.location.href.split("#")[0] + "#" + encodeURIComponent(link);
+			} else if(url){
+				document.getElementById(url).style.display = 'block';
+				window.location.href = window.location.href.split("#")[0] + "#" + encodeURIComponent(url);
+			}
+
+
+
 	}
 
 	//top menu
@@ -67,4 +80,7 @@
 	var goToQuizButton = document.getElementById('resultsButton');
 	goToQuizButton.onclick = router;
 
-})();
+
+	router('#mainPage');
+	return router;
+});
