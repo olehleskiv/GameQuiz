@@ -22,7 +22,6 @@
 		var pages = ['mainPage', 
 					'gamePage', 
 					'addNewQuestion', 
-					'admin',
 					'htmlQuiz',
 					'cssQuiz',
 					'jsQuiz',
