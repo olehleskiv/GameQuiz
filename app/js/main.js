@@ -1,12 +1,16 @@
+require.config({
+	deps: ['main'],
+    baseUrl: 'js/',
+});
 
 
 require([ 'libs/libsMain',
 	      'cont/contMain',
 	      'class/modMain',
 	      'views/viewMain',
-	      ], function($, route, world, quiz_maker, addQuestion, mainHero) {
+	      ], function($, router, world, quiz_maker, addQuestion, mainHero) {
 
-	return console.log('requre js success');
+	return console.log('requrejs BUILD!');
 
 
 });
