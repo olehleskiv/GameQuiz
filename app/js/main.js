@@ -11,6 +11,4 @@ require([ 'libs/libsMain',
 	      ], function($, router, world, quiz_maker, addQuestion, mainHero) {
 
 	return console.log('requrejs BUILD!');
-
-
 });

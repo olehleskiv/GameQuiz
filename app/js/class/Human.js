@@ -11,26 +11,6 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			localStorage.setItem('brainOop','0')
 			localStorage.setItem('brainJq','0')
 		}
-		
-		//memorize js
-		this.js = parseInt(localStorage.getItem('brainJs'));
-		showRes('JS', this.js, 'jsProgress', 'mobjsProgress');
-		
-		//memorize html
-		this.html = localStorage.getItem('brainHtml');
-		showRes('HTML', this.html, 'htmlProgress', 'mobhtmlProgress');
-
-		//memorize css
-		this.css = localStorage.getItem('brainCss');
-		showRes('CSS', this.css, 'cssProgress', 'mobcssProgress');
-
-		//memorize oop
-		this.oop = localStorage.getItem('brainOop');
-		showRes('OOP', this.oop, 'oopProgress', 'moboopProgress');
-
-		//memorize jq
-		this.jq = localStorage.getItem('brainJq');
-		showRes('jQuery/ajax', this.jq, 'jqProgress', 'mobjqProgress');
 
 	}
 
@@ -116,34 +96,34 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			var result = parseInt(localStorage.getItem('brainHtml')) + points;
 			localStorage.setItem('brainHtml',result);
 			this.brain.html = result;
-			showRes('HTML', result, 'htmlProgress', 'mobhtmlProgress');
+			showRes('HTML', result, 'htmlBuilding', 'mobhtmlProgress');
 
 		}
 		if(name == "css"){
 			var result = parseInt(localStorage.getItem('brainCss')) + points;
 			localStorage.setItem('brainCss',result);
 			this.brain.css = result;
-			showRes('CSS', result, 'cssProgress', 'mobcssProgress');
+			showRes('CSS', result, 'cssBuilding', 'mobcssProgress');
 
 		}
 		if(name == "js"){
 			var result = parseInt(localStorage.getItem('brainJs')) + points;
 			localStorage.setItem('brainJs',result);
 			this.brain.js = result;
-			showRes('JS', result, 'jsProgress', 'mobjsProgress');
+			showRes('JS', result, 'javascriptBuilding', 'mobjsProgress');
 		}
 		if(name == "jq"){
 			var result = parseInt(localStorage.getItem('brainJq')) + points;
 			localStorage.setItem('brainJq',result);
 			this.brain.jq = result;
-			showRes('jQuery/ajax', result, 'jqProgress', 'mobjqProgress');
+			showRes('jQuery/ajax', result, 'jqueryBuilding', 'mobjqProgress');
 
 		}
 		if(name == "oop"){
 			var result = parseInt(localStorage.getItem('brainOop')) + points;
 			localStorage.setItem('brainOop',result);
 			this.brain.oop = result;
-			showRes('jQuery/ajax', result, 'oopProgress', 'moboopProgress');
+			showRes('jQuery/ajax', result, 'oopBuilding', 'moboopProgress');
 		}
 	};
 

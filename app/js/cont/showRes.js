@@ -1,4 +1,5 @@
-define([], function(showRes) { 
+
+define([], function() { 
 
 
 	//this function insterts result of user tests (in %)
@@ -12,7 +13,8 @@ define([], function(showRes) {
 
 
 	function showRes(name, amount, id, idMob) {
-		var bar = document.getElementById(id),
+		console.log(id);
+		var bar = document.getElementById(id).firstChild.firstChild,
 		mobres = document.getElementById(idMob);
 
 		bar.innerHTML = amount + "%";

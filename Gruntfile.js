@@ -36,34 +36,64 @@ module.exports = function(grunt) {
 	          optimization: 2
 		    },
 		    files: {
-		      "prod/css/result.css": [
-		      "app/css/less/source1.less", 
-		      "app/css/less/source2.less",
-		      "app/css/less/source3.less"],
 
 		      "app/css/result.css" :[
-		      "app/css/less/source1.less", 
-		      "app/css/less/source2.less",
-		      "app/css/less/source3.less"]
+		      "app/css/less/*.less"]
 		    }
 		  }
 		},
 
-		htmlmin: {                                       // Task
+		htmlmin: {                                       
 		    multiple: { 
 
-		     options: {                                 // Target options
+		     options: {                                
 		        removeComments: true,
 		        collapseWhitespace: true
-		      },                                 // Target
-		      files: [{                                  // Dictionary of files
+		      },                                 
+		      files: [{                                  
 		        expand: true,
-		        cwd: 'app/',                             // Project root
-		        src: '*.html',                        // Source
-		        dest: 'prod/'                            // Destination
+		        cwd: 'app/',                            
+		        src: '*.html',                        
+		        dest: 'prod/'                            
+		      },{                                 
+		        expand: true,
+		        cwd: 'app/admin',                             
+		        src: '*.html',                       		 
+		        dest: 'prod/admin'                       
 		      }]
 		    }
 		},
+		cssmin: {
+		  my_target: {
+
+		    files: [{
+		      expand: true,
+		      cwd: 'app/css/',
+		      src: ['result.css'],
+		      dest: 'app/css/',
+		      ext: '.min.css'
+		    }]
+		  }
+		},
+
+		concat: {
+		    options: {
+		    },
+		    prodcss: {
+			    src: 'app/css/*.min.css',
+			    dest: 'prod/css/result.css'
+			}, 
+
+			css: {
+			    src: 'app/css/*.min.css',
+			    dest: 'app/css/result.css'
+			}, 
+
+			adminCss: {
+			    src: 'app/admin/css/*.css',
+			    dest: 'prod/admin/css/admin.css'
+			},  
+		  },
 
 		watch: {
 			html: {
@@ -71,7 +101,7 @@ module.exports = function(grunt) {
 				tasks: ['htmlmin']
 			},
 		    scripts: {
-		        files: ['app/js/*.js','app/js/cont/*.js','app/js/libs/*.js','app/js/models/*.js','app/js/views/*.js' ],
+		        files: ['app/js/*.js','app/js/cont/*.js','app/js/libs/*.js','app/js/class/*.js','app/js/views/*.js' ],
 		        tasks: ['requirejs'],
 		    },
 		    styles: {
@@ -86,7 +116,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	
-	grunt.registerTask('default', ['htmlmin', 'requirejs', 'imagemin', 'less', 'watch' ]);
+	grunt.registerTask('default', ['htmlmin', 'less', 'cssmin', 'concat', 'requirejs', 'imagemin', 'watch' ]);
 };

@@ -1,5 +1,5 @@
 
-define(['class/Building'], function(Building) { 
+define(['class/Building', 'cont/showRes'], function(Building, showRes) { 
 
 	function cssBuilding(x, y, z, j) {
 
@@ -86,6 +86,30 @@ define(['class/Building'], function(Building) {
 	var oopBuild = new oopBuilding(-180, 20);
 	oopBuild.draw();
 
+		//memorize js
+		this.js = parseInt(localStorage.getItem('brainJs'));
+		showRes('JS', this.js, 'javascriptBuilding"', 'mobjsProgress');
+		console.log('loh');
+		
+		//memorize html
+		this.html = localStorage.getItem('brainHtml');
+		showRes('JS', this.js, 'htmlBuilding"', 'mobjsProgress');
 
+
+		//memorize css
+		this.css = localStorage.getItem('brainCss');
+		showRes('JS', this.js, 'cssBuilding"', 'mobjsProgress');
+
+
+
+		//memorize oop
+		this.oop = localStorage.getItem('brainOop');
+		showRes('JS', this.js, 'oopBuilding"', 'mobjsProgress');
+
+
+
+		//memorize jq
+		this.jq = localStorage.getItem('brainJq');
+		showRes('JS', this.js, 'jqueryBuilding"', 'mobjsProgress');
 
 });

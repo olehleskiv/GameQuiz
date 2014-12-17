@@ -11,6 +11,23 @@ define(['cont/confirmStartQuiz'], function(confirmStartQuiz) {
 
 	Building.prototype.draw = function() {
 		var block = document.getElementById('gamePage');
+
+
+		this.progress = document.createElement('div');
+		this.progress.setAttribute('class','progress');
+		this.progress.style.width = "100%";
+
+			var insideProgress =document.createElement('div');
+			insideProgress.setAttribute('class',this.id + "Progress");
+			insideProgress.setAttribute('class','progress-bar progress-bar-success');
+			insideProgress.setAttribute('role','progressbar');
+			insideProgress.innerHTML = "0%";
+
+		this.progress.appendChild(insideProgress);
+		this.progress.style.position = "relative";
+
+
+		
 		this.building = document.createElement('div');
 		this.building.setAttribute("id",this.id);
 		this.building.setAttribute("href",this.href);
@@ -43,6 +60,7 @@ define(['cont/confirmStartQuiz'], function(confirmStartQuiz) {
 		};
 
 		block.appendChild(this.building);
+		this.building.appendChild(this.progress);
 	};
 
 	return Building;
