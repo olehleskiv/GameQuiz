@@ -1,3 +1,4 @@
+
 var quizURL = '../../data/quiz.json';
 
     var JSONObject = $.getJSON(quizURL, function(data) {
@@ -17,7 +18,7 @@ var quizURL = '../../data/quiz.json';
             
         }
 
-	function renderTable(objectQuizArray, quizName) {
+    function renderTable(objectQuizArray, quizName) {
         var name = quizName,
             objectArray = objectQuizArray;
 
@@ -50,7 +51,7 @@ var quizURL = '../../data/quiz.json';
                 '<td><%= themeQuiz.correct %></td>'+
                 '<td><%= themeQuiz.active %></td>'+
                 '<% if (themeQuiz.active == false) { %>'+
-                    '<td class="uncheked"><input type="checkbox" name="<%= i %>"/></td>'+
+                    '<td class="uncheked"><input type="checkbox" name="'+ name + '_' + '<%= i %>"/></td>'+
                     '<% } else { %>'+
                     '<td><input type="checkbox" checked name="'+ name + '_' + '<%= i %>" class="active"/></td>'+
                     '<% } %>'+
@@ -58,25 +59,24 @@ var quizURL = '../../data/quiz.json';
         '<% } %>';
 
         var form = document.getElementById('quiz-form'),
-		    table = document.createElement('table'),
+            table = document.createElement('table'),
             compiledTemplate = _.template(tableTemplate),
             readyHtml = compiledTemplate({ object : objectArray }),
             header = document.createElement('h1');
             header.innerHTML = name + ' quiz';
 
-		table.className = 'table';
-		table.setAttribute('id', name);
+        table.className = 'table';
+        table.setAttribute('id', name);
         table.className = 'responstable';
         table.innerHTML = readyHtml;
 
         form.appendChild(header);
-		form.appendChild(table);
-	}
+        form.appendChild(table);
+    }
 });
 
 
 $(document).ready(function(){
-    
     //Check to see if the window is top if not then display button
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {

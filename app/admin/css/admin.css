@@ -100,8 +100,7 @@ img{
 }
 
 #ok:hover,
-.submit-button:hover
-{
+.submit-button:hover {
 	background: #2288bb;
 }
 
@@ -195,6 +194,43 @@ height: 30px;
 
 .uncheked {
 	background-color: #e7504e;
+}
+
+.submited-tip{
+	display: block;
+	width: 60%;
+	background: #52b752;
+	font-size: 2em;
+	padding: 2%;
+	margin: 3% auto;
+	text-align: center;
+	color: #fff;
+}
+
+.button-holder{
+	width: 70%;
+	margin: 0 auto;
+	background: #D9E4E6;
+	text-align: center;
+}
+
+.go-back-button, 
+.log-out-button{
+	display: inline-block;
+	width: 20%;
+	background: #52b752;
+	padding: 2%;
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+	margin: 4%;
+	text-decoration: none;
+}
+
+.go-back-button:hover, 
+.log-out-button:hover {
+	background: #2288bb;
+	border-radius: 15px;
 }
 
 
