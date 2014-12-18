@@ -9,7 +9,7 @@ define(['cont/confirmStartQuiz'], function(confirmStartQuiz) {
 		this.y = 0;
 	}
 
-	Building.prototype.draw = function() {
+	Building.prototype.draw = function(barColor) {
 		var block = document.getElementById('gamePage');
 
 
@@ -19,7 +19,7 @@ define(['cont/confirmStartQuiz'], function(confirmStartQuiz) {
 
 			var insideProgress =document.createElement('div');
 			insideProgress.setAttribute('class',this.id + "Progress");
-			insideProgress.setAttribute('class','progress-bar progress-bar-success');
+			insideProgress.setAttribute('class','progress-bar progress-bar-' + barColor);
 			insideProgress.setAttribute('role','progressbar');
 			insideProgress.innerHTML = "0%";
 

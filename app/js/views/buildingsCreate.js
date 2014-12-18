@@ -64,52 +64,53 @@ define(['class/Building', 'cont/showRes'], function(Building, showRes) {
 	htmlBuilding.prototype = new Building();
 
 	var htmlBuild = new htmlBuilding(125);
-	htmlBuild.draw();
+	htmlBuild.draw('info');
 
 	cssBuilding.prototype = new Building();
 
 	var cssBuild = new cssBuilding(125, 0);
-	cssBuild.draw();
+	cssBuild.draw('warning');
 
 	javascriptBuilding.prototype = new Building();
 
 	var javascriptBuilding = new javascriptBuilding();
-	javascriptBuilding.draw();
+	javascriptBuilding.draw('success');
 
 	jqueryBuilding.prototype = new Building();
 
 	var jQueryBuild = new jqueryBuilding(-130, 0);
-	jQueryBuild.draw();
+	jQueryBuild.draw('danger');
 
 	oopBuilding.prototype = new Building();
 
 	var oopBuild = new oopBuilding(-180, 20);
-	oopBuild.draw();
+	oopBuild.draw('primary');
 
-		//memorize js
+
+	$(document).ready(function() {
+		//set js
 		this.js = parseInt(localStorage.getItem('brainJs'));
-		showRes('JS', this.js, 'javascriptBuilding"', 'mobjsProgress');
+		showRes('JS', this.js, 'javascriptBuilding', 'mobjsProgress');
 		console.log('loh');
 		
-		//memorize html
+		//set html
 		this.html = localStorage.getItem('brainHtml');
-		showRes('JS', this.js, 'htmlBuilding"', 'mobjsProgress');
+		showRes('HTML', this.html, 'htmlBuilding', 'mobhtmlProgress');
 
 
-		//memorize css
+		//set css
 		this.css = localStorage.getItem('brainCss');
-		showRes('JS', this.js, 'cssBuilding"', 'mobjsProgress');
+		showRes('CSS', this.css, 'cssBuilding', 'mobcssProgress');
 
 
 
-		//memorize oop
+		//set oop
 		this.oop = localStorage.getItem('brainOop');
-		showRes('JS', this.js, 'oopBuilding"', 'mobjsProgress');
+		showRes('OOP', this.oop, 'oopBuilding', 'moboopProgress');
 
 
-
-		//memorize jq
+		//set jq
 		this.jq = localStorage.getItem('brainJq');
-		showRes('JS', this.js, 'jqueryBuilding"', 'mobjsProgress');
-
+		showRes('Jquery/Ajax', this.jq, 'jqueryBuilding', 'mobjqProgress');
+	});
 });

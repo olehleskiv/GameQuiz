@@ -369,15 +369,17 @@
         margin-top: 15px;
         padding-top: 23px;
     }
+    .progress {
+        height: 12px !important;
+    }
+    .progress-bar {
+        font-size: 11px;
+        line-height: 12px;
+        color: black;
+    }
 
 
-
-
-
-
-
-
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: 410px) {
         .desctopMenu,
         .tree {
             display:none;
@@ -471,5 +473,12 @@
         }
         .quizTitle {
             background-size: 230px;
+        }
+        .progress {
+            margin-top: -140px;
+        }
+        .mobileProgress {
+            margin-top: 60px;
+            margin-bottom: 20px;
         }
     }

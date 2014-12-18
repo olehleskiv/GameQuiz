@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 		    },
 		    styles: {
 		        files: ['app/css/less/*.less'], // which files to watch
-		        tasks: ['less'],
+		        tasks: ['less','cssmin','concat']
 		    }
 		}
 

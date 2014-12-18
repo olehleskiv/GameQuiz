@@ -50,7 +50,7 @@ define(['jquery'], function($, router) {
 				window.location.href = window.location.href.split("#")[0] + "#" + encodeURIComponent(url);
 			}
 
-
+			$("#bs-example-navbar-collapse-1").removeClass("in").addClass("collapse"); //hide mobile menu
 
 	}
 
@@ -82,5 +82,6 @@ define(['jquery'], function($, router) {
 
 
 	router('#mainPage');
+
 	return router;
 });

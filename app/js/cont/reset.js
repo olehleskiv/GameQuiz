@@ -22,7 +22,7 @@ define(['views/mainHero'], function(mainHero) {
 				mainDude.brain.jq = localStorage.getItem('brainJq');
 
 				//unset html
-				var bar = document.getElementById('htmlProgress'),
+				var bar = document.getElementById('htmlBuilding').firstChild.firstChild,
 				mobres = document.getElementById('mobhtmlProgress');
 
 				bar.innerHTML = mainDude.brain.html + "%";
@@ -30,28 +30,31 @@ define(['views/mainHero'], function(mainHero) {
 				bar.style.width = mainDude.brain.html + "%";
 
 				//unset css3
-				bar = document.getElementById('cssProgress'),
+				var bar = document.getElementById('cssBuilding').firstChild.firstChild,
 				mobres = document.getElementById('mobcssProgress');
 
 				bar.innerHTML = mainDude.brain.css + "%";
 				mobres.innerHTML = "CSS: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.css + "%";
 
-				bar = document.getElementById('jsProgress'),
+				//unset js
+				var bar = document.getElementById('javascriptBuilding').firstChild.firstChild,
 				mobres = document.getElementById('mobjsProgress');
 
 				bar.innerHTML = mainDude.brain.js + "%";
 				mobres.innerHTML = "JavaScript: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.js + "%";
 
-				bar = document.getElementById('jqProgress'),
+				//unset jq
+				var bar = document.getElementById('jqueryBuilding').firstChild.firstChild,
 				mobres = document.getElementById('mobjqProgress');
 
 				bar.innerHTML = mainDude.brain.jq + "%";
 				mobres.innerHTML = "jQuery/Ajax: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.jq + "%";
-
-				bar = document.getElementById('oopProgress'),
+				
+				//unset jq
+				var bar = document.getElementById('oopBuilding').firstChild.firstChild,
 				mobres = document.getElementById('moboopProgress');
 
 				bar.innerHTML = mainDude.brain.oop + "%";

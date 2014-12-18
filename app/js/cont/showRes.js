@@ -13,12 +13,16 @@ define([], function() {
 
 
 	function showRes(name, amount, id, idMob) {
-		console.log(id);
+
 		var bar = document.getElementById(id).firstChild.firstChild,
 		mobres = document.getElementById(idMob);
 
+		if(amount > 0) {
+			bar.style.color = 'white';
+		}
 		bar.innerHTML = amount + "%";
 		mobres.innerHTML = name + " " +  amount + " %";
+		console.log('loh' + idMob)
 		bar.style.width = amount + "%";
 	}
 
