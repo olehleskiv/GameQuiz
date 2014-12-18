@@ -5,11 +5,12 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 
 	function brain() {
 		if(!localStorage.getItem('brainJs')) {
-			localStorage.setItem('brainJs','0')
-			localStorage.setItem('brainHtml','0')
-			localStorage.setItem('brainCss','0')
-			localStorage.setItem('brainOop','0')
-			localStorage.setItem('brainJq','0')
+
+			localStorage.setItem('brainJs',0)
+			localStorage.setItem('brainHtml',0)
+			localStorage.setItem('brainCss',0)
+			localStorage.setItem('brainOop',0)
+			localStorage.setItem('brainJq',0)
 		}
 
 	}
@@ -93,34 +94,34 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 
 	Human.prototype.study = function(name, points) {
 		if(name == "html"){
-			var result = parseInt(localStorage.getItem('brainHtml')) + points;
+			var result = points;
 			localStorage.setItem('brainHtml',result);
 			this.brain.html = result;
 			showRes('HTML', result, 'htmlBuilding', 'mobhtmlProgress');
 
 		}
 		if(name == "css"){
-			var result = parseInt(localStorage.getItem('brainCss')) + points;
+			var result = points;
 			localStorage.setItem('brainCss',result);
 			this.brain.css = result;
 			showRes('CSS', result, 'cssBuilding', 'mobcssProgress');
 
 		}
 		if(name == "js"){
-			var result = parseInt(localStorage.getItem('brainJs')) + points;
+			var result = points;
 			localStorage.setItem('brainJs',result);
 			this.brain.js = result;
 			showRes('JS', result, 'javascriptBuilding', 'mobjsProgress');
 		}
 		if(name == "jq"){
-			var result = parseInt(localStorage.getItem('brainJq')) + points;
+			var result = points;
 			localStorage.setItem('brainJq',result);
 			this.brain.jq = result;
 			showRes('jQuery/ajax', result, 'jqueryBuilding', 'mobjqProgress');
 
 		}
 		if(name == "oop"){
-			var result = parseInt(localStorage.getItem('brainOop')) + points;
+			var result = points;
 			localStorage.setItem('brainOop',result);
 			this.brain.oop = result;
 			showRes('jQuery/ajax', result, 'oopBuilding', 'moboopProgress');

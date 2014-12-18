@@ -377,6 +377,61 @@
         line-height: 12px;
         color: black;
     }
+    .mainKnight {
+        background: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 2%;
+        &:before {
+            background: url("../img/people/dialogLeft.png") ;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "Lets Rock! I'll gona kick your ass";
+            display: block;
+            height: 100%;
+            margin-left: 50%;
+            margin-top: -20%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .oponent {
+        background: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        right: 2%; 
+    }
+    .oopOponent {
+        background: url("../img/people/oop.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            background: url("../img/people/dialogRight.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "So, you think you know something about OOP? Fool!";
+            display: block;
+            height: 100%;
+            margin-left: -50%;
+            margin-top: -20%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+        }
+    }
 
 
     @media only screen and (max-width: 410px) {

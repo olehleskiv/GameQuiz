@@ -22,7 +22,6 @@ define([], function() {
 		}
 		bar.innerHTML = amount + "%";
 		mobres.innerHTML = name + " " +  amount + " %";
-		console.log('loh' + idMob)
 		bar.style.width = amount + "%";
 	}
 

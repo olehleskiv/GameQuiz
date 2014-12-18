@@ -91,7 +91,6 @@ define(['class/Building', 'cont/showRes'], function(Building, showRes) {
 		//set js
 		this.js = parseInt(localStorage.getItem('brainJs'));
 		showRes('JS', this.js, 'javascriptBuilding', 'mobjsProgress');
-		console.log('loh');
 		
 		//set html
 		this.html = localStorage.getItem('brainHtml');
