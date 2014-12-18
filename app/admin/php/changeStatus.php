@@ -7,23 +7,43 @@ $json = file_get_contents('../../data/quiz.json'); // getting the json file
 	
 	$json = json_decode($json, true);
 
-	for ($i = 0; $i < count($json['js']); $i++) { 
-		$json['js'][$i]['active'] = false;
-	}
+	$prefixes = array(
+		0 => 'JavaScript_',
+		1 => 'OOP_',
+		2 => 'CSS_',
+		3 => 'HTML_',
+		4 => 'JQuery_',
+		);
+	$index = 0;
 
-	for ($i = 0; $i < count($json['js']); $i++) { 
-		$prefix = 'JavaScript_' . $i;
-		if (isset($_POST[$prefix])) {
-			$json['js'][$i]['active'] = true;
-		}
+	foreach ($json as $key => $value) {
+		$json[$key] = changeStatus($prefixes[$index], $value);
+		$index ++;
 	}
-
-	echo json_encode($json);
 
 	$json = json_encode($json);							 //decoding json
 
 	if(file_put_contents('../../data/quiz.json', $json)) {  //putting json on the server
-		echo "Thank you! you question has been submitted, it will be available after admin approval";
 	}
 
+
+//Function chages the status field at quiz JSON
+	function changeStatus ($pref, $arr) {
+		for ($i = 0; $i < count($arr); $i++) { 
+			$arr[$i]['active'] = false;
+		}
+
+		for ($i = 0; $i < count($arr); $i++) { 
+			$prefix = $pref . $i;
+			if (isset($_POST[$prefix])) {
+				$arr[$i]['active'] = true;
+			}
+		}
+		return $arr;
+
+	}
+//end of function
+
+	include "../html/submited.html";
 ?>
+
