@@ -21,6 +21,16 @@
 	}
 	$json = json_decode($json, true);				//decoding json
 
+
+
+	$json = htmlspecialchars($json);
+
+		function factorial($x) {
+			if ($x === 0) return 1;
+			else return $x*factorial($x);
+		}
+
+
 	if($question['category'] == "html") {			//putting question array into appropriate category
 		$json['html'][] = $formated_question;
 	} elseif($question['category'] == "css") {

@@ -321,8 +321,8 @@
     #jsQuiz,
     #oopQuiz,
     #jqQuiz, {
-        background: url("../img/html_bg.jpg");
-        background-position: center;
+        background: url("../img/html_bg.png");
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 100%;
         position: fixed;
@@ -333,25 +333,25 @@
     }
     #cssQuiz {
         background: url("../img/css_bg.jpg");
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 100%;
     }
     #jsQuiz {
         background: url("../img/js_bg.png");
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 100%; 
     }
     #jqQuiz {
-        background: url("../img/jq_bg.jpg");
-        background-position: center;
+        background: url("../img/jq_bg.png");
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 100%; 
     }
     #oopQuiz {
         background: url("../img/oop_bg.png");
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 100%;   
     }
@@ -386,6 +386,7 @@
         background-size: 100%;
         background-repeat: no-repeat;
         left: 2%;
+        bottom:10px;
         &:before {
             background: url("../img/people/dialogLeft.png") ;
             background-position: center;
@@ -409,6 +410,7 @@
         height: 50%;
         position: absolute;
         right: 2%;
+        bottom:10px;
         &:before {
             background: url("../img/people/dialogRight.png");
             background-position: center;
@@ -460,6 +462,15 @@
         background-repeat: no-repeat;
         &:before {
             content: "So, you think you know something about jquery or Ajax? Fool!";
+        }
+    }
+    #jsOponent {
+        background: url("../img/people/jsk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            content: "So, you think you know something about JavaScript? Fool!";
         }
     }
 
@@ -565,5 +576,45 @@
         .mobileProgress {
             margin-top: 60px;
             margin-bottom: 20px;
+        }
+        #frame {
+            margin: 125px auto !important;
+        }
+        .quizTitle {
+             margin-top: 0;
+        }
+        .mainKnight {
+        width: 25%;
+        height: 170px;
+        top:105px;
+        &:before {
+            font-size: 10px;
+            height: 50px;
+            margin-left: 15%;
+            margin-top: -10px;
+            max-height: 200px;
+            min-height: 100px;
+            padding: 25px 10px;
+            text-align: center;
+            width: 120%;
+            min-width: 120px;
+            }
+        }
+        .oponent {
+        width: 25%;
+        height: 170px;
+        top:105px;
+        &:before {
+            font-size: 10px;
+            height: 50px;
+            margin-left: -100%;
+            margin-top: -10px;
+            max-height: 200px;
+            min-height: 100px;
+            padding: 25px 10px;
+            text-align: center;
+            width: 150%;
+            min-width: 120px;
+            } 
         }
     }
