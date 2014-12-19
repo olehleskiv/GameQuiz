@@ -76,12 +76,12 @@ define(['jquery'], function($) {
 															//about successfull or unsuccessfull actions
 															//if param "error" = true - it's an error
 
-		var mainAddQuestionForm = document.getElementById('addQuestion');
+		var mainAddQuestionDude = document.getElementById('resultMessageDude');
 		var block = document.createElement('div');
 		if(error) {
-			block.setAttribute("class","alert alert-danger errorBlock");
+			block.setAttribute("class","errorBlock");
 		} else {
-			block.setAttribute("class","alert alert-success errorBlock");
+			block.setAttribute("class","errorBlock");
 		}
 
 		var logo = document.createElement('span');
@@ -90,7 +90,7 @@ define(['jquery'], function($) {
 
 		block.appendChild(logo);
 		block.innerHTML = message;
-		mainAddQuestionForm.insertBefore(block, mainAddQuestionForm.getElementsByTagName('div')[0]);
+		mainAddQuestionDude.appendChild(block);
 	}
 
 	function changeButtons() {											//function hides submit button

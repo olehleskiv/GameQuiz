@@ -3,7 +3,7 @@
 	$question = $_POST;								//getting data from POST array
 
 	$formated_question = array(						//forming approprite array for json file
-		title => htmlspecialchars($question['title']),
+		title => $question['title'],
 		variants => array(
 			htmlspecialchars($question['var1']),
 			htmlspecialchars($question['var2']),
