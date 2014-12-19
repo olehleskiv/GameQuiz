@@ -408,19 +408,13 @@
         width: 20%;
         height: 50%;
         position: absolute;
-        right: 2%; 
-    }
-    .oopOponent {
-        background: url("../img/people/oop.png");
-        background-position: center;
-        background-size: 100%;
-        background-repeat: no-repeat;
+        right: 2%;
         &:before {
             background: url("../img/people/dialogRight.png");
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
-            content: "So, you think you know something about OOP? Fool!";
+            content: "default";
             display: block;
             height: 100%;
             margin-left: -50%;
@@ -430,6 +424,42 @@
             padding: 20%;
             text-align: center;
             width: 100%;
+        } 
+    }
+    #oopOponent {
+        background: url("../img/people/oopk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            content: "So, you think you know something about OOP? Fool!";
+        }
+    }
+    #htmlOponent {
+        background: url("../img/people/htmlk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            content: "So, you think you know something about HTML? Fool!";
+        }
+    }
+    #cssOponent {
+        background: url("../img/people/cssK.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            content: "So, you think you know something about CSS? Fool!";
+        }
+    }
+    #jqOponent {
+        background: url("../img/people/jqk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        &:before {
+            content: "So, you think you know something about jquery or Ajax? Fool!";
         }
     }
 
