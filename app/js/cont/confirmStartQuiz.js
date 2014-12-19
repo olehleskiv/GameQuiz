@@ -1,9 +1,9 @@
 
 define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) { 
 
-	function confirmStartQuiz(name) {									//this function fires when enterBuilding
-																		//function indicates that the hero entered
-																		//the bulding
+	function confirmStartQuiz(name) {						//this function fires when enterBuilding
+															//function indicates that the hero entered
+															//the bulding
 		
 		//before showing the popup we fire this function
 		//it disables the keyboard, for user not to make
@@ -19,7 +19,7 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 			startButton.setAttribute('href','#' + name + 'Quiz');
 			var quizContainer = name + 'Quiz';
 			createQuiz(name, quizContainer);
-
+						
 			// startButton.onclick = function() {
 			// // 	console.log('on');
 			//  	createQuiz(name, quizContainer);
