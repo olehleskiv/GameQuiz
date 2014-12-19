@@ -1002,7 +1002,7 @@
     "variants": [
       "<menu></menu>",
       "<navmenu></navmenu>",
-      "<menu navigator=""></menu>",
+      "<menu navigator=\"\"></menu>",
       "<nav></nav>"
     ],
     "correct": 3,
@@ -1048,8 +1048,8 @@
     "ID": 6,
     "title": "Which tag is used to make an ordered list?",
     "variants": [
-      "<ordered list=""></ordered>",
-      "<number list=""></number>",
+      "<ordered list=\"\"></ordered>",
+      "<number list=\"\"></number>",
       "<ul></ul>",
       "<ol></ol>"
     ],
@@ -1099,7 +1099,7 @@
     "title": "In HTML, which syntax is correct to open a hyperlink in a new browser window?",
     "variants": [
       "<a href=\"new url\"></a>",
-      "<a href=\"url\" new=""></a>",
+      "<a href=\"url\" new=\"\"></a>",
       "<a href=\"url\" target=\"_main\"></a>",
       "<a href=\"url\" target=\"_blank\"></a>"
     ],
