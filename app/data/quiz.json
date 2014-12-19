@@ -981,5 +981,334 @@
 		"correct": 0,
 		"active": true
 		}
-	]
+	],
+  "html":
+  [
+    {
+    "ID": 1,
+    "title": "Which attribute specifies default text in an input field?",
+    "variants": [
+      "onfocus attribute",
+      "textfield attribute",
+      "placeholder attribute",
+      "contextfield attribute"
+    ],
+    "correct": 2,  
+    "active": true
+    },
+    {
+    "ID": 2,
+    "title": "Which of the following elements is correct for a navigation menu?",
+    "variants": [
+      "<menu></menu>",
+      "<navmenu></navmenu>",
+      "<menu navigator=""></menu>",
+      "<nav></nav>"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 3,
+    "title": "Which syntax is correct?",
+    "variants": [
+      "<movie src=\"video.flv\"></movie>",
+      "<movie> src=\"video.flv\"</movie>",
+      "<video src=\"video.flv\"></video>",
+      "<control src=\"video.flv\"></control>"
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 4,
+    "title": "What are the main tags for creating a table?",
+    "variants": [
+      "<table><tbody><tr><td></td></tr></tbody></table>",
+      "<text>, <table></table></text>",
+      "<tp>, <hr>, <b></b></tp>",
+      "<border>, <height></height></border>"
+    ],
+    "correct": 0,
+    "active": true
+    },
+    {
+    "ID": 5,
+    "title": "Which of the following attributes are accepted for the tag?",
+    "variants": [
+      "pt, width, alt",
+      "url, pixel, height",
+      "path, height, alt",
+      "src, width, height"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 6,
+    "title": "Which tag is used to make an ordered list?",
+    "variants": [
+      "<ordered list=""></ordered>",
+      "<number list=""></number>",
+      "<ul></ul>",
+      "<ol></ol>"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 7,
+    "title": "Which syntax is correct for making a check box?",
+    "variants": [
+      "<check box=\"\"></check>",
+      "<input type=\"checkbox\">",
+      "<type =\"\" checkbox=\"\"></type>",
+      "<input>checkbox</input>",
+      ""
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 8,
+    "title": "In HTML, we cannnot nest a table inside another table.",
+    "variants": [
+      "True",
+      "False",
+      "",
+      "",
+      ""
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 9,
+    "title": "In HTML, Which syntax is correct?",
+    "variants": [
+      "<img href=\"photo.jpg\">",
+      "<img alt=\"photo.jpg\">",
+      "<img src=\"photo.jpg\">",
+      "<img> src=\"photo.jpg\""
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 10,
+    "title": "In HTML, which syntax is correct to open a hyperlink in a new browser window?",
+    "variants": [
+      "<a href=\"new url\"></a>",
+      "<a href=\"url\" new=""></a>",
+      "<a href=\"url\" target=\"_main\"></a>",
+      "<a href=\"url\" target=\"_blank\"></a>"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 11,
+    "title": "How to add video in HTML5?",
+    "variants": [
+      "<video width=\"320\" height=\"240\" src=\"myVideo.mp4\">",
+      "<video width=\"320\" height=\"240\" controls=\"controls\" > < source src=\"myVideo.mp4\" type=\"video/mp4\"/>",
+      "<object id=\"MediaPlayer\" width=\"434\" height=\"300\" classid=\"clsid\" type=\"application/x-oleobject\" > < param name=\"Filename\" value=\"myVideo.mp4\" >",
+      "object width=\"320\" height=\"240\" src=\"myVideo.mp4\"",
+      "<embed src=\"video.avi\" width=\"352\" height=\"240\">"
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 12,
+    "title": "Which are all new events in HTML5?",
+    "variants": [
+      "onplay, ondrag, onmousewheel, onstorage, onbeforeprint",
+      "onblur, onpause, onoffline, onload, ondrop",
+      "ondrop, onkeypress, onmouseover, onplaying, onclick"
+    ],
+    "correct": 0,
+    "active": true
+    },
+    {
+    "ID": 13,
+    "title": "Which of the follows are all new elements for  HTML5?",
+    "variants": [
+      "article, footer, section, audio, track",
+      "object, article, br, table, input",
+      "input, frame, body, table, form",
+      "All of them"
+    ],
+    "correct": 0,
+    "active": true
+    },
+    {
+    "ID": 14,
+    "title": "Which browsers support HTML5?",
+    "variants": [
+      "IE, Opera, Chrome, Firefox",
+      "All",
+      "The major browsers, but only some features",
+      "Mobiles, Opera, Chrome",
+      "The major browsers"
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 15,
+    "title": "Select the Doctype that should be specified at the top of all HTML5 documents.",
+    "variants": [
+      "<!Doctype html PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\">",
+      "<!DOCTYPE html5 PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\">",
+      "<!doctype html5>",
+      "<!DOCTYPE html>"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 16,
+    "title": "Which of the following elements are no longer supported in HTML5?",
+    "variants": [
+      "<caption>",
+      "<blockquote>",
+      "<abbr>",
+      "<acronym>"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 17,
+    "title": "Input type=\"email\" used on input fields provides the following advantages.",
+    "variants": [
+      "Makes the form more accessible",
+      "Enables modern browsers to validate the form field on submit (without JavaScript)",
+      "Makes it easier to enter email addresses capable mobile devices ",
+      "All of the above"
+    ],
+    "correct": 3,
+    "active": true
+    },
+    {
+    "ID": 18,
+    "title": "Which of the following is not a media element used in html5?",
+    "variants": [
+      "source",
+      "audio",
+      "track",
+      "time"
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 18,
+    "title": "SVG graphics do not lose quality when they are resized?",
+    "variants": [
+      "True",
+      "False",
+      "can’t determine",
+      "None of these"
+    ],
+    "correct": 0,
+    "active": true
+    },
+    {
+    "ID": 19,
+    "title": "What do we mean by SVG?",
+    "variants": [
+      "Secondary vector graphics",
+      "scalable vertical graphics",
+      "Scalable vector graphics",
+      "scalable vector graph"
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 20,
+    "title": "Which storage object is used for storing the data with no expiry date?",
+    "variants": [
+      "Session storage",
+      "local storage",
+      "mass storage",
+      "stack storage"
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 21,
+    "title": "Which animation uses the how ever mount done it will change the background?",
+    "variants": [
+      "@Keyframes",
+      "Animation", 
+      "Background percent",
+      "Background position",
+      "Nothing of the above"
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 22,
+    "title": "<canvas> element is only a __________ to the graphics.",
+    "variants": [
+      "component",
+      "container",
+      "attribute",
+      "method"
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 23,
+    "title": "How many graphic object types are allowes by SVG?",
+    "variants": [
+      "2",
+      "5",
+      "3",
+      "7"
+    ],
+    "correct": 2,
+    "active": true
+    },
+    {
+    "ID": 24,
+    "title": "",
+    "variants": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "active": true
+    },
+    {
+    "ID": 25,
+    "title": "<output> element represents _______",
+    "variants": [
+      "Authenticate the user",
+      "result of a calculation",
+      "pre-defined values",
+      "none of these"
+    ],
+    "correct": 1,
+    "active": true
+    },
+    {
+    "ID": 26,
+    "title": "Text/Html is called the _______ of the page",
+    "variants": [
+      "content type",
+      "MIME type",
+      "content type/MIME type",
+      "none of these"
+    ],
+    "correct": 2,
+    "active": true
+    }
+  ]
 }
