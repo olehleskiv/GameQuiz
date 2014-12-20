@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
-body{
+body {
 	background: url('../../img/bg.png');
 	font-family:'Open Sans',sans-serif;
 }
-img{
+img {
 	max-width: 100%;
 }
 .crown-image {

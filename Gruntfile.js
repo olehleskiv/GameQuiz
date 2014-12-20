@@ -60,6 +60,11 @@ module.exports = function(grunt) {
 		        cwd: 'app/admin',                             
 		        src: '*.html',                       		 
 		        dest: 'prod/admin'                       
+		      },{                                  
+		        expand: true,
+		        cwd: 'app/admin/html',                            
+		        src: '*.html',                        
+		        dest: 'prod/admin/html'                            
 		      }]
 		    }
 		},
@@ -72,7 +77,14 @@ module.exports = function(grunt) {
 		      src: ['result.css'],
 		      dest: 'app/css/',
 		      ext: '.min.css'
-		    }]
+		    },{
+		      expand: true,
+		      cwd: 'app/admin/css/',
+		      src: ['admin.css'],
+		      dest: 'app/admin/css/',
+		      ext: '.min.css'
+		    }
+		    ]
 		  }
 		},
 
@@ -105,7 +117,7 @@ module.exports = function(grunt) {
 		        tasks: ['requirejs'],
 		    },
 		    styles: {
-		        files: ['app/css/less/*.less'], // which files to watch
+		        files: ['app/css/less/*.less', 'app/admin/css/*'], // which files to watch
 		        tasks: ['less','cssmin','concat']
 		    }
 		}
