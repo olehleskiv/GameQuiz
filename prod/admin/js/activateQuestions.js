@@ -1,5 +1,5 @@
-var quizURL = '../../data/quiz.json';
 
+var quizURL = '../../data/quiz.json';
 
     var JSONObject = $.getJSON(quizURL, function(data) {
         var quizArray = [];
@@ -8,10 +8,8 @@ var quizURL = '../../data/quiz.json';
         for (i in data) {
             quizArray.push(data[i]);
         }
-        console.log(quizArray);
-        console.log(data);
 
-
+        createAllTables();
 
         function createAllTables() {
             for (var i = 0; i < quizArray.length; i++ ) {
@@ -20,7 +18,7 @@ var quizURL = '../../data/quiz.json';
             
         }
 
-	function renderTable(objectQuizArray, quizName) {
+    function renderTable(objectQuizArray, quizName) {
         var name = quizName,
             objectArray = objectQuizArray;
 
@@ -37,8 +35,9 @@ var quizURL = '../../data/quiz.json';
 
         '<% for (var i = 0; i < object.length; i++) { %>'+
             '<% var themeQuiz = object[i]; %>'+
+   
             '<tr>'+
-                '<td><%= themeQuiz.ID %></td>'+
+                '<td><%= i %></td>'+
                 '<td><%= themeQuiz.title %></td>'+
                 '<td>'+
                     '<ol type="1" start="0">'+
@@ -51,66 +50,48 @@ var quizURL = '../../data/quiz.json';
                 '</td>'+
                 '<td><%= themeQuiz.correct %></td>'+
                 '<td><%= themeQuiz.active %></td>'+
-                '<td><input type="checkbox" class="active rounded"/></td>'+
+                '<% if (themeQuiz.active == false) { %>'+
+                    '<td class="uncheked"><input type="checkbox" name="'+ name + '_' + '<%= i %>"/></td>'+
+                    '<% } else { %>'+
+                    '<td><input type="checkbox" checked name="'+ name + '_' + '<%= i %>" class="active"/></td>'+
+                    '<% } %>'+
              '</tr>'+
         '<% } %>';
 
-		var table = document.createElement('table'),
+        var form = document.getElementById('quiz-form'),
+            table = document.createElement('table'),
             compiledTemplate = _.template(tableTemplate),
-            readyHtml = compiledTemplate({ object : objectArray }); 
-        var header = document.createElement('h1');
+            readyHtml = compiledTemplate({ object : objectArray }),
+            header = document.createElement('h1');
             header.innerHTML = name + ' quiz';
 
-		table.className = 'table';
-		//table.setAttribute('id', 'quiz-table');
+        table.className = 'table';
+        table.setAttribute('id', name);
         table.className = 'responstable';
         table.innerHTML = readyHtml;
 
-        document.body.appendChild(header);
-		document.body.appendChild(table);
-	}
-
-    createAllTables();
+        form.appendChild(header);
+        form.appendChild(table);
+    }
 });
 
 
-    var saveButton = document.getElementById('save');
-
-    saveButton.addEventListener("click", function(){ 
-    	console.log('click');
-    	var check = $("#quiz-table .active:checked");
-    	console.log(check);
+$(document).ready(function(){
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
     });
+    
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+    
+});
 
 
-
-     function GetAllChecked() {
-             var chkedshid = new Array();
-             var rows = new Array();
-             var table = document.getElementById("quiz-table");
-             console.log(table);
-             rows = table.getElementsByTagName("tr");
-             trcount = rows.length;
-
-                  var totlchk = new Array();    
-             for (var i = 0; i < rows.length; i++) {
-                 trid = rows[i].id;
-
-
-                 if (inputList = document.getElementById(trid).getElementsByTagName("input")) {
-                     for (var n = 0; n < inputList.length; n++) {
-                         if (inputList[n].type == "checkbox") {
-                             if (inputList[n].checked == true) {
-                                 chkedshid[n] = inputList[n].id;
-                             }
-                         }
-                     }
-                     totlchk = totlchk.concat(chkedshid.join());
-                     console.log(totlchk);
-                 }
-
-             }
-        
-             // document.getElementById('myHiddenfield').value = totlchk.join();
-             // document.getElementById("BtnSav2Cart").click();
-         }
