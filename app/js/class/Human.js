@@ -1,18 +1,33 @@
 
 
-define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(enterBuilding, zIndexCheck, showRes) {
+define(['cont/enterBuilding',
+		'cont/zIndexCheck', 
+		'cont/showRes',
+		'cont/showBadges'], function(enterBuilding, 
+									 zIndexCheck, 
+									 showRes, 
+									 showBadges) {
 
 
 	function brain() {
 		if(!localStorage.getItem('brainJs')) {
 
-			localStorage.setItem('brainJs',0)
-			localStorage.setItem('brainHtml',0)
-			localStorage.setItem('brainCss',0)
-			localStorage.setItem('brainOop',0)
-			localStorage.setItem('brainJq',0)
+			localStorage.setItem('brainJs','0');
+			localStorage.setItem('brainHtml','0');
+			localStorage.setItem('brainCss','0');
+			localStorage.setItem('brainOop','0');
+			localStorage.setItem('brainJq','0');
+
 		}
 
+		if(localStorage.getItem('jsPoints') == 0) {
+
+			localStorage.setItem('jsPoints',1000);
+			localStorage.setItem('htmlPoints',4000);
+			localStorage.setItem('cssPoints',7000);
+			localStorage.setItem('oopPoints',6000);
+			localStorage.setItem('jqPoints',10000);
+		}
 	}
 
 	function body() {
@@ -99,6 +114,8 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			this.brain.html = result;
 			showRes('HTML', result, 'htmlBuilding', 'mobhtmlProgress');
 
+			showBadges('htmlPoints','htmlBadge');
+
 		}
 		if(name == "css"){
 			var result = points;
@@ -106,12 +123,16 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			this.brain.css = result;
 			showRes('CSS', result, 'cssBuilding', 'mobcssProgress');
 
+			showBadges('cssPoints','cssBadge');
+
 		}
 		if(name == "js"){
 			var result = points;
 			localStorage.setItem('brainJs',result);
 			this.brain.js = result;
 			showRes('JS', result, 'javascriptBuilding', 'mobjsProgress');
+
+			showBadges('jsPoints','jsBadge');
 		}
 		if(name == "jq"){
 			var result = points;
@@ -119,14 +140,24 @@ define(['cont/enterBuilding', 'cont/zIndexCheck', 'cont/showRes'], function(ente
 			this.brain.jq = result;
 			showRes('jQuery/ajax', result, 'jqueryBuilding', 'mobjqProgress');
 
+			showBadges('jqPoints','jqBadge');
+
 		}
 		if(name == "oop"){
 			var result = points;
 			localStorage.setItem('brainOop',result);
 			this.brain.oop = result;
 			showRes('jQuery/ajax', result, 'oopBuilding', 'moboopProgress');
+
+			showBadges('oopPoints','oopBadge');
 		}
 	};
+
+	showBadges('htmlPoints','htmlBadge');
+	showBadges('cssPoints','cssBadge');
+	showBadges('jsPoints','jsBadge');
+	showBadges('jqPoints','jqBadge');
+	showBadges('oopPoints','oopBadge');
 
 	return Human;
 });

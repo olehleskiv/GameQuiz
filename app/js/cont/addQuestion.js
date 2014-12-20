@@ -77,19 +77,18 @@ define(['jquery'], function($) {
 															//if param "error" = true - it's an error
 
 		var mainAddQuestionDude = document.getElementById('resultMessageDude');
-		var block = document.createElement('div');
-		if(error) {
-			block.setAttribute("class","errorBlock");
-		} else {
-			block.setAttribute("class","errorBlock");
-		}
+		var block = document.getElementById('errorBlock');
 
 		var logo = document.createElement('span');
-		logo.setAttribute("class","glyphicon glyphicon-exclamation-sign");
-		logo.setAttribute("aria-hidden","true");
+		if(error) {
+			logo.setAttribute("class","mesError");
+		} else {
+			logo.setAttribute("class","mesSuccess");
+		}
 
-		block.appendChild(logo);
+		
 		block.innerHTML = message;
+		block.appendChild(logo);
 		mainAddQuestionDude.appendChild(block);
 	}
 

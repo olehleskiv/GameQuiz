@@ -287,13 +287,38 @@
         background-repeat: no-repeat;
         background-size: 100%;
         display: block;
-        margin-top: 65px;
-        margin-left: 100px;
-        width:150px;
+        margin-left: 150px;
+        margin-top: 170px;
+        width:180px;
         height:300px;
     }
-    .errorBlock {
-
+    #errorBlock {
+        width:200px;
+        background: url("../img/people/dialogRight.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 200px;
+        margin-left: -180px;
+        margin-top: -150px;
+        padding: 40px 30px;
+        width: 250px;
+    }
+    .mesError {
+        background: url("../img/people/error.png");
+        width: 30px;
+        height: 30px ;
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .mesSuccess {
+        background: url("../img/people/success.png");
+        width: 30px;
+        height: 30px ;
+        display: block;
+        margin: auto;
+        margin-top: 5px;
     }
     .my-confirm {
         top: 100px;
@@ -483,7 +508,76 @@
             content: "So, you think you know something about JavaScript? Fool!";
         }
     }
+    #mainPage {
+        background: url("../img/world/castle.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background-position: 43px 163px;
+        background-size: 500px;
+        background-repeat: no-repeat;
+    }
+    .mainInfo p {
+        background: rgba(192,192,192,0.5);
+        color: white;
+        border-radius: 10px
+    }
+    #playButton {
+        border: 2px solid white;
+    }
+    .badges {
 
+        height: 100px;
+        position: absolute;
+        top: 45px;
+        width: 500px;
+        top: 50px; left: 0; right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .badges h5 {
+        position: absolute;
+        width: 100%;
+        color: white;
+        background: rgba(192,192,192,0.60);
+        border-radius: 10px;
+        text-shadow: 1px 1px 3px black;
+    }
+    .badgeContainer {
+        padding-top: 22px;
+        width:100px;
+        height:100%;
+        float:left;
+    }
+    .badgeContainer p {
+        background: none repeat scroll 0 0 #fff;
+        border-radius: 7px;
+        margin: 5px;
+    }
+    .resbadge {
+
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;
+    }
+    .resbadgeGood {
+        background: url('../img/world/smbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
+    .resbadgeBad {
+        background: url('../img/world/defbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
 
     @media only screen and (max-width: 410px) {
         .desctopMenu,
@@ -626,5 +720,24 @@
             width: 150%;
             min-width: 120px;
             } 
+        }
+        #resultMessageDude {
+            background:url('../img/people/add_quiz.png');
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: block;
+            margin:auto;
+            margin-top: 150px;
+            width:180px;
+            height:300px;
+        }
+        #errorBlock {
+            height: 140px;
+            margin: -75% auto auto;
+            padding: 30px;
+            position: absolute;
+            right: 0;
+            width: 200px;
         }
     }

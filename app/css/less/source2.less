@@ -11,18 +11,22 @@
       font-weight:700;
   }
   #frame {
-      max-width:620px;
-      width:auto;
+      max-width: 50%;
       border:1px solid #ccc;
-      background:#fff;
-      padding:10px;
-      margin: 50px auto;
+      background: rgba(233, 242, 176, 0.9);
+      border-radius: 20px;
+      padding: 1%;
+      margin: 1% auto;
+  }
+
+  #question{
+    margin-top: 1px;
   }
 
   #pager {
-      margin:5px 0 5px;
       font:bold 1em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
       color:#999;
+      margin: 0;
   }
 
   #choice-block {
@@ -32,26 +36,47 @@
       padding:0;
   }
   .choice-box {
+      width: 90%; 
       display:block;
       text-align:center;
       margin:8px auto;
       padding:10px 0;
-      border:1px solid #666;
+      font-size: 1.2em;
       cursor:pointer;
+      background: rgba(247, 135, 101, 0.95);
+
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
+
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
   }
 
   .choice:hover{
-  	background-color: #fff;
-  }
-
-  .choice:hover{
-  	background-color: #e1e1e1;
+  	background: rgba(62, 193, 90, 0.95);
+    font-weight: bold;
   }
 
   .result{
   	text-align: center;
-    font-size: 4em;
+    font-size: 1.8em;
+  }
+
+  .go-to-map-button {
+    width: 50%;
+    display: block;
+    background: #52b752;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .go-to-map-button:hover{
+    color: #FFF;
+    background: #5489f2;
+    border-radius: 10px;
+    text-decoration: none;
   }

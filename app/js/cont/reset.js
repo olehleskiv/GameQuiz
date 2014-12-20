@@ -1,5 +1,5 @@
 
-define(['views/mainHero'], function(mainHero) {
+define(['views/mainHero','cont/showBadges'], function(mainHero, showBadges) {
 
 	var confirmReset = document.getElementById('resetButton')
 	confirmReset.onclick = function() {
@@ -10,10 +10,22 @@ define(['views/mainHero'], function(mainHero) {
 			reset.onclick = function() {
 
 				localStorage.setItem('brainJs','0');
-				localStorage.setItem('brainHtml','0')
-				localStorage.setItem('brainCss','0')
-				localStorage.setItem('brainOop','0')
-				localStorage.setItem('brainJq','0')
+				localStorage.setItem('brainHtml','0');
+				localStorage.setItem('brainCss','0');
+				localStorage.setItem('brainOop','0');
+				localStorage.setItem('brainJq','0');
+
+				localStorage.setItem('jsPoints',0);
+				localStorage.setItem('htmlPoints',0);
+				localStorage.setItem('cssPoints',0);
+				localStorage.setItem('oopPoints',0);
+				localStorage.setItem('jqPoints',0);
+				
+				showBadges('htmlPoints','htmlBadge');
+				showBadges('cssPoints','cssBadge');
+				showBadges('jsPoints','jsBadge');
+				showBadges('jqPoints','jqBadge');
+				showBadges('oopPoints','oopBadge');
 
 				mainDude.brain.js = localStorage.getItem('brainJs');
 				mainDude.brain.html = localStorage.getItem('brainHtml');
@@ -61,6 +73,7 @@ define(['views/mainHero'], function(mainHero) {
 				mobres.innerHTML = "OOP: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.oop + "%";
 			}
+
 		}
 
 });

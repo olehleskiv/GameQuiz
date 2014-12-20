@@ -11,7 +11,7 @@
         "true"
       ],
       "correct": 0,
-      "active": false
+      "active": true
     },
     {
       "ID": 2,
@@ -24,7 +24,7 @@
         "object"
       ],
       "correct": 3,
-      "active": false
+      "active": true
     },
     {
       "ID": 3,
