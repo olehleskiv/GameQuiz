@@ -2,7 +2,7 @@ define(['jquery'], function($) {
 
 	function showBadges(name, id) {
 
-		var points = localStorage.getItem(name),
+		var points = parseInt(localStorage.getItem(name)),
 		block = document.getElementById(id);
 
 
