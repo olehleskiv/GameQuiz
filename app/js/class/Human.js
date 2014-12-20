@@ -22,11 +22,11 @@ define(['cont/enterBuilding',
 
 		if(localStorage.getItem('jsPoints') == 0) {
 
-			localStorage.setItem('jsPoints',1000);
-			localStorage.setItem('htmlPoints',4000);
-			localStorage.setItem('cssPoints',7000);
-			localStorage.setItem('oopPoints',6000);
-			localStorage.setItem('jqPoints',10000);
+			localStorage.setItem('jsPoints',0);
+			localStorage.setItem('htmlPoints',0);
+			localStorage.setItem('cssPoints',0);
+			localStorage.setItem('oopPoints',0);
+			localStorage.setItem('jqPoints',0);
 		}
 	}
 
