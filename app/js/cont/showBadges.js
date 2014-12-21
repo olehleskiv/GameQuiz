@@ -2,10 +2,8 @@ define(['jquery'], function($) {
 
 	function showBadges(name, id) {
 
-
-		var points = parseInt(localStorage.getItem(name)),
-		block = document.getElementById(id);
-
+		var points = parseInt(localStorage.getItem(name))
+		  , block = document.getElementById(id);
 
 		if(points < 2000 || !points) {
 			block.children[1].setAttribute('class', 'resbadgeBad');
@@ -13,22 +11,34 @@ define(['jquery'], function($) {
 			block.children[3].setAttribute('class', 'resbadgeBad');
 		}
 
-		if(points >= 2000 && points <= 5000) {
+		if (points >= 2000) {
+			var level = 'Rookie';
+			showAwards(level, id);
 			block.children[1].setAttribute('class', 'resbadgeGood');
 			block.children[2].setAttribute('class', 'resbadgeBad');
-			block.children[3].setAttribute('class', 'resbadgeBad');
+			block.children[3].setAttribute('class', 'resbadgeBad'); 
 		} 
 
-		if(points >= 5000 && points <= 7000) {
+		if (points >= 5000) {
+			var level = 'Middle';
+			showAwards(level, id);
 			block.children[1].setAttribute('class', 'resbadgeGood');
 			block.children[2].setAttribute('class', 'resbadgeGood');
 			block.children[3].setAttribute('class', 'resbadgeBad');
 		}
 
-		if(points >= 7000 && points <= 11000) {
+		if (points >= 7000) {
+			var level = 'Master';
+			showAwards(level, id);
 			block.children[1].setAttribute('class', 'resbadgeGood');
 			block.children[2].setAttribute('class', 'resbadgeGood');
 			block.children[3].setAttribute('class', 'resbadgeGood');
+		}
+
+		function showAwards(level, id) {
+				var awardName = id + level; 
+				var award = document.getElementById(awardName);
+				award.style.background = 'url(img/badges/' + awardName + '.png)';
 		}
 	}
 

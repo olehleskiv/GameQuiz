@@ -11,7 +11,7 @@
 
 //
 ///////////////////////////////////////////////
-define(['jquery'], function($, router) { 
+define(['jquery', 'views/renderResults'], function($, renderAwardsTable, router) { 
 
 	function router(url){
 		var link = $(this).attr('href');
@@ -82,6 +82,10 @@ define(['jquery'], function($, router) {
 
 
 	router('#mainPage');
+
+
+	//This function renders div blocks for future awards
+	renderAwardsTable();
 
 	return router;
 });

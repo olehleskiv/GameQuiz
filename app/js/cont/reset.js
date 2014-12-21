@@ -66,6 +66,7 @@ define(['views/mainHero','cont/showBadges'], function(mainHero, showBadges) {
 		}
 
 	var confirmReset = document.getElementById('resetButton');
+	
 	var mobConfirmReset = document.getElementById('mobResetButton');
 
 	confirmReset.onclick = reset;

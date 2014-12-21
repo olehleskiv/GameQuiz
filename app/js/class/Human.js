@@ -20,14 +20,22 @@ define(['cont/enterBuilding',
 
 		}
 
-		if(localStorage.getItem('jsPoints') == 0) {
-
+		if(!localStorage.getItem('jsPoints')) {
 			localStorage.setItem('jsPoints',0);
+		}
+		if(!localStorage.getItem('htmlPoints')){
 			localStorage.setItem('htmlPoints',0);
+		}
+		if(!localStorage.getItem('cssPoints')) {
 			localStorage.setItem('cssPoints',0);
+		}
+		if(!localStorage.getItem('oopPoints')) {
 			localStorage.setItem('oopPoints',0);
+		}
+		if(!localStorage.getItem('oopPoints')) {
 			localStorage.setItem('jqPoints',0);
 		}
+			
 	}
 
 	function body() {
@@ -108,6 +116,7 @@ define(['cont/enterBuilding',
 	};
 
 	Human.prototype.study = function(name, points) {
+
 		if(name == "html"){
 			var result = points;
 			localStorage.setItem('brainHtml',result);
