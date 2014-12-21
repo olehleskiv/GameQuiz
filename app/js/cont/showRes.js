@@ -12,16 +12,14 @@ define([], function() {
 	//	- idMob - id the mobile result span
 
 
-	function showRes(name, amount, id, idMob) {
+	function showRes(name, amount, id) {
 
-		var bar = document.getElementById(id).firstChild.firstChild,
-		mobres = document.getElementById(idMob);
+		var bar = document.getElementById(id).firstChild.firstChild;
 
 		if(amount > 0) {
 			bar.style.color = 'white';
 		}
 		bar.innerHTML = amount + "%";
-		mobres.innerHTML = name + " " +  amount + " %";
 		bar.style.width = amount + "%";
 	}
 

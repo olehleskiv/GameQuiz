@@ -96,17 +96,13 @@ define(['class/Building', 'cont/showRes'], function(Building, showRes) {
 		this.html = localStorage.getItem('brainHtml');
 		showRes('HTML', this.html, 'htmlBuilding', 'mobhtmlProgress');
 
-
 		//set css
 		this.css = localStorage.getItem('brainCss');
 		showRes('CSS', this.css, 'cssBuilding', 'mobcssProgress');
 
-
-
 		//set oop
 		this.oop = localStorage.getItem('brainOop');
 		showRes('OOP', this.oop, 'oopBuilding', 'moboopProgress');
-
 
 		//set jq
 		this.jq = localStorage.getItem('brainJq');

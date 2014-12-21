@@ -102,6 +102,10 @@ function createQuiz(name, quizContainerId) {
     //////////////////////////////////////////////////////////
         function scoreCount() {
             $('.choice').on('click', function () {
+                
+                $('.messageRight').css('display','none');
+                $('.messageLeft').css('display','none');
+
                 choice = $(this).attr('data-index')
                 console.log(choice, '  ',  quiz[currentquestion].correct);
                 if (choice == quiz[currentquestion].correct) {

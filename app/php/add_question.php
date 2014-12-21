@@ -47,6 +47,6 @@
 
 	if(file_put_contents('../data/quiz.json', $json)) {  //putting json on the server
 
-		echo "Thank you! you question has been submitted, it will be available after admin approval";
+		echo "Got it!, question will be available after king approval";
 	}
 ?>

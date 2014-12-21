@@ -2,11 +2,12 @@ define(['jquery'], function($) {
 
 	function showBadges(name, id) {
 
+
 		var points = parseInt(localStorage.getItem(name)),
 		block = document.getElementById(id);
 
 
-		if(points < 2000) {
+		if(points < 2000 || !points) {
 			block.children[1].setAttribute('class', 'resbadgeBad');
 			block.children[2].setAttribute('class', 'resbadgeBad');
 			block.children[3].setAttribute('class', 'resbadgeBad');
@@ -30,5 +31,12 @@ define(['jquery'], function($) {
 			block.children[3].setAttribute('class', 'resbadgeGood');
 		}
 	}
+
+			showBadges('htmlPoints','htmlBadge');
+			showBadges('cssPoints','cssBadge');
+			showBadges('jsPoints','jsBadge');
+			showBadges('jqPoints','jqBadge');
+			showBadges('oopPoints','oopBadge');
+
 	return showBadges;
 });

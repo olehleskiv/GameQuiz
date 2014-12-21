@@ -112,7 +112,7 @@ define(['cont/enterBuilding',
 			var result = points;
 			localStorage.setItem('brainHtml',result);
 			this.brain.html = result;
-			showRes('HTML', result, 'htmlBuilding', 'mobhtmlProgress');
+			showRes('HTML', result, 'htmlBuilding');
 
 			showBadges('htmlPoints','htmlBadge');
 
@@ -121,7 +121,7 @@ define(['cont/enterBuilding',
 			var result = points;
 			localStorage.setItem('brainCss',result);
 			this.brain.css = result;
-			showRes('CSS', result, 'cssBuilding', 'mobcssProgress');
+			showRes('CSS', result, 'cssBuilding');
 
 			showBadges('cssPoints','cssBadge');
 
@@ -130,7 +130,7 @@ define(['cont/enterBuilding',
 			var result = points;
 			localStorage.setItem('brainJs',result);
 			this.brain.js = result;
-			showRes('JS', result, 'javascriptBuilding', 'mobjsProgress');
+			showRes('JS', result, 'javascriptBuilding');
 
 			showBadges('jsPoints','jsBadge');
 		}
@@ -138,7 +138,7 @@ define(['cont/enterBuilding',
 			var result = points;
 			localStorage.setItem('brainJq',result);
 			this.brain.jq = result;
-			showRes('jQuery/ajax', result, 'jqueryBuilding', 'mobjqProgress');
+			showRes('jQuery/ajax', result, 'jqueryBuilding');
 
 			showBadges('jqPoints','jqBadge');
 
@@ -147,17 +147,12 @@ define(['cont/enterBuilding',
 			var result = points;
 			localStorage.setItem('brainOop',result);
 			this.brain.oop = result;
-			showRes('jQuery/ajax', result, 'oopBuilding', 'moboopProgress');
+			showRes('jQuery/ajax', result, 'oopBuilding');
 
 			showBadges('oopPoints','oopBadge');
 		}
 	};
 
-	showBadges('htmlPoints','htmlBadge');
-	showBadges('cssPoints','cssBadge');
-	showBadges('jsPoints','jsBadge');
-	showBadges('jqPoints','jqBadge');
-	showBadges('oopPoints','oopBadge');
 
 	return Human;
 });

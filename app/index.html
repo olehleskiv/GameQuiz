@@ -31,6 +31,7 @@
 
 	      <ul id="mobileDropDown" class="nav navbar-nav mobileMenu">
 	      	<li><a href="#results" >your results</a></li>
+	      	<li><a type="button" id="mobResetButton" >reset results</a></li>
 	      	<li><a href="#aboutus">About us</a></li>
 			<li><a href="/data/quiz.json">Get JSON</a></li>
 			<li><a href="admin/admin.html">Admin</a></li>
@@ -80,7 +81,7 @@
 			</div>
 
 		  <div class="col-md-6">
-		  	<div>
+		  	<div class="imagesRow1">
 			  	<img class="mainImages" alt="html" src="img/html.png">
 			  	<img class="mainImages" alt="css" src="img/css.png">
 			  	<img class="mainImages" alt="javascript" src="img/js.png">
@@ -99,47 +100,37 @@
 
 	<div id="gamePage" class="container" style="display:none">
 
-		<!--Skills-->
-		<div class="row mobileProgress">
-			<h4>Your Progress</h4>
-			<h5><span id="mobhtmlProgress" class="label label-primary">HTML</span></h5>
-			<h5><span id="mobcssProgress" class="label label-info">CSS</span></h5>
-			<h5><span id="mobjsProgress" class="label label-warning">JavaScript</span></h5>
-			<h5><span id="mobjqProgress" class="label label-danger">jQuery, Ajax</span></h5>
-			<h5><span id="moboopProgress" class="label label-success">OOP</span></h5>
-		</div>
-
 		<div class="badges">
 			<h5>Pass tests and Collect badges</h5>
 			<div class="badgeContainer" id="htmlBadge" >
 				<p>HTML</p>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 			<div class="badgeContainer" id="cssBadge">
 				<p>CSS</p>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 			<div class="badgeContainer" id="jsBadge">
 				<p>JS</p>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 			<div class="badgeContainer" id="oopBadge">
 				<p>OOP</p>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 			<div class="badgeContainer" id="jqBadge">
 				<p>jQ/Ajax</p>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
-				<div class="resbadge" ></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 		</div>
 
@@ -256,32 +247,52 @@
 	<!-- QUIZ SECTION -->
 	<div class="container" id="htmlQuiz">
 		<h2 class="quizTitle">HTML quiz</h2>
-		<div class="mainKnight"></div>
-		<div id="htmlOponent" class="oponent"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+		</div>
+		<div id="htmlOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end html quiz -->
 
 	<div class="container" id="cssQuiz">
 		<h2 class="quizTitle">CSS quiz</h2>
-		<div class="mainKnight"></div>
-		<div id="cssOponent" class="oponent"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+		</div>
+		<div id="cssOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end css quiz -->
 
 	<div class="container" id="jsQuiz">
 		<h2 class="quizTitle">JS quiz</h2>
-		<div class="mainKnight"></div>
-		<div id="jsOponent" class="oponent"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+		</div>
+		<div id="jsOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end js quiz -->
 
 	<div class="container" id="oopQuiz">
 		<h2 class="quizTitle">OOP quiz</h2>
-		<div class="mainKnight"></div>
-		<div id="oopOponent" class="oponent"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+		</div>
+		<div id="oopOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end oop quiz -->
 
 	<div class="container" id="jqQuiz">
 		<h2 class="quizTitle">jQuery/Ajax quiz</h2>
-		<div class="mainKnight"></div>
-		<div id="jqOponent" class="oponent"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+		</div>
+		<div id="jqOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end jQuery/Ajax quiz -->
 	
 

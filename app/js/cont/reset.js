@@ -1,8 +1,7 @@
 
 define(['views/mainHero','cont/showBadges'], function(mainHero, showBadges) {
 
-	var confirmReset = document.getElementById('resetButton')
-	confirmReset.onclick = function() {
+	function reset() {
 
 		$('#resetConfirm').modal();
 
@@ -34,46 +33,42 @@ define(['views/mainHero','cont/showBadges'], function(mainHero, showBadges) {
 				mainDude.brain.jq = localStorage.getItem('brainJq');
 
 				//unset html
-				var bar = document.getElementById('htmlBuilding').firstChild.firstChild,
-				mobres = document.getElementById('mobhtmlProgress');
+				var bar = document.getElementById('htmlBuilding').firstChild.firstChild;
 
 				bar.innerHTML = mainDude.brain.html + "%";
-				mobres.innerHTML = "HTML: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.html + "%";
 
 				//unset css3
-				var bar = document.getElementById('cssBuilding').firstChild.firstChild,
-				mobres = document.getElementById('mobcssProgress');
+				var bar = document.getElementById('cssBuilding').firstChild.firstChild;
 
 				bar.innerHTML = mainDude.brain.css + "%";
-				mobres.innerHTML = "CSS: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.css + "%";
 
 				//unset js
-				var bar = document.getElementById('javascriptBuilding').firstChild.firstChild,
-				mobres = document.getElementById('mobjsProgress');
+				var bar = document.getElementById('javascriptBuilding').firstChild.firstChild;
 
 				bar.innerHTML = mainDude.brain.js + "%";
-				mobres.innerHTML = "JavaScript: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.js + "%";
 
 				//unset jq
-				var bar = document.getElementById('jqueryBuilding').firstChild.firstChild,
-				mobres = document.getElementById('mobjqProgress');
+				var bar = document.getElementById('jqueryBuilding').firstChild.firstChild;
 
 				bar.innerHTML = mainDude.brain.jq + "%";
-				mobres.innerHTML = "jQuery/Ajax: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.jq + "%";
 				
 				//unset jq
-				var bar = document.getElementById('oopBuilding').firstChild.firstChild,
-				mobres = document.getElementById('moboopProgress');
+				var bar = document.getElementById('oopBuilding').firstChild.firstChild;
 
 				bar.innerHTML = mainDude.brain.oop + "%";
-				mobres.innerHTML = "OOP: " + mainDude.brain.jq + "%";
 				bar.style.width = mainDude.brain.oop + "%";
 			}
 
 		}
+
+	var confirmReset = document.getElementById('resetButton');
+	var mobConfirmReset = document.getElementById('mobResetButton');
+
+	confirmReset.onclick = reset;
+	mobConfirmReset.onclick = reset;
 
 });

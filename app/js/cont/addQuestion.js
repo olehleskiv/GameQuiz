@@ -18,7 +18,6 @@ define(['jquery'], function($) {
 			correct = this.form.correct.value,
 			category = this.form.category.value;
 
-			title = title + "<pre>" + code + "</pre>";
 			//
 			// All fields in form are required
 			//
@@ -34,6 +33,7 @@ define(['jquery'], function($) {
 			if(category === "") {
 				message("please choose category", true);
 			} else {
+				title = title + "<pre>" + code + "</pre>";
 				send([title, var1, var2, var3, var4, var5, correct, category]);		//if no errors - send
 			}
 	};
