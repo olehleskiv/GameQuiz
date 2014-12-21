@@ -12,6 +12,19 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 
 		$('#gameConfirm').on('show.bs.modal', function (e) {
 			document.body.setAttribute("onkeydown","return false");						//disable keyboard
+
+			console.log(name.slice(0, 1).toUpperCase() + name.slice(1));			
+			console.log(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))));
+
+			if(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))) != 0) {
+
+				var score = localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1)));
+				var mesBody = document.getElementById('gameConfirmBody');
+				mesBody.innerHTML = "<p>you have already passed this test!, you current score is<h2>" + score + "%</h2></p>";
+			} else {
+				var mesBody = document.getElementById('gameConfirmBody');
+				mesBody.innerHTML = "";
+			}
 			var title = document.getElementById('gameConfirmTitle');
 			title.innerHTML = 'Do you want to start ' + name + ' quiz?';
 
@@ -20,10 +33,6 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 			var quizContainer = name + 'Quiz';
 			createQuiz(name, quizContainer);
 						
-			// startButton.onclick = function() {
-			// // 	console.log('on');
-			//  	createQuiz(name, quizContainer);
-			//  };
 		});
 
 
