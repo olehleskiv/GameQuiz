@@ -1,4 +1,5 @@
-define(['jquery','views/mainHero', 'cont/route'], function($, mainDude, router, createQuiz) { 
+define(['jquery','views/mainHero', 'cont/route'], 
+    function($, mainDude, router, createQuiz) { 
 
 function createQuiz(name, quizContainerId) {
 
@@ -120,13 +121,14 @@ function buttle(name) {
     var opponentId = name + 'Oponent';
     var opponent = document.getElementById(opponentId);
     var frame = document.getElementById('frame');
+    
 
     if (choice == quiz[currentquestion].correct){
         $('.mainKnight').css('left','70%');
         setTimeout(function(){
             $('.mainKnight').css('left','2%');
 
-            setInterval(function(){
+            var c = setInterval(function(){
                 $('.mainKnight').css('transform','rotate(-10deg)');
 
                 setTimeout(function(){
@@ -135,9 +137,10 @@ function buttle(name) {
                 100);
             },
             200);
+
         },
         1000);
-
+        
     } else {
         opponent.style.right = '70%';
         setTimeout(function(){

@@ -58,18 +58,23 @@ var quizURL = '../../data/quiz.json';
              '</tr>'+
         '<% } %>';
 
-        var form = document.getElementById('quiz-form'),
-            table = document.createElement('table'),
-            compiledTemplate = _.template(tableTemplate),
-            readyHtml = compiledTemplate({ object : objectArray }),
-            header = document.createElement('h1');
-            header.innerHTML = name + ' quiz';
+        var form = document.getElementById('quiz-form')
+            , table = document.createElement('table')
+            , linkToTable = document.createElement('a')
+            , compiledTemplate = _.template(tableTemplate)
+            , readyHtml = compiledTemplate({ object : objectArray })
+            , header = document.createElement('h1');
+        
+        header.innerHTML = name + ' quiz';
+
+        linkToTable.setAttribute('name', name + 'quiz');
 
         table.className = 'table';
         table.setAttribute('id', name);
         table.className = 'responstable';
         table.innerHTML = readyHtml;
 
+        form.appendChild(linkToTable);
         form.appendChild(header);
         form.appendChild(table);
     }

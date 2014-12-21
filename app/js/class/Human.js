@@ -108,6 +108,7 @@ define(['cont/enterBuilding',
 	};
 
 	Human.prototype.study = function(name, points) {
+		renderAwardsTable();
 		if(name == "html"){
 			var result = points;
 			localStorage.setItem('brainHtml',result);

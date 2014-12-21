@@ -12,7 +12,7 @@ img {
 	margin: 0 auto;
 }
 
-.button{
+.button, .link{
 	width: 100px;
 	background: #52b752;
 	display: block;
@@ -29,6 +29,23 @@ img {
 
 .button:hover{
 	background: #2288bb;
+}
+
+.link{
+	display: inline-block;
+	width: 15%;
+	background: #2288bb;
+}
+
+.link:hover{
+	background: #52b752;
+	border-radius: 10px;
+}
+
+.nav-links{
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
 }
 
 #login{
