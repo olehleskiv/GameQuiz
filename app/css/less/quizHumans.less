@@ -1,0 +1,113 @@
+ .mainKnight {
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 2%;
+        bottom:10px;
+        transition: all 1s ease;
+        .messageLeft {
+            background-image: url("../img/people/dialogLeft.png") ;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            margin-left: 15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+
+            &:after {
+            content: "Lets Rock! I'll gona kick your ass";
+            }
+        }
+        
+    }
+    .oponent{
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        right: 2%;
+        bottom:10px;
+        transition: all .5s ease;
+        .messageRight {
+            background-image: url("../img/people/dialogRight.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "default";
+            display: block;
+            height: 100%;
+            margin-left: -15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+        } 
+    }
+
+    #oopOponent {
+        background-image: url("../img/people/oopk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about OOP? Fool!";
+            }
+        }
+    }
+    #htmlOponent {
+        background-image: url("../img/people/htmlk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about HTML? Fool!";
+            }
+        }
+    }
+    #cssOponent {
+        background-image: url("../img/people/cssk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about CSS? Fool!";
+            }
+        }
+    }
+    #jqOponent {
+        background-image: url("../img/people/jqk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about jquery or Ajax? Fool!";
+            }
+        }
+    }
+    #jsOponent {
+        background-image: url("../img/people/jsk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about JavaScript? Fool!";
+            }
+        }
+    }

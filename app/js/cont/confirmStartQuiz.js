@@ -18,9 +18,14 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 
 			if(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))) != 0) {
 
-				var score = localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1)));
-				var mesBody = document.getElementById('gameConfirmBody');
-				mesBody.innerHTML = "<p>you have already passed this test!, you current score is<h2>" + score + "%</h2></p>";
+				var score = localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))),
+				points = localStorage.getItem(name + "Points"),
+				mesBody = document.getElementById('gameConfirmBody');
+
+				mesBody.innerHTML = "<p>you have already passed this test!, you current score is<h2>" + 
+										score + "%" + 
+									"</h2></p><p>your points:<h3>" + points + "</h3>" +
+									"your current result will be overridden</p>";
 			} else {
 				var mesBody = document.getElementById('gameConfirmBody');
 				mesBody.innerHTML = "";

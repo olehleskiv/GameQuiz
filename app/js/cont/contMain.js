@@ -6,7 +6,6 @@ define([
 		 'cont/addQuestionFormCheck',
 		 'cont/confirmStartQuiz',
 		 'cont/zIndexCheck',
-		 'cont/removeInstr',
 		 'cont/mobileFunc'], function() {
 
 	return console.log('controllers success');

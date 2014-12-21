@@ -55,8 +55,6 @@ define(['cont/enterBuilding',
 	}
 
 	Human.prototype.move = function(direction, speed) {
-		
-			document.getElementById('startInstruction').style.display = "none";
 
 			var dudePos = $("#mainGuy").position();
 
@@ -162,6 +160,15 @@ define(['cont/enterBuilding',
 		}
 	};
 
+	Human.prototype.showMessage = function() {
 
+		$('#mainGuy').addClass('activeMainGuy')
+		$('#mainGuy').css("zIndex","999");
+	}
+	Human.prototype.hideMessage = function() {
+
+		$('#mainGuy').removeClass('activeMainGuy')
+		$('#mainGuy').css("zIndex","");
+	}
 	return Human;
 });
