@@ -158,10 +158,55 @@
         color: black;
     }
 
+	
+	@media only screen and (max-width: 1150px) {
+		#cssBuilding,
+        #oopBuilding,
+        #jqueryBuilding,
+        #javascriptBuilding,
+        #htmlBuilding  {
+            position: relative;
+            width: 30%;
+            background-size: 65%;
+        }
+		
+		#htmlBuilding,
+		#cssBuilding {
+			margin-top: 150px !important;
+		}
+		
+        #jqueryBuilding{
+			margin-top: -180px !important;
+		}
+		
+		#oopBuilding{
+			margin-top: -200px !important;
+		}
+		
+		
+		.progress {
+            margin-top: 60px;
+        }
+	}	
+	
+
+	@media only screen and (max-width: 700px) {
+		
+        #jqueryBuilding{
+			margin-top: -240px !important;
+		}
+		
+		#oopBuilding{
+			margin-top: -260px !important;
+		}
+	}	
+
+	
     @media only screen and (max-width: 410px) { 
         .progress {
             margin-top: -140px;
         }
+		
         #cssBuilding,
         #oopBuilding,
         #jqueryBuilding,
