@@ -1,8 +1,3 @@
-require.config({
-	deps: ['main'],
-    baseUrl: 'js/',
-});
-
 
 require(['libs/jquery',
 		 'libs/libsMain',

@@ -26,10 +26,10 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 				points = localStorage.getItem(name + "Points"),
 				mesBody = document.getElementById('gameConfirmBody');
 
-				mesBody.innerHTML = "<p>you have already passed this test!, you current score is<h2>" + 
-										score + "%" + 
-									"</h2></p><p>your points:<h3>" + points + "</h3>" +
-									"your current result will be overridden</p>";
+				mesBody.innerHTML = "<p>you have already passed this test!, you current score is" + 
+									"<h3><span class=\"label label-success\">" + score + "%</span></h3>" + 
+									"<p>your points: </p><h3><span class=\"label label-warning\" >" + points + "</span></h3>" +
+									"<p>your current result will be overridden</p>";
 			} else {
 				var mesBody = document.getElementById('gameConfirmBody');
 				mesBody.innerHTML = "";

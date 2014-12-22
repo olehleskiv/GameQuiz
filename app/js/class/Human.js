@@ -12,11 +12,11 @@ define(['cont/enterBuilding',
 	function brain() {
 		if(!localStorage.getItem('brainJs')) {
 
-			localStorage.setItem('brainJs','0');
-			localStorage.setItem('brainHtml','0');
-			localStorage.setItem('brainCss','0');
-			localStorage.setItem('brainOop','0');
-			localStorage.setItem('brainJq','0');
+			localStorage.setItem('brainJs',0);
+			localStorage.setItem('brainHtml',0);
+			localStorage.setItem('brainCss',0);
+			localStorage.setItem('brainOop',0);
+			localStorage.setItem('brainJq',0);
 
 		}
 
@@ -166,7 +166,13 @@ define(['cont/enterBuilding',
 
 	Human.prototype.showMessage = function() {
 
-		$('#mainGuy').addClass('activeMainGuy')
+		$('#mainGuy').addClass('activeMainGuy');
+		$('#mainGuy').attr('title', 'Greetings Sir! Use arrow keys to move me I can walk here,' +
+			                        'I can pass test and gather points, percentage score depends' + 
+			                        'on how many answers were correct.   To get badges you will need' + 
+			                        'to get as much points as possible, amounts of points you get depends ' + 
+			                        'on how fast you pass the test and how many correct answers you have. Good luck!');
+
 		$('#mainGuy').css("zIndex","999");
 	}
 	Human.prototype.hideMessage = function() {
