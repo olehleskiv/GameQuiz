@@ -1,5 +1,5 @@
-define(['jquery','views/mainHero', 'cont/route'], 
-    function($, mainDude, router, createQuiz) { 
+define(['jquery','cont/battle', 'cont/displayResults', 'views/mainHero', ], 
+    function($, battle, displayResults, mainDude,  createQuiz) { 
 
 function createQuiz(name, quizContainerId) {
 
@@ -9,7 +9,7 @@ function createQuiz(name, quizContainerId) {
         var subjectQuiz =  getQuizName(name, JSONobject["responseJSON"]);        //JSONobject["responseJSON"].js;
         var quiz = randomQuizQuestions(subjectQuiz);
         var currentquestion = 0
-            , maxQuest = 25
+            , maxQuest = 15
             , score = 0
             , maxTime = 4500000
             , startTime = new Date();
@@ -114,73 +114,10 @@ function createQuiz(name, quizContainerId) {
                 if (choice == quiz[currentquestion].correct) {
                     score++;
                 } 
-                buttle(name);
+                battle(name, choice, quiz, currentquestion);
                 processQuestion();
             })
         }
-
-function buttle(name) {
-    var opponentId = name + 'Oponent';
-    var opponent = document.getElementById(opponentId);
-    var frame = document.getElementById('frame');
-    console.log(opponentId);
-    
-
-    if (choice == quiz[currentquestion].correct){
-        $('.mainKnight').css('left','70%');
-            
-        setTimeout(function(){
-            $('.mainKnight').css('left','2%');
-            
-            //$('.messageLeft').css('background-image','url(img/people/bang.png)');
-            $('.bang').css('display','block');
-            setTimeout(function(){
-                $('.bang').css('display','none');
-            }, 200);
-
-            var c = setInterval(function(){
-                $('.mainKnight').css('transform','rotate(-10deg)');
-
-                setTimeout(function(){
-                    $('.mainKnight').css('transform','rotate(10deg)');
-                },
-                200);
-            },
-            400);
-
-        },
-        700);
-        
-        
-    } else {
-        opponent.style.right = '70%';
-        setTimeout(function(){
-            opponent.style.right = '2%';
-        }, 700);
-        //frame.style.display = 'none';
-        setTimeout(function() {
-            //frame.style.display = 'block';
-            opponent.style.right = '2%';
-            //$('.messageRight').css('background-image','url(img/people/bang.png)');
-            $('.bang').css('display','block');
-            setTimeout(function(){
-                $('.bang').css('display','none');
-            }, 200);
-
-            setInterval(function(){
-                 opponent.style.transform = 'rotate(-10deg)';
-
-                setTimeout(function(){
-                    opponent.style.transform = 'rotate(10deg)';
-                },
-                200);
-            },
-            400);
-        },
-        700);
-    }
-
-}
 
 
     //////////////////////////////////////////////////////////
@@ -189,7 +126,9 @@ function buttle(name) {
         function processQuestion() {
             currentquestion++;
             if (currentquestion == maxQuest) {
-                displayResults();
+                var res = Math.round(score / maxQuest * 100);
+                displayResults(name, startTime, maxTime, maxQuest, score);
+                this.mainDude.study(name, res);                     //inserting into progress bars
             } 
             else {
                 nextQuestion();
@@ -232,66 +171,7 @@ function buttle(name) {
                 }
             }
         }
-    
-    //////////////////////////////////////////////////////////
-    //Function to count and show the results of quiz
-    //and to instert the result into the game page progress bar
-    //////////////////////////////////////////////////////////
 
-        function displayResults() {
-            var endTime = new Date()
-                , answersTime = endTime - startTime
-                , pointsTime = maxTime - answersTime
-                , playerPoints = Math.round((pointsTime * score) / 10000); 
-
-            var questionTitle = document.getElementById('question')
-                , choiseBlock = document.getElementById('choice-block')
-                , result = document.createElement('h2')
-                , points = document.createElement('p')
-                , backToWorldButton = document.createElement('a')
-                , res = Math.round(score / maxQuest * 100);
-                
-            questionTitle.innerHTML = 'You got ' + score + ' out of ' + maxQuest + ' correct.';
-            choiseBlock.innerHTML = '';
-            result.className = 'result';
-            result.innerHTML = res + '%';
-
-            if (answersTime > maxTime) {
-                playerPoints = 0;
-            }
-
-            points.className = 'result';
-            points.innerHTML = 'You got ' + playerPoints + ' points';
-                
-            backToWorldButton.setAttribute('href', '#gamePage');
-            backToWorldButton.innerHTML = 'Go back to map';
-            backToWorldButton.className = 'go-to-map-button';
-            
-            backToWorldButton.addEventListener("click", function(){
-                router('#gamePage');
-            });
-
-            questionTitle.appendChild(result);
-            questionTitle.appendChild(points);
-            questionTitle.appendChild(backToWorldButton);
-
-            
-            setPointsToLocalStorage();
-            this.mainDude.study(name, res);                     //inserting into progress bars
-            ////////////////////////////////////////////////////////////////////////////
-            //function to put points into local storage if they are bigger then old ones
-            ////////////////////////////////////////////////////////////////////////////
-            function setPointsToLocalStorage() {
-
-                var storageId = name + 'Points'
-                    , oldPoints = localStorage.getItem(storageId);
-                console.log(storageId);
-                console.log("old" + oldPoints + "new" + playerPoints);
-                if (playerPoints > oldPoints) {
-                    localStorage.setItem(storageId, playerPoints);
-                }
-            }
-        }
 
     });
 
