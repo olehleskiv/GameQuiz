@@ -97,7 +97,7 @@ img {
 
 #ok , .submit-button {
 	width: 100%;
-	background: #52b752;
+	background: #e7504e;
 	border: 0;
 	padding: 4%;
 	font-family: 'Open Sans',sans-serif;
@@ -118,9 +118,25 @@ img {
 
 #ok:hover,
 .submit-button:hover {
-	background: #2288bb;
+	background: #52b752;
 }
 
+.back-to-main {
+	display: block;
+	width: 20%;
+	padding: 1%;
+	font-size: 1.4em;
+	margin: 1% auto;
+	text-decoration: none;
+	background: #464c51;
+	color: #fff;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.back-to-main:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 h1{
 	text-align: center;
 	color: #504668;

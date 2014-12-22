@@ -5,7 +5,10 @@ define([
 		 'cont/addQuestion',
 		 'cont/addQuestionFormCheck',
 		 'cont/confirmStartQuiz',
-		 'cont/zIndexCheck'], function() {
+		 'cont/zIndexCheck',
+		 'cont/quiz',
+		 'cont/displayResults',
+		 'cont/battle'], function() {
 
 	return console.log('controllers success');
 

@@ -57,8 +57,12 @@ define(['cont/enterBuilding',
 	Human.prototype.move = function(direction, speed) {
 
 			var dudePos = $("#mainGuy").position();
+			var left = 37
+			  , up = 38
+			  , right = 39
+			  , down = 40;
 
-			if(direction == 39) {												        // if "->" button is pressed
+			if(direction == right) {												        // if "->" button is pressed
 				this.humanBody.stepsRight += speed;
 				this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
 				this.humanBody.human.style.background = "url(img/people/walker.gif)";
@@ -68,7 +72,7 @@ define(['cont/enterBuilding',
 				}
 				return;
 			}
-			if(direction == 37) {													// if "<-" button is pressed
+			if(direction == left) {													// if "<-" button is pressed
 				this.humanBody.stepsRight -= speed;
 				this.humanBody.human.style.left = this.humanBody.stepsRight + "px";
 				this.humanBody.human.style.background = "url(img/people/walker.gif)";
@@ -78,7 +82,7 @@ define(['cont/enterBuilding',
 				}
 				return;
 			}
-			if(direction == 40) {													// if "down" button is pressed
+			if(direction == down) {													// if "down" button is pressed
 				this.humanBody.stepsTop += speed;
 				this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 				this.humanBody.human.style.background = "url(img/people/walker.gif)";
@@ -91,7 +95,7 @@ define(['cont/enterBuilding',
 
 				return;
 			}
-			if(direction == 38) {													// if "up" button is pressed
+			if(direction == up) {													// if "up" button is pressed
 				this.humanBody.stepsTop -= speed;
 				this.humanBody.human.style.top = this.humanBody.stepsTop + "px";
 				this.humanBody.human.style.background = 'url(img/people/walker.gif)';
