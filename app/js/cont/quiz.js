@@ -18,7 +18,7 @@ function createQuiz(name, quizContainerId) {
         var subjectQuiz =  getQuizName(name, JSONobject["responseJSON"]);        //JSONobject["responseJSON"].js;
         var quiz = randomQuizQuestions(subjectQuiz);
         var currentquestion = 0
-            , maxQuest = 15
+            , maxQuest = 25
             , score = 0
             , maxTime = 4500000
             , startTime = new Date();

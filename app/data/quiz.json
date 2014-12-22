@@ -568,7 +568,7 @@
       "active": true
     },
     {
-      "title": "Constructors are used to",
+      "title": "Constructors a used to",
       "variants": [
         "Initialize a newly created object.",
         "Free memory.",
@@ -987,7 +987,7 @@
       "variants": [
         "&lt;menu&gt;&lt;/menu&gt;",
         "&lt;navmenu&gt;&lt;/navmenu&gt;",
-        "&lt;menu navigator=\"\"&gt;&lt;/menu&gt;",
+        "&lt;menu navigator=  &rdquo;  &rdquo;&gt;&lt;/menu&gt;",
         "&lt;nav&gt;&lt;/nav&gt;"
       ],
       "correct": 3,
@@ -997,10 +997,10 @@
       "ID": 3,
       "title": "Which syntax is correct?",
       "variants": [
-        "&lt;movie src=\"video.flv\"&gt;&lt;/movie&gt;",
-        "&lt;movie&gt; src=\"video.flv\"&lt;/movie&gt;",
-        "&lt;video src=\"video.flv\"&gt;&lt;/video&gt;",
-        "&lt;control src=\"video.flv\"&gt;&lt;/control&gt;"
+        "&lt;movie src= &rdquo;video.flv  &rdquo;&gt;&lt;/movie&gt;",
+        "&lt;movie&gt; src= &rdquo;video.flv  &rdquo;&lt;/movie&gt;",
+        "&lt;video src= &rdquo;video.flv  &rdquo;&gt;&lt;/video&gt;",
+        "&lt;control src= &rdquo;video.flv  &rdquo;&gt;&lt;/control&gt;"
       ],
       "correct": 2,
       "active": true
@@ -1033,8 +1033,8 @@
       "ID": 6,
       "title": "Which tag is used to make an ordered list?",
       "variants": [
-        "&lt;ordered list=\"\"&gt;&lt;/ordered&gt;",
-        "&lt;number list=\"\"&gt;&lt;/number&gt;",
+        "&lt;ordered list=  &rdquo;  &rdquo;&gt;&lt;/ordered&gt;",
+        "&lt;number list= &rdquo; &rdquo;&gt;&lt;/number&gt;",
         "&lt;ul&gt;&lt;/ul&gt;",
         "&lt;ol&gt;&lt;/ol&gt;"
       ],
@@ -1045,9 +1045,9 @@
       "ID": 7,
       "title": "Which syntax is correct for making a check box?",
       "variants": [
-        "&lt;check box=\"\"&gt;&lt;/check&gt;",
-        "&lt;input type=\"checkbox\"&gt;",
-        "&lt;type =\"\" checkbox=\"\"&gt;&lt;/type&gt;",
+        "&lt;check box= &rdquo; &rdquo;&gt;&lt;/check&gt;",
+        "&lt;input type=  &rdquo;checkbox  &rdquo;&gt;",
+        "&lt;type = &rdquo; &rdquo; checkbox= &rdquo; &rdquo;&gt;&lt;/type&gt;",
         "&lt;input&gt;checkbox&lt;/input&gt;",
         ""
       ],
@@ -1071,10 +1071,10 @@
       "ID": 9,
       "title": "In HTML, Which syntax is correct?",
       "variants": [
-        "&lt;img href=\"photo.jpg\"&gt;",
-        "&lt;img alt=\"photo.jpg\"&gt;",
-        "&lt;img src=\"photo.jpg\"&gt;",
-        "&lt;img&gt; src=\"photo.jpg\""
+        "&lt;img href=  &rdquo;photo.jpg &rdquo;&gt;",
+        "&lt;img alt= &rdquo;photo.jpg  &rdquo;&gt;",
+        "&lt;img src= &rdquo;photo.jpg  &rdquo;&gt;",
+        "&lt;img&gt; src= &rdquo;photo.jpg  &rdquo;"
       ],
       "correct": 2,
       "active": true
@@ -1083,10 +1083,10 @@
       "ID": 10,
       "title": "In HTML, which syntax is correct to open a hyperlink in a new browser window?",
       "variants": [
-        "&lt;a href=\"new url\"&gt;&lt;/a&gt;",
-        "&lt;a href=\"url\" new=\"\"&gt;&lt;/a&gt;",
-        "&lt;a href=\"url\" target=\"_main\"&gt;&lt;/a&gt;",
-        "&lt;a href=\"url\" target=\"_blank\"&gt;&lt;/a&gt;"
+        "&lt;a href=  &rdquo;new url &rdquo;&gt;&lt;/a&gt;",
+        "&lt;a href=  &rdquo;url &rdquo; new=  &rdquo;  &rdquo;&gt;&lt;/a&gt;",
+        "&lt;a href=  &rdquo;url &rdquo; target= &rdquo;_main  &rdquo;&gt;&lt;/a&gt;",
+        "&lt;a href=  &rdquo;url &rdquo; target= &rdquo;_blank &rdquo;&gt;&lt;/a&gt;"
       ],
       "correct": 3,
       "active": true
@@ -1095,11 +1095,11 @@
       "ID": 11,
       "title": "How to add video in HTML5?",
       "variants": [
-        "&lt;video width=\"320\" height=\"240\" src=\"myVideo.mp4\"&gt;",
-        "&lt;video width=\"320\" height=\"240\" controls=\"controls\" &gt; &lt; source src=\"myVideo.mp4\" type=\"video/mp4\"/&gt;",
-        "&lt;object id=\"MediaPlayer\" width=\"434\" height=\"300\" classid=\"clsid\" type=\"application/x-oleobject\" &gt; &lt; param name=\"Filename\" value=\"myVideo.mp4\" &gt;",
-        "object width=\"320\" height=\"240\" src=\"myVideo.mp4\"",
-        "&lt;embed src=\"video.avi\" width=\"352\" height=\"240\"&gt;"
+        "&lt;video width= &rdquo;320  &rdquo; height=  &rdquo;240 &rdquo; src=  &rdquo;myVideo.mp4 &rdquo;&gt;",
+        "&lt;video width= &rdquo;320  &rdquo; height=  &rdquo;240 &rdquo; controls= &rdquo;controls &rdquo; &gt; &lt; source src= &rdquo;myVideo.mp4  &rdquo; type=  &rdquo;video/mp4 &rdquo;/&gt;",
+        "&lt;object id= &rdquo;MediaPlayer  &rdquo; width= &rdquo;434  &rdquo; height=  &rdquo;300 &rdquo; classid=  &rdquo;clsid &rdquo; type= &rdquo;application/x-oleobject  &rdquo; &gt; &lt; param name=  &rdquo;Filename  &rdquo; value= &rdquo;myVideo.mp4  &rdquo; &gt;",
+        "object width=  &rdquo;320 &rdquo; height= &rdquo;240  &rdquo; src= &rdquo;myVideo.mp4  &rdquo;",
+        "&lt;embed src= &rdquo;video.avi  &rdquo; width= &rdquo;352  &rdquo; height=  &rdquo;240 &rdquo;&gt;"
       ],
       "correct": 1,
       "active": true
@@ -1144,8 +1144,8 @@
       "ID": 15,
       "title": "Select the Doctype that should be specified at the top of all HTML5 documents.",
       "variants": [
-        "&lt;!Doctype html PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\"&gt;",
-        "&lt;!DOCTYPE html5 PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\"&gt;",
+        "&lt;!Doctype html PUBLIC   &rdquo;-//W3C//DTD HTML 5.0 Transitional//EN &rdquo;&gt;",
+        "&lt;!DOCTYPE html5 PUBLIC  &rdquo;-//W3C//DTD HTML 5.0 Transitional//EN  &rdquo;&gt;",
         "&lt;!doctype html5&gt;",
         "&lt;!DOCTYPE html&gt;"
       ],
@@ -1166,7 +1166,7 @@
     },
     {
       "ID": 17,
-      "title": "Input type=\"email\" used on input fields provides the following advantages.",
+      "title": "Input type= &rdquo;email  &rdquo; used on input fields provides the following advantages.",
       "variants": [
         "Makes the form more accessible",
         "Enables modern browsers to validate the form field on submit (without JavaScript)",
