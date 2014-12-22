@@ -1,5 +1,5 @@
-define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz'], 
-    function($, mainDude, router, createQuiz) { 
+define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz', 'cont/renderUserResultsTable'], 
+    function($, mainDude, router, createQuiz, renderUserResultsTable) { 
     
     //////////////////////////////////////////////////////////
     //Function to count and show the results of quiz
@@ -36,7 +36,9 @@ define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz'],
             backToWorldButton.className = 'go-to-map-button';
             
             backToWorldButton.addEventListener("click", function(){
-                router('#gamePage');
+                renderUserResultsTable(name, maxQuest);
+                //router('#gamePage');
+                router('#results');
             });
 
             questionTitle.appendChild(result);

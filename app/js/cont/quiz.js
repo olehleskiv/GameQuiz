@@ -1,5 +1,14 @@
-define(['jquery','cont/battle', 'cont/displayResults', 'views/mainHero', ], 
-    function($, battle, displayResults, mainDude,  createQuiz) { 
+define(['jquery'
+        , 'cont/saveQuizResults'
+        , 'cont/battle'
+        , 'cont/displayResults' 
+        , 'views/mainHero'], 
+    function($
+        , saveQuizResults
+        , battle
+        , displayResults
+        , mainDude
+        , createQuiz) { 
 
 function createQuiz(name, quizContainerId) {
 
@@ -49,6 +58,10 @@ function createQuiz(name, quizContainerId) {
                 quizContainer.appendChild(container);
                 
                 addQuestionVariants(quiz[currentquestion].variants);
+                if (localStorage.getItem(name)) {
+                    localStorage.removeItem(name);
+                }
+
                 scoreCount();
                 
             }
@@ -106,14 +119,20 @@ function createQuiz(name, quizContainerId) {
     //////////////////////////////////////////////////////////
         function scoreCount() {
             $('.choice').on('click', function () {
+                choice = $(this).attr('data-index');
+                var choiceText = $(this).html()
+                  , correctAns = quiz[currentquestion].correct
+                  , correctText = quiz[currentquestion].variants[correctAns];
                 
                 $('.messageRight').css('display','none');
                 $('.messageLeft').css('display','none');
                 
-                choice = $(this).attr('data-index')
-                if (choice == quiz[currentquestion].correct) {
+                if (choice == correctAns) {
                     score++;
                 } 
+
+                saveQuizResults(name, currentquestion, choiceText, correctText, maxQuest);
+
                 battle(name, choice, quiz, currentquestion);
                 processQuestion();
             })

@@ -1,1 +1,1639 @@
-{"js":[{"ID":1,"title":"What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();<\/pre>","variants":["object","array","arguments","undefined","true"],"correct":0,"active":true},{"ID":2,"title":"What is the result of the this code?<br><pre>var f = function g() {<br>return 23;<br>};<br>typeof g();<\/pre>","variants":["number","undefined","function","Error","object"],"correct":3,"active":true},{"ID":3,"title":"What does the alert below?<br><pre>function aaa() {<br>return {<br>test: 1<br>};<br>}<br>alert(typeof aaa());<\/pre>","variants":["function","number","object","undefined","Error"],"correct":3,"active":true},{"ID":4,"title":"What is the result of this code?<br><pre>var bar = 1,foo = {};<br>foo: {<br>bar: 2;<br>baz: ++bar;<br>};<br>foo.baz + foo.bar + bar;<\/pre>","variants":["ReferenceError","undefined","NaN","4","5"],"correct":2,"active":true},{"ID":5,"title":"What is the result of the expression?<br><pre>10 > 9 > 8 === true;<\/pre>","variants":["ReferenceError","TypeError","undefined","true","false"],"correct":4,"active":true},{"ID":6,"title":"What is the result of the function?<br><pre>function foo(a, b) {<br>arguments[1] = 2;<br>alert(b);<br>}<br>foo(1);<\/pre>","variants":["ReferenceError","''","2","undefined","1"],"correct":3,"active":true},{"ID":7,"title":"What is the result of this code?<br><pre> with (function(x, undefined){}) length;<\/pre>","variants":["true","1","2","undefined","Error"],"correct":2,"active":true},{"ID":8,"title":"What is the result of this function?<br><pre>(function(foo){<br>return typeof foo.bar;<br>})({ foo: { bar: 1 } });<\/pre>","variants":["true","undefined","object","number","Error"],"correct":1,"active":true},{"ID":9,"title":"What is the result of this code?<br><pre>var x = [typeof x, typeof y][1];<br>typeof typeof x;<\/pre>","variants":["number","string","undefined","object","Error"],"correct":1,"active":true},{"ID":10,"title":"What is x equels to?<br><pre>  var y = 1, x = y = typeof x;<br>x<\/pre>","variants":["1","number","'undefined'","undefined","'string'"],"correct":4,"active":true},{"ID":11,"title":"What does this function return?<br><pre>(function(x){<br>delete x;<br>return x;<br>})(1);<\/pre>","variants":["1","null","undefined","Error","''"],"correct":0,"active":true},{"ID":12,"title":"Why so Java and JavaScript have similar name?","variants":["Java Script is a stripped-down version of Java","The syntax of JavaScript is loosely based on Java syntax","They both support Object Oriented Programming","They both are server-side languages","None of the above"],"correct":4,"active":true},{"ID":13,"title":"What event handler doesn't exist?","variants":["onAbort","onBlur","onSelection","onFocus","onUnload"],"correct":2,"active":true},{"ID":14,"title":"Which of the following is not a valid JavaScript variable name?","variants":["2java","_java_and_java_names","javaandjava","$bestvar","None of the above"],"correct":0,"active":true},{"ID":15,"title":"What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);<\/pre>","variants":["1","null","undefined","Error","number"],"correct":2,"active":true},{"ID":16,"title":"What is the result of the code?<br><pre>function a(x) {<br>return x * 2;<br>}<br>var a;<br>alert(a);<\/pre>","variants":["0","null","undefined","Error","the source code of the function"],"correct":4,"active":true},{"ID":17,"title":"What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);<\/pre>","variants":["RangeError","[object Function]","undefined","[object Window]","Object[window]"],"correct":3,"active":true},{"ID":18,"title":"What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);<\/pre>","variants":["RangeError","[object Function]","undefined","[object Window]","Object[window]"],"correct":3,"active":true},{"ID":18,"title":"What will be the return value of the following code?<br><pre>!!~1<\/pre>","variants":["1","true","undefined","false","NaN"],"correct":1,"active":true},{"ID":19,"title":"What will be the return value of the following code?<br><pre>(true + false) > 2 + true;<\/pre>","variants":["Error","true","undefined","false","NaN"],"correct":3,"active":true},{"ID":20,"title":" Alert helps find errors by...","variants":["displaying current values of variables","indicating execution path","pausing execution","restarting execution","all of the above"],"correct":2,"active":true},{"ID":21,"title":" What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));<\/pre>","variants":["13","12","9","11","nothing of the above"],"correct":2,"active":true},{"ID":22,"title":" What is the result of the string?<br><pre>+'1' + 1 + '1'<\/pre>","variants":["'21'","'111'","21","11","3"],"correct":0,"active":true},{"ID":23,"title":"Which of the below is used in Java script to insert special characters?","variants":["&","\\","-","%","$"],"correct":1,"active":true},{"ID":24,"title":"Which of the below is used in Java script to insert special characters?","variants":["&","\\","-","%","$"],"correct":1,"active":true},{"ID":25,"title":"Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?","variants":["call","apply","eval","make","run"],"correct":2,"active":true}],"oop":[{"title":"An abstract class is a class which cannot be instantiated as it is mainly used for inheritance","variants":["true","false","","",""],"correct":"0","active":true},{"title":"Scalability in Object Oriented Programming allows for extensions of the objects functions or of class functions.","variants":["true","false","","",""],"correct":"0","active":true},{"title":"A class is considered a template of:","variants":["An object","A variable","A value","An attribute",""],"correct":"0","active":true},{"title":"When a message is sent to an object it is meant that...","variants":["A variable is set for that object","A value is assigned to that object","A method is called on that object","",""],"correct":"2","active":true},{"title":"Constructors must be called before the main function","variants":["True","False","","",""],"correct":"1","active":true},{"title":"The keyword private restricts the access of class of struct members to static functions","variants":["True","False","","",""],"correct":"1","active":true},{"title":"Scalability in Object Oriented Programming  allows for extensions of the objects functions or of a class functions","variants":["True","False","","",""],"correct":"1","active":true},{"title":"We can not inherit the constructor of a base class","variants":["True","False","","",""],"correct":"1","active":true},{"title":"A unit of data in Object Oriented Programming is called","variants":["Byte","Bit","Structure","Block",""],"correct":"3","active":true},{"title":"An object that has more than one form is referred to as","variants":["abstract class"," interface","polymorphism","inheritance",""],"correct":"2","active":true},{"title":"One or more function that has different number of argument or different type of argument but all have same return type is called as","variants":["Function overloading","Prototype","Abstraction","Object","Encapsulation"],"correct":"0","active":true},{"title":"The process by which one object can acquire the properties of another object","variants":["Encapsulation","Polymorphism","Inheritance","",""],"correct":"2","active":true},{"title":"To call a base class constructor in a derived class, is it needed to call the base class initializer.","variants":["True","False","","",""],"correct":"1","active":true},{"title":"When deriving from a private base class, the public, protected and private members of the base class become private members of the derived class.","variants":["True","False","","",""],"correct":"1","active":true},{"title":"Which of the following is not a part of OOP?","variants":["Information hiding","Polymorphism","Multitasking","Type checking",""],"correct":"2","active":true},{"title":"Two or more methods with same name in the same class with different arguments is called as","variants":["Method overloading","Method overriding","","",""],"correct":"0","active":true},{"title":"An _______ cannot provide any code at all,can provide only  the signature.","variants":["abstract class","interface","","",""],"correct":"1","active":true},{"title":"Can objects of abstract classes be instantiated","variants":["True","False","","",""],"correct":"1","active":true},{"title":"Pick the term that relates to polymorphism","variants":["Static allocation","Dynamic binding","Dynamic allocation","Static typing",""],"correct":"1","active":true},{"title":"Main method can be overriden","variants":["True","False","","",""],"correct":"1","active":true},{"title":"Constructors are used to","variants":["Initialize a newly created object.","Free memory.","To create a sub class","To build a user interface.",""],"correct":"0","active":true},{"title":"When sub class declares a method that has the same type arguments as a method declared by one of its superclass,it is termed as","variants":["method overloading","method overriding","operator overloading","operator overriding",""],"correct":"1","active":true},{"title":"Keyword which is used to access the method or member variables from the superclass","variants":["is_a","super","has_a","using",""],"correct":"1","active":true},{"title":"Information Hiding can also be termed as","variants":["data hiding","encapsulation","inheritance","",""],"correct":"1","active":true},{"title":"Method with the same name or different return type and difference in the parameters either in number or type is known as","variants":["Compile Time Overloading","function overloading","","",""],"correct":"0","active":true},{"title":"Static methods cannot be accessed directly from the class level.","variants":["True","False","","",""],"correct":"1","active":true}],"css":[{"ID":1,"title":"What does CSS stand for?","variants":["Creative Style Sheets","Computer Style Sheets","Cascading Style Sheets","Cascade Style Sheets ","Colorful Style Sheets"],"correct":2,"active":true},{"ID":2,"title":"Which prefix do you need to get CSS3 properties to work on older Mozilla Firefox browsers?","variants":["-webkit-","-gecko-","-www-","-o-","-moz-"],"correct":4,"active":true},{"ID":3,"title":"What are the first three values of text-shadow in order?","variants":["vertical, blur, horizontal ","blur, vertical, horizontal ","vertical, horizontal, blur","horizontal, vertical, blur ","horizontal, blur, vertical "],"correct":3,"active":true},{"ID":4,"title":"How would you declare a media query to fit an iPhone?","variants":["@media only screen and (max-width: 480px) { }","@media only screen and (max-width: 720px) { } ","@media only screen and (min-width: 480px) { }","@media only screen and (min-width: 320px) { }","@media only screen and (min-width: 520px) { }"],"correct":0,"active":true},{"ID":5,"title":" What are the two ways to create an object in flash?","variants":["drawing a rectangle, copy from another object","convert to symbol, place an image on the stage","place an image on the stage, using ActionScript","convert to symbol, using ActionScript"],"correct":3,"active":true},{"ID":6,"title":"What does a CSS reset do?","variants":["Resets the whole computer ","Sets all the element properties to 0","Makes your browser crash","Deletes all your other CSS files"],"correct":1,"active":true},{"ID":7,"title":"Which set of numbers is not a hexadecimal color?","variants":["#00FF00","#A0A0A0","#FFFFFF","#EEE","#00G66R"],"correct":4,"active":true},{"ID":8,"title":"Which properties are used to position objects?","variants":["top, left, right, bottom, center","head, body, right, middle, side","up, down, left, right, middle","inside, outside, forward, backward, center","left, up, right, down, middle"],"correct":0,"active":true},{"ID":9,"title":"How to add text shadow using CSS3?","variants":["font: shadowed 5px 5px 5px grey;","font-shadow: 5px 5px 5px grey;","text-shadow: 5px 5px 5px grey;","shadow: text 5px 5px 5px grey;","shadow: font 5px 5px 5px grey;"],"correct":2,"active":true},{"ID":10,"title":"What does RGBa mean?","variants":["Review Get assistance Back-up your information acquire proof","Red Green Blue alpha","Red Gray Brown alpha","Red Gold Black alpha","Red Green Blue aqua"],"correct":1,"active":true},{"ID":11,"title":"Using CSS transitions means you dont have to use","variants":["css","flash","javascript","flash or javascript"],"correct":3,"active":true},{"ID":12,"title":"What is this CSS code suppose to do to an element?<br><pre>div{<br>transition: width 2s;<br>}<br>div:hover{<br>width:300px;<br>}<\/pre>","variants":["Make bigger","Expand the width","Increase the size","Make smaller","Reduces the width"],"correct":1,"active":true},{"ID":13,"title":"What are the four parameters for an cubic-bezier?","variants":["A1(x), A1(y), A2(x), A2(y)","B1(x), B1(y), B2(x), B2(y)","P1(x), P1(y), P2(x), P2(y)","C1(x), C1(y), C2(x), C2(y)","R1(x), R1(y), R2(x), R2(y)"],"correct":2,"active":true},{"ID":14,"title":"Overflow:hidden; does what?","variants":["Makes a scroll bar appear","Hides overhanging content","Makes the page disappear","It does nothing","None of the above"],"correct":1,"active":true},{"ID":15,"title":"Among which module\/modules is\/are supported by CSS3?","variants":["2D\/3D Transformations","Animations","Multiple Column Layout","User Interface","All the above"],"correct":4,"active":true},{"ID":16,"title":"What browser supports -webkit-?","variants":["Safari","GoogleChrome","Both (GoogleChrome) and (Safari)","Internet-Explorer","None of the above"],"correct":2,"active":true},{"ID":17,"title":"Which transform uses pixels?","variants":["Skew","Scale","Rotate","Translate"],"correct":3,"active":true},{"ID":18,"title":"Choose one non-CSS methods of presenting content and effects that existed before CSS3?","variants":["CSS","Chuck Norris","Apache","Photoshop"],"correct":3,"active":true},{"ID":18,"title":"Before CSS3, what determined the size of the background image?","variants":["Whatever Google said was best","default browser setting","the actual image size","the background property in the style sheet"],"correct":2,"active":true},{"ID":19,"title":"Name two new properties for presenting text in CSS3:","variants":["block-text and line-text","text-shadow and word-wrap","word-shadow and word-wrap","text-shadow and text-wrap","font-shadow and line-text"],"correct":1,"active":true},{"ID":20,"title":"Which statements are true about browser support for 2d transform?","variants":["All browsers support it if you download a plugin","All browsers support it in their newest versions, with prefixes","Only Internet Explorer supports it, with the -$$$- prefix"],"correct":1,"active":true},{"ID":21,"title":"Which animation uses the how ever mount done it will change the background?","variants":["@Keyframes","Animation","Background percent","Background position","Nothing of the above"],"correct":2,"active":true},{"ID":22,"title":"In Link Transition which code lets you have a 2s ease in with a color of blue hover state?","variants":["Transition:blue 2s easein","Transition:blue 2second ease-in","Transition:blue 2second ease-in","Transition:blue 2s ease-in","Transition:blue 2 ease-in"],"correct":3,"active":true},{"ID":23,"title":"If you have multiple transitions how would you format it?","variants":["#t1 t2{ }","#t1t2{ }","#t1 #t2{ }","#t1#t2{ }"],"correct":2,"active":true},{"ID":24,"title":"Is this a valid declaration, under CSS3?<br><pre>box-shadow: 1px 1px 10px 0px rgba(0,0,0,0);<\/pre>","variants":["True","False"],"correct":0,"active":true},{"ID":25,"title":"If you have a container of 300px all around, which size <p> will fit in the container?","variants":["p{ width:250px; height:200px; }","p{ width:200px; height:500; }","p{ width:301px; height:259px; }","p{ width:500px; height:500px; }","p{ width:299px; height:299px; }"],"correct":0,"active":true}],"html":[{"ID":1,"title":"Which attribute specifies default text in an input field?","variants":["onfocus attribute","textfield attribute","placeholder attribute","contextfield attribute"],"correct":2,"active":true},{"ID":2,"title":"Which of the following elements is correct for a navigation menu?","variants":["&lt;menu&gt;&lt;\/menu&gt;","&lt;navmenu&gt;&lt;\/navmenu&gt;","&lt;menu navigator=\"\"&gt;&lt;\/menu&gt;","&lt;nav&gt;&lt;\/nav&gt;"],"correct":3,"active":true},{"ID":3,"title":"Which syntax is correct?","variants":["&lt;movie src=\"video.flv\"&gt;&lt;\/movie&gt;","&lt;movie&gt; src=\"video.flv\"&lt;\/movie&gt;","&lt;video src=\"video.flv\"&gt;&lt;\/video&gt;","&lt;control src=\"video.flv\"&gt;&lt;\/control&gt;"],"correct":2,"active":true},{"ID":4,"title":"What are the main tags for creating a table?","variants":["&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;\/td&gt;&lt;\/tr&gt;&lt;\/tbody&gt;&lt;\/table&gt;","&lt;text&gt;, &lt;table&gt;&lt;\/table&gt;&lt;\/text&gt;","&lt;tp&gt;, &lt;hr&gt;, &lt;b&gt;&lt;\/b&gt;&lt;\/tp&gt;","&lt;border&gt;, &lt;height&gt;&lt;\/height&gt;&lt;\/border&gt;"],"correct":0,"active":true},{"ID":5,"title":"Which of the following attributes are accepted for the tag?","variants":["pt, width, alt","url, pixel, height","path, height, alt","src, width, height"],"correct":3,"active":true},{"ID":6,"title":"Which tag is used to make an ordered list?","variants":["&lt;ordered list=\"\"&gt;&lt;\/ordered&gt;","&lt;number list=\"\"&gt;&lt;\/number&gt;","&lt;ul&gt;&lt;\/ul&gt;","&lt;ol&gt;&lt;\/ol&gt;"],"correct":3,"active":true},{"ID":7,"title":"Which syntax is correct for making a check box?","variants":["&lt;check box=\"\"&gt;&lt;\/check&gt;","&lt;input type=\"checkbox\"&gt;","&lt;type =\"\" checkbox=\"\"&gt;&lt;\/type&gt;","&lt;input&gt;checkbox&lt;\/input&gt;",""],"correct":1,"active":true},{"ID":8,"title":"In HTML, we cannnot nest a table inside another table.","variants":["True","False","","",""],"correct":1,"active":true},{"ID":9,"title":"In HTML, Which syntax is correct?","variants":["&lt;img href=\"photo.jpg\"&gt;","&lt;img alt=\"photo.jpg\"&gt;","&lt;img src=\"photo.jpg\"&gt;","&lt;img&gt; src=\"photo.jpg\""],"correct":2,"active":true},{"ID":10,"title":"In HTML, which syntax is correct to open a hyperlink in a new browser window?","variants":["&lt;a href=\"new url\"&gt;&lt;\/a&gt;","&lt;a href=\"url\" new=\"\"&gt;&lt;\/a&gt;","&lt;a href=\"url\" target=\"_main\"&gt;&lt;\/a&gt;","&lt;a href=\"url\" target=\"_blank\"&gt;&lt;\/a&gt;"],"correct":3,"active":true},{"ID":11,"title":"How to add video in HTML5?","variants":["&lt;video width=\"320\" height=\"240\" src=\"myVideo.mp4\"&gt;","&lt;video width=\"320\" height=\"240\" controls=\"controls\" &gt; &lt; source src=\"myVideo.mp4\" type=\"video\/mp4\"\/&gt;","&lt;object id=\"MediaPlayer\" width=\"434\" height=\"300\" classid=\"clsid\" type=\"application\/x-oleobject\" &gt; &lt; param name=\"Filename\" value=\"myVideo.mp4\" &gt;","object width=\"320\" height=\"240\" src=\"myVideo.mp4\"","&lt;embed src=\"video.avi\" width=\"352\" height=\"240\"&gt;"],"correct":1,"active":true},{"ID":12,"title":"Which are all new events in HTML5?","variants":["onplay, ondrag, onmousewheel, onstorage, onbeforeprint","onblur, onpause, onoffline, onload, ondrop","ondrop, onkeypress, onmouseover, onplaying, onclick"],"correct":0,"active":true},{"ID":13,"title":"Which of the follows are all new elements for  HTML5?","variants":["article, footer, section, audio, track","object, article, br, table, input","input, frame, body, table, form","All of them"],"correct":0,"active":true},{"ID":14,"title":"Which browsers support HTML5?","variants":["IE, Opera, Chrome, Firefox","All","The major browsers, but only some features","Mobiles, Opera, Chrome","The major browsers"],"correct":1,"active":true},{"ID":15,"title":"Select the Doctype that should be specified at the top of all HTML5 documents.","variants":["&lt;!Doctype html PUBLIC \"-\/\/W3C\/\/DTD HTML 5.0 Transitional\/\/EN\"&gt;","&lt;!DOCTYPE html5 PUBLIC \"-\/\/W3C\/\/DTD HTML 5.0 Transitional\/\/EN\"&gt;","&lt;!doctype html5&gt;","&lt;!DOCTYPE html&gt;"],"correct":3,"active":true},{"ID":16,"title":"Which of the following elements are no longer supported in HTML5?","variants":["&lt;caption&gt;","&lt;blockquote&gt;","&lt;abbr&gt;","&lt;acronym&gt;"],"correct":3,"active":true},{"ID":17,"title":"Input type=\"email\" used on input fields provides the following advantages.","variants":["Makes the form more accessible","Enables modern browsers to validate the form field on submit (without JavaScript)","Makes it easier to enter email addresses capable mobile devices ","All of the above"],"correct":3,"active":true},{"ID":18,"title":"Which of the following is not a media element used in html5?","variants":["source","audio","track","time"],"correct":2,"active":true},{"ID":18,"title":"SVG graphics do not lose quality when they are resized?","variants":["True","False","can\u2019t determine","None of these"],"correct":0,"active":true},{"ID":19,"title":"What do we mean by SVG?","variants":["Secondary vector graphics","scalable vertical graphics","Scalable vector graphics","scalable vector graph"],"correct":2,"active":true},{"ID":20,"title":"Which storage object is used for storing the data with no expiry date?","variants":["Session storage","local storage","mass storage","stack storage"],"correct":1,"active":true},{"ID":21,"title":"Which animation uses the how ever mount done it will change the background?","variants":["@Keyframes","Animation","Background percent","Background position","Nothing of the above"],"correct":2,"active":true},{"ID":22,"title":"&lt;canvas&gt; element is only a __________ to the graphics.","variants":["component","container","attribute","method"],"correct":1,"active":true},{"ID":23,"title":"How many graphic object types are allowes by SVG?","variants":["2","5","3","7"],"correct":2,"active":true},{"ID":24,"title":"","variants":["True","False"],"correct":0,"active":false},{"ID":25,"title":"&lt;output&gt; element represents _______","variants":["Authenticate the user","result of a calculation","pre-defined values","none of these"],"correct":1,"active":true},{"ID":26,"title":"Text\/Html is called the _______ of the page","variants":["content type","MIME type","content type\/MIME type","none of these"],"correct":2,"active":true}],"jq":[{"ID":1,"title":"What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();<\/pre>","variants":["object","array","arguments","undefined","true"],"correct":0,"active":true},{"ID":2,"title":"What is the result of the this code?<br><pre>var f = function g() {<br>return 23;<br>};<br>typeof g();<\/pre>","variants":["number","undefined","function","Error","object"],"correct":3,"active":true},{"ID":3,"title":"What does the alert below?<br><pre>function aaa() {<br>return {<br>test: 1<br>};<br>}<br>alert(typeof aaa());<\/pre>","variants":["function","number","object","undefined","Error"],"correct":3,"active":true},{"ID":4,"title":"What is the result of this code?<br><pre>var bar = 1,foo = {};<br>foo: {<br>bar: 2;<br>baz: ++bar;<br>};<br>foo.baz + foo.bar + bar;<\/pre>","variants":["ReferenceError","undefined","NaN","4","5"],"correct":2,"active":true},{"ID":5,"title":"What is the result of the expression?<br><pre>10 > 9 > 8 === true;<\/pre>","variants":["ReferenceError","TypeError","undefined","true","false"],"correct":4,"active":true},{"ID":6,"title":"What is the result of the function?<br><pre>function foo(a, b) {<br>arguments[1] = 2;<br>alert(b);<br>}<br>foo(1);<\/pre>","variants":["ReferenceError","''","2","undefined","1"],"correct":3,"active":true},{"ID":7,"title":"What is the result of this code?<br><pre> with (function(x, undefined){}) length;<\/pre>","variants":["true","1","2","undefined","Error"],"correct":2,"active":true},{"ID":8,"title":"What is the result of this function?<br><pre>(function(foo){<br>return typeof foo.bar;<br>})({ foo: { bar: 1 } });<\/pre>","variants":["true","undefined","object","number","Error"],"correct":1,"active":true},{"ID":9,"title":"What is the result of this code?<br><pre>var x = [typeof x, typeof y][1];<br>typeof typeof x;<\/pre>","variants":["number","string","undefined","object","Error"],"correct":1,"active":true},{"ID":10,"title":"What is x equels to?<br><pre>  var y = 1, x = y = typeof x;<br>x<\/pre>","variants":["1","number","'undefined'","undefined","'string'"],"correct":4,"active":true},{"ID":11,"title":"What does this function return?<br><pre>(function(x){<br>delete x;<br>return x;<br>})(1);<\/pre>","variants":["1","null","undefined","Error","''"],"correct":0,"active":true},{"ID":12,"title":"Why so Java and JavaScript have similar name?","variants":["Java Script is a stripped-down version of Java","The syntax of JavaScript is loosely based on Java syntax","They both support Object Oriented Programming","They both are server-side languages","None of the above"],"correct":4,"active":true},{"ID":13,"title":"What event handler doesn't exist?","variants":["onAbort","onBlur","onSelection","onFocus","onUnload"],"correct":2,"active":true},{"ID":14,"title":"Which of the following is not a valid JavaScript variable name?","variants":["2java","_java_and_java_names","javaandjava","$bestvar","None of the above"],"correct":0,"active":true},{"ID":15,"title":"What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);<\/pre>","variants":["1","null","undefined","Error","number"],"correct":2,"active":true},{"ID":16,"title":"What is the result of the code?<br><pre>function a(x) {<br>return x * 2;<br>}<br>var a;<br>alert(a);<\/pre>","variants":["0","null","undefined","Error","the source code of the function"],"correct":4,"active":true},{"ID":17,"title":"What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);<\/pre>","variants":["RangeError","[object Function]","undefined","[object Window]","Object[window]"],"correct":3,"active":true},{"ID":18,"title":"What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);<\/pre>","variants":["RangeError","[object Function]","undefined","[object Window]","Object[window]"],"correct":3,"active":true},{"ID":18,"title":"What will be the return value of the following code?<br><pre>!!~1<\/pre>","variants":["1","true","undefined","false","NaN"],"correct":1,"active":true},{"ID":19,"title":"What will be the return value of the following code?<br><pre>(true + false) > 2 + true;<\/pre>","variants":["Error","true","undefined","false","NaN"],"correct":3,"active":true},{"ID":20,"title":" Alert helps find errors by...","variants":["displaying current values of variables","indicating execution path","pausing execution","restarting execution","all of the above"],"correct":2,"active":true},{"ID":21,"title":" What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));<\/pre>","variants":["13","12","9","11","nothing of the above"],"correct":2,"active":true},{"ID":22,"title":" What is the result of the string?<br><pre>+'1' + 1 + '1'<\/pre>","variants":["'21'","'111'","21","11","3"],"correct":0,"active":true},{"ID":23,"title":"Which of the below is used in Java script to insert special characters?","variants":["&","\\","-","%","$"],"correct":1,"active":true},{"ID":24,"title":"Which of the below is used in Java script to insert special characters?","variants":["&","\\","-","%","$"],"correct":1,"active":true},{"ID":25,"title":"Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?","variants":["call","apply","eval","make","run"],"correct":2,"active":true}]}
+{
+  "js": [
+    {
+      "ID": 1,
+      "title": "What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();</pre>",
+      "variants": [
+        "object",
+        "array",
+        "arguments",
+        "undefined",
+        "true"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 2,
+      "title": "What is the result of the this code?<br><pre>var f = function g() {<br>return 23;<br>};<br>typeof g();</pre>",
+      "variants": [
+        "number",
+        "undefined",
+        "function",
+        "Error",
+        "object"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 3,
+      "title": "What does the alert below?<br><pre>function aaa() {<br>return {<br>test: 1<br>};<br>}<br>alert(typeof aaa());</pre>",
+      "variants": [
+        "function",
+        "number",
+        "object",
+        "undefined",
+        "Error"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 4,
+      "title": "What is the result of this code?<br><pre>var bar = 1,foo = {};<br>foo: {<br>bar: 2;<br>baz: ++bar;<br>};<br>foo.baz + foo.bar + bar;</pre>",
+      "variants": [
+        "ReferenceError",
+        "undefined",
+        "NaN",
+        "4",
+        "5"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 5,
+      "title": "What is the result of the expression?<br><pre>10 > 9 > 8 === true;</pre>",
+      "variants": [
+        "ReferenceError",
+        "TypeError",
+        "undefined",
+        "true",
+        "false"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 6,
+      "title": "What is the result of the function?<br><pre>function foo(a, b) {<br>arguments[1] = 2;<br>alert(b);<br>}<br>foo(1);</pre>",
+      "variants": [
+        "ReferenceError",
+        "''",
+        "2",
+        "undefined",
+        "1"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 7,
+      "title": "What is the result of this code?<br><pre> with (function(x, undefined){}) length;</pre>",
+      "variants": [
+        "true",
+        "1",
+        "2",
+        "undefined",
+        "Error"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 8,
+      "title": "What is the result of this function?<br><pre>(function(foo){<br>return typeof foo.bar;<br>})({ foo: { bar: 1 } });</pre>",
+      "variants": [
+        "true",
+        "undefined",
+        "object",
+        "number",
+        "Error"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 9,
+      "title": "What is the result of this code?<br><pre>var x = [typeof x, typeof y][1];<br>typeof typeof x;</pre>",
+      "variants": [
+        "number",
+        "string",
+        "undefined",
+        "object",
+        "Error"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 10,
+      "title": "What is x equels to?<br><pre>  var y = 1, x = y = typeof x;<br>x</pre>",
+      "variants": [
+        "1",
+        "number",
+        "'undefined'",
+        "undefined",
+        "'string'"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 11,
+      "title": "What does this function return?<br><pre>(function(x){<br>delete x;<br>return x;<br>})(1);</pre>",
+      "variants": [
+        "1",
+        "null",
+        "undefined",
+        "Error",
+        "''"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 12,
+      "title": "Why so Java and JavaScript have similar name?",
+      "variants": [
+        "Java Script is a stripped-down version of Java",
+        "The syntax of JavaScript is loosely based on Java syntax",
+        "They both support Object Oriented Programming",
+        "They both are server-side languages",
+        "None of the above"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 13,
+      "title": "What event handler doesn't exist?",
+      "variants": [
+        "onAbort",
+        "onBlur",
+        "onSelection",
+        "onFocus",
+        "onUnload"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 14,
+      "title": "Which of the following is not a valid JavaScript variable name?",
+      "variants": [
+        "2java",
+        "_java_and_java_names",
+        "javaandjava",
+        "$bestvar",
+        "None of the above"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 15,
+      "title": "What is the result of the code?<br><pre>if ('a' in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
+      "variants": [
+        "1",
+        "null",
+        "undefined",
+        "Error",
+        "number"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 16,
+      "title": "What is the result of the code?<br><pre>function a(x) {<br>return x * 2;<br>}<br>var a;<br>alert(a);</pre>",
+      "variants": [
+        "0",
+        "null",
+        "undefined",
+        "Error",
+        "the source code of the function"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 17,
+      "title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+      "variants": [
+        "RangeError",
+        "[object Function]",
+        "undefined",
+        "[object Window]",
+        "Object[window]"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+      "variants": [
+        "RangeError",
+        "[object Function]",
+        "undefined",
+        "[object Window]",
+        "Object[window]"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "What will be the return value of the following code?<br><pre>!!~1</pre>",
+      "variants": [
+        "1",
+        "true",
+        "undefined",
+        "false",
+        "NaN"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 19,
+      "title": "What will be the return value of the following code?<br><pre>(true + false) > 2 + true;</pre>",
+      "variants": [
+        "Error",
+        "true",
+        "undefined",
+        "false",
+        "NaN"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 20,
+      "title": " Alert helps find errors by...",
+      "variants": [
+        "displaying current values of variables",
+        "indicating execution path",
+        "pausing execution",
+        "restarting execution",
+        "all of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 21,
+      "title": " What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));</pre>",
+      "variants": [
+        "13",
+        "12",
+        "9",
+        "11",
+        "nothing of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 22,
+      "title": " What is the result of the string?<br><pre>+'1' + 1 + '1'</pre>",
+      "variants": [
+        "'21'",
+        "'111'",
+        "21",
+        "11",
+        "3"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 23,
+      "title": "Which of the below is used in Java script to insert special characters?",
+      "variants": [
+        "&",
+        "backslash",
+        "-",
+        "%",
+        "$"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 24,
+      "title": "Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?",
+      "variants": [
+        "call",
+        "apply",
+        "eval",
+        "make",
+        "run"
+      ],
+      "correct": 2,
+      "active": true
+    }
+  ],
+  "oop": [
+    {
+      "title": "An abstract class is a class which cannot be instantiated as it is mainly used for inheritance",
+      "variants": [
+        "true",
+        "false",
+        "",
+        "",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "Scalability in Object Oriented Programming allows for extensions of the objects functions or of class functions.",
+      "variants": [
+        "true",
+        "false",
+        "",
+        "",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "A class is considered a template of:",
+      "variants": [
+        "An object",
+        "A variable",
+        "A value",
+        "An attribute",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "When a message is sent to an object it is meant that...",
+      "variants": [
+        "A variable is set for that object",
+        "A value is assigned to that object",
+        "A method is called on that object",
+        "",
+        ""
+      ],
+      "correct": "2",
+      "active": true
+    },
+    {
+      "title": "Constructors must be called before the main function",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "The keyword private restricts the access of class of struct members to static functions",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Scalability in Object Oriented Programming  allows for extensions of the objects functions or of a class functions",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "We can not inherit the constructor of a base class",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "A unit of data in Object Oriented Programming is called",
+      "variants": [
+        "Byte",
+        "Bit",
+        "Structure",
+        "Block",
+        ""
+      ],
+      "correct": "3",
+      "active": true
+    },
+    {
+      "title": "An object that has more than one form is referred to as",
+      "variants": [
+        "abstract class",
+        " interface",
+        "polymorphism",
+        "inheritance",
+        ""
+      ],
+      "correct": "2",
+      "active": true
+    },
+    {
+      "title": "One or more function that has different number of argument or different type of argument but all have same return type is called as",
+      "variants": [
+        "Function overloading",
+        "Prototype",
+        "Abstraction",
+        "Object",
+        "Encapsulation"
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "The process by which one object can acquire the properties of another object",
+      "variants": [
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "",
+        ""
+      ],
+      "correct": "2",
+      "active": true
+    },
+    {
+      "title": "To call a base class constructor in a derived class, is it needed to call the base class initializer.",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "When deriving from a private base class, the public, protected and private members of the base class become private members of the derived class.",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Which of the following is not a part of OOP?",
+      "variants": [
+        "Information hiding",
+        "Polymorphism",
+        "Multitasking",
+        "Type checking",
+        ""
+      ],
+      "correct": "2",
+      "active": true
+    },
+    {
+      "title": "Two or more methods with same name in the same class with different arguments is called as",
+      "variants": [
+        "Method overloading",
+        "Method overriding",
+        "",
+        "",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "An _______ cannot provide any code at all,can provide only  the signature.",
+      "variants": [
+        "abstract class",
+        "interface",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Can objects of abstract classes be instantiated",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Pick the term that relates to polymorphism",
+      "variants": [
+        "Static allocation",
+        "Dynamic binding",
+        "Dynamic allocation",
+        "Static typing",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Main method can be overriden",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Constructors are used to",
+      "variants": [
+        "Initialize a newly created object.",
+        "Free memory.",
+        "To create a sub class",
+        "To build a user interface.",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "When sub class declares a method that has the same type arguments as a method declared by one of its superclass,it is termed as",
+      "variants": [
+        "method overloading",
+        "method overriding",
+        "operator overloading",
+        "operator overriding",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Keyword which is used to access the method or member variables from the superclass",
+      "variants": [
+        "is_a",
+        "super",
+        "has_a",
+        "using",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Information Hiding can also be termed as",
+      "variants": [
+        "data hiding",
+        "encapsulation",
+        "inheritance",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    },
+    {
+      "title": "Method with the same name or different return type and difference in the parameters either in number or type is known as",
+      "variants": [
+        "Compile Time Overloading",
+        "function overloading",
+        "",
+        "",
+        ""
+      ],
+      "correct": "0",
+      "active": true
+    },
+    {
+      "title": "Static methods cannot be accessed directly from the class level.",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": "1",
+      "active": true
+    }
+  ],
+  "css": [
+    {
+      "ID": 1,
+      "title": "What does CSS stand for?",
+      "variants": [
+        "Creative Style Sheets",
+        "Computer Style Sheets",
+        "Cascading Style Sheets",
+        "Cascade Style Sheets ",
+        "Colorful Style Sheets"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 2,
+      "title": "Which prefix do you need to get CSS3 properties to work on older Mozilla Firefox browsers?",
+      "variants": [
+        "-webkit-",
+        "-gecko-",
+        "-www-",
+        "-o-",
+        "-moz-"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 3,
+      "title": "What are the first three values of text-shadow in order?",
+      "variants": [
+        "vertical, blur, horizontal ",
+        "blur, vertical, horizontal ",
+        "vertical, horizontal, blur",
+        "horizontal, vertical, blur ",
+        "horizontal, blur, vertical "
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 4,
+      "title": "How would you declare a media query to fit an iPhone?",
+      "variants": [
+        "@media only screen and (max-width: 480px) { }",
+        "@media only screen and (max-width: 720px) { } ",
+        "@media only screen and (min-width: 480px) { }",
+        "@media only screen and (min-width: 320px) { }",
+        "@media only screen and (min-width: 520px) { }"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 5,
+      "title": " What are the two ways to create an object in flash?",
+      "variants": [
+        "drawing a rectangle, copy from another object",
+        "convert to symbol, place an image on the stage",
+        "place an image on the stage, using ActionScript",
+        "convert to symbol, using ActionScript"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 6,
+      "title": "What does a CSS reset do?",
+      "variants": [
+        "Resets the whole computer ",
+        "Sets all the element properties to 0",
+        "Makes your browser crash",
+        "Deletes all your other CSS files"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 7,
+      "title": "Which set of numbers is not a hexadecimal color?",
+      "variants": [
+        "#00FF00",
+        "#A0A0A0",
+        "#FFFFFF",
+        "#EEE",
+        "#00G66R"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 8,
+      "title": "Which properties are used to position objects?",
+      "variants": [
+        "top, left, right, bottom, center",
+        "head, body, right, middle, side",
+        "up, down, left, right, middle",
+        "inside, outside, forward, backward, center",
+        "left, up, right, down, middle"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 9,
+      "title": "How to add text shadow using CSS3?",
+      "variants": [
+        "font: shadowed 5px 5px 5px grey;",
+        "font-shadow: 5px 5px 5px grey;",
+        "text-shadow: 5px 5px 5px grey;",
+        "shadow: text 5px 5px 5px grey;",
+        "shadow: font 5px 5px 5px grey;"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 10,
+      "title": "What does RGBa mean?",
+      "variants": [
+        "Review Get assistance Back-up your information acquire proof",
+        "Red Green Blue alpha",
+        "Red Gray Brown alpha",
+        "Red Gold Black alpha",
+        "Red Green Blue aqua"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 11,
+      "title": "Using CSS transitions means you dont have to use",
+      "variants": [
+        "css",
+        "flash",
+        "javascript",
+        "flash or javascript"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 12,
+      "title": "What is this CSS code suppose to do to an element?<br><pre>div{<br>transition: width 2s;<br>}<br>div:hover{<br>width:300px;<br>}</pre>",
+      "variants": [
+        "Make bigger",
+        "Expand the width",
+        "Increase the size",
+        "Make smaller",
+        "Reduces the width"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 13,
+      "title": "What are the four parameters for an cubic-bezier?",
+      "variants": [
+        "A1(x), A1(y), A2(x), A2(y)",
+        "B1(x), B1(y), B2(x), B2(y)",
+        "P1(x), P1(y), P2(x), P2(y)",
+        "C1(x), C1(y), C2(x), C2(y)",
+        "R1(x), R1(y), R2(x), R2(y)"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 14,
+      "title": "Overflow:hidden; does what?",
+      "variants": [
+        "Makes a scroll bar appear",
+        "Hides overhanging content",
+        "Makes the page disappear",
+        "It does nothing",
+        "None of the above"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 15,
+      "title": "Among which module/modules is/are supported by CSS3?",
+      "variants": [
+        "2D/3D Transformations",
+        "Animations",
+        "Multiple Column Layout",
+        "User Interface",
+        "All the above"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 16,
+      "title": "What browser supports -webkit-?",
+      "variants": [
+        "Safari",
+        "GoogleChrome",
+        "Both (GoogleChrome) and (Safari)",
+        "Internet-Explorer",
+        "None of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 17,
+      "title": "Which transform uses pixels?",
+      "variants": [
+        "Skew",
+        "Scale",
+        "Rotate",
+        "Translate"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "Choose one non-CSS methods of presenting content and effects that existed before CSS3?",
+      "variants": [
+        "CSS",
+        "Chuck Norris",
+        "Apache",
+        "Photoshop"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "Before CSS3, what determined the size of the background image?",
+      "variants": [
+        "Whatever Google said was best",
+        "default browser setting",
+        "the actual image size",
+        "the background property in the style sheet"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 19,
+      "title": "Name two new properties for presenting text in CSS3:",
+      "variants": [
+        "block-text and line-text",
+        "text-shadow and word-wrap",
+        "word-shadow and word-wrap",
+        "text-shadow and text-wrap",
+        "font-shadow and line-text"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 20,
+      "title": "Which statements are true about browser support for 2d transform?",
+      "variants": [
+        "All browsers support it if you download a plugin",
+        "All browsers support it in their newest versions, with prefixes",
+        "Only Internet Explorer supports it, with the -$$$- prefix"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 21,
+      "title": "Which animation uses the how ever mount done it will change the background?",
+      "variants": [
+        "@Keyframes",
+        "Animation",
+        "Background percent",
+        "Background position",
+        "Nothing of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 22,
+      "title": "In Link Transition which code lets you have a 2s ease in with a color of blue hover state?",
+      "variants": [
+        "Transition:blue 2s easein",
+        "Transition:blue 2second ease-in",
+        "Transition:blue 2second ease-in",
+        "Transition:blue 2s ease-in",
+        "Transition:blue 2 ease-in"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 23,
+      "title": "If you have multiple transitions how would you format it?",
+      "variants": [
+        "#t1 t2{ }",
+        "#t1t2{ }",
+        "#t1 #t2{ }",
+        "#t1#t2{ }"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 24,
+      "title": "Is this a valid declaration, under CSS3?<br><pre>box-shadow: 1px 1px 10px 0px rgba(0,0,0,0);</pre>",
+      "variants": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 25,
+      "title": "If you have a container of 300px all around, which size <p> will fit in the container?",
+      "variants": [
+        "p{ width:250px; height:200px; }",
+        "p{ width:200px; height:500; }",
+        "p{ width:301px; height:259px; }",
+        "p{ width:500px; height:500px; }",
+        "p{ width:299px; height:299px; }"
+      ],
+      "correct": 0,
+      "active": true
+    }
+  ],
+  "html": [
+    {
+      "ID": 1,
+      "title": "Which attribute specifies default text in an input field?",
+      "variants": [
+        "onfocus attribute",
+        "textfield attribute",
+        "placeholder attribute",
+        "contextfield attribute"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 2,
+      "title": "Which of the following elements is correct for a navigation menu?",
+      "variants": [
+        "&lt;menu&gt;&lt;/menu&gt;",
+        "&lt;navmenu&gt;&lt;/navmenu&gt;",
+        "&lt;menu navigator=\"\"&gt;&lt;/menu&gt;",
+        "&lt;nav&gt;&lt;/nav&gt;"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 3,
+      "title": "Which syntax is correct?",
+      "variants": [
+        "&lt;movie src=\"video.flv\"&gt;&lt;/movie&gt;",
+        "&lt;movie&gt; src=\"video.flv\"&lt;/movie&gt;",
+        "&lt;video src=\"video.flv\"&gt;&lt;/video&gt;",
+        "&lt;control src=\"video.flv\"&gt;&lt;/control&gt;"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 4,
+      "title": "What are the main tags for creating a table?",
+      "variants": [
+        "&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;",
+        "&lt;text&gt;, &lt;table&gt;&lt;/table&gt;&lt;/text&gt;",
+        "&lt;tp&gt;, &lt;hr&gt;, &lt;b&gt;&lt;/b&gt;&lt;/tp&gt;",
+        "&lt;border&gt;, &lt;height&gt;&lt;/height&gt;&lt;/border&gt;"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 5,
+      "title": "Which of the following attributes are accepted for the tag?",
+      "variants": [
+        "pt, width, alt",
+        "url, pixel, height",
+        "path, height, alt",
+        "src, width, height"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 6,
+      "title": "Which tag is used to make an ordered list?",
+      "variants": [
+        "&lt;ordered list=\"\"&gt;&lt;/ordered&gt;",
+        "&lt;number list=\"\"&gt;&lt;/number&gt;",
+        "&lt;ul&gt;&lt;/ul&gt;",
+        "&lt;ol&gt;&lt;/ol&gt;"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 7,
+      "title": "Which syntax is correct for making a check box?",
+      "variants": [
+        "&lt;check box=\"\"&gt;&lt;/check&gt;",
+        "&lt;input type=\"checkbox\"&gt;",
+        "&lt;type =\"\" checkbox=\"\"&gt;&lt;/type&gt;",
+        "&lt;input&gt;checkbox&lt;/input&gt;",
+        ""
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 8,
+      "title": "In HTML, we cannnot nest a table inside another table.",
+      "variants": [
+        "True",
+        "False",
+        "",
+        "",
+        ""
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 9,
+      "title": "In HTML, Which syntax is correct?",
+      "variants": [
+        "&lt;img href=\"photo.jpg\"&gt;",
+        "&lt;img alt=\"photo.jpg\"&gt;",
+        "&lt;img src=\"photo.jpg\"&gt;",
+        "&lt;img&gt; src=\"photo.jpg\""
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 10,
+      "title": "In HTML, which syntax is correct to open a hyperlink in a new browser window?",
+      "variants": [
+        "&lt;a href=\"new url\"&gt;&lt;/a&gt;",
+        "&lt;a href=\"url\" new=\"\"&gt;&lt;/a&gt;",
+        "&lt;a href=\"url\" target=\"_main\"&gt;&lt;/a&gt;",
+        "&lt;a href=\"url\" target=\"_blank\"&gt;&lt;/a&gt;"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 11,
+      "title": "How to add video in HTML5?",
+      "variants": [
+        "&lt;video width=\"320\" height=\"240\" src=\"myVideo.mp4\"&gt;",
+        "&lt;video width=\"320\" height=\"240\" controls=\"controls\" &gt; &lt; source src=\"myVideo.mp4\" type=\"video/mp4\"/&gt;",
+        "&lt;object id=\"MediaPlayer\" width=\"434\" height=\"300\" classid=\"clsid\" type=\"application/x-oleobject\" &gt; &lt; param name=\"Filename\" value=\"myVideo.mp4\" &gt;",
+        "object width=\"320\" height=\"240\" src=\"myVideo.mp4\"",
+        "&lt;embed src=\"video.avi\" width=\"352\" height=\"240\"&gt;"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 12,
+      "title": "Which are all new events in HTML5?",
+      "variants": [
+        "onplay, ondrag, onmousewheel, onstorage, onbeforeprint",
+        "onblur, onpause, onoffline, onload, ondrop",
+        "ondrop, onkeypress, onmouseover, onplaying, onclick"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 13,
+      "title": "Which of the follows are all new elements for  HTML5?",
+      "variants": [
+        "article, footer, section, audio, track",
+        "object, article, br, table, input",
+        "input, frame, body, table, form",
+        "All of them"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 14,
+      "title": "Which browsers support HTML5?",
+      "variants": [
+        "IE, Opera, Chrome, Firefox",
+        "All",
+        "The major browsers, but only some features",
+        "Mobiles, Opera, Chrome",
+        "The major browsers"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 15,
+      "title": "Select the Doctype that should be specified at the top of all HTML5 documents.",
+      "variants": [
+        "&lt;!Doctype html PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\"&gt;",
+        "&lt;!DOCTYPE html5 PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\"&gt;",
+        "&lt;!doctype html5&gt;",
+        "&lt;!DOCTYPE html&gt;"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 16,
+      "title": "Which of the following elements are no longer supported in HTML5?",
+      "variants": [
+        "&lt;caption&gt;",
+        "&lt;blockquote&gt;",
+        "&lt;abbr&gt;",
+        "&lt;acronym&gt;"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 17,
+      "title": "Input type=\"email\" used on input fields provides the following advantages.",
+      "variants": [
+        "Makes the form more accessible",
+        "Enables modern browsers to validate the form field on submit (without JavaScript)",
+        "Makes it easier to enter email addresses capable mobile devices ",
+        "All of the above"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "Which of the following is not a media element used in html5?",
+      "variants": [
+        "source",
+        "audio",
+        "track",
+        "time"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "SVG graphics do not lose quality when they are resized?",
+      "variants": [
+        "True",
+        "False",
+        "can’t determine",
+        "None of these"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 19,
+      "title": "What do we mean by SVG?",
+      "variants": [
+        "Secondary vector graphics",
+        "scalable vertical graphics",
+        "Scalable vector graphics",
+        "scalable vector graph"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 20,
+      "title": "Which storage object is used for storing the data with no expiry date?",
+      "variants": [
+        "Session storage",
+        "local storage",
+        "mass storage",
+        "stack storage"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 21,
+      "title": "Which animation uses the how ever mount done it will change the background?",
+      "variants": [
+        "@Keyframes",
+        "Animation",
+        "Background percent",
+        "Background position",
+        "Nothing of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 22,
+      "title": "&lt;canvas&gt; element is only a __________ to the graphics.",
+      "variants": [
+        "component",
+        "container",
+        "attribute",
+        "method"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 23,
+      "title": "How many graphic object types are allowes by SVG?",
+      "variants": [
+        "2",
+        "5",
+        "3",
+        "7"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 24,
+      "title": "",
+      "variants": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "active": false
+    },
+    {
+      "ID": 25,
+      "title": "&lt;output&gt; element represents _______",
+      "variants": [
+        "Authenticate the user",
+        "result of a calculation",
+        "pre-defined values",
+        "none of these"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 26,
+      "title": "Text/Html is called the _______ of the page",
+      "variants": [
+        "content type",
+        "MIME type",
+        "content type/MIME type",
+        "none of these"
+      ],
+      "correct": 2,
+      "active": true
+    }
+  ],
+  "jq": [
+    {
+      "ID": 1,
+      "title": "What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();</pre>",
+      "variants": [
+        "object",
+        "array",
+        "arguments",
+        "undefined",
+        "true"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 2,
+      "title": "What is the result of the this code?<br><pre>var f = function g() {<br>return 23;<br>};<br>typeof g();</pre>",
+      "variants": [
+        "number",
+        "undefined",
+        "function",
+        "Error",
+        "object"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 3,
+      "title": "What does the alert below?<br><pre>function aaa() {<br>return {<br>test: 1<br>};<br>}<br>alert(typeof aaa());</pre>",
+      "variants": [
+        "function",
+        "number",
+        "object",
+        "undefined",
+        "Error"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 4,
+      "title": "What is the result of this code?<br><pre>var bar = 1,foo = {};<br>foo: {<br>bar: 2;<br>baz: ++bar;<br>};<br>foo.baz + foo.bar + bar;</pre>",
+      "variants": [
+        "ReferenceError",
+        "undefined",
+        "NaN",
+        "4",
+        "5"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 5,
+      "title": "What is the result of the expression?<br><pre>10 > 9 > 8 === true;</pre>",
+      "variants": [
+        "ReferenceError",
+        "TypeError",
+        "undefined",
+        "true",
+        "false"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 6,
+      "title": "What is the result of the function?<br><pre>function foo(a, b) {<br>arguments[1] = 2;<br>alert(b);<br>}<br>foo(1);</pre>",
+      "variants": [
+        "ReferenceError",
+        "''",
+        "2",
+        "undefined",
+        "1"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 7,
+      "title": "What is the result of this code?<br><pre> with (function(x, undefined){}) length;</pre>",
+      "variants": [
+        "true",
+        "1",
+        "2",
+        "undefined",
+        "Error"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 8,
+      "title": "What is the result of this function?<br><pre>(function(foo){<br>return typeof foo.bar;<br>})({ foo: { bar: 1 } });</pre>",
+      "variants": [
+        "true",
+        "undefined",
+        "object",
+        "number",
+        "Error"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 9,
+      "title": "What is the result of this code?<br><pre>var x = [typeof x, typeof y][1];<br>typeof typeof x;</pre>",
+      "variants": [
+        "number",
+        "string",
+        "undefined",
+        "object",
+        "Error"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 10,
+      "title": "What is x equels to?<br><pre>  var y = 1, x = y = typeof x;<br>x</pre>",
+      "variants": [
+        "1",
+        "number",
+        "'undefined'",
+        "undefined",
+        "'string'"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 11,
+      "title": "What does this function return?<br><pre>(function(x){<br>delete x;<br>return x;<br>})(1);</pre>",
+      "variants": [
+        "1",
+        "null",
+        "undefined",
+        "Error",
+        "''"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 12,
+      "title": "Why so Java and JavaScript have similar name?",
+      "variants": [
+        "Java Script is a stripped-down version of Java",
+        "The syntax of JavaScript is loosely based on Java syntax",
+        "They both support Object Oriented Programming",
+        "They both are server-side languages",
+        "None of the above"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 13,
+      "title": "What event handler doesn't exist?",
+      "variants": [
+        "onAbort",
+        "onBlur",
+        "onSelection",
+        "onFocus",
+        "onUnload"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 14,
+      "title": "Which of the following is not a valid JavaScript variable name?",
+      "variants": [
+        "2java",
+        "_java_and_java_names",
+        "javaandjava",
+        "$bestvar",
+        "None of the above"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 15,
+      "title": "What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
+      "variants": [
+        "1",
+        "null",
+        "undefined",
+        "Error",
+        "number"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 16,
+      "title": "What is the result of the code?<br><pre>function a(x) {<br>return x * 2;<br>}<br>var a;<br>alert(a);</pre>",
+      "variants": [
+        "0",
+        "null",
+        "undefined",
+        "Error",
+        "the source code of the function"
+      ],
+      "correct": 4,
+      "active": true
+    },
+    {
+      "ID": 17,
+      "title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+      "variants": [
+        "RangeError",
+        "[object Function]",
+        "undefined",
+        "[object Window]",
+        "Object[window]"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "What is the result of the code?<br><pre>function a() {<br>alert(this);<br>}<br>a.call(null);</pre>",
+      "variants": [
+        "RangeError",
+        "[object Function]",
+        "undefined",
+        "[object Window]",
+        "Object[window]"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 18,
+      "title": "What will be the return value of the following code?<br><pre>!!~1</pre>",
+      "variants": [
+        "1",
+        "true",
+        "undefined",
+        "false",
+        "NaN"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 19,
+      "title": "What will be the return value of the following code?<br><pre>(true + false) > 2 + true;</pre>",
+      "variants": [
+        "Error",
+        "true",
+        "undefined",
+        "false",
+        "NaN"
+      ],
+      "correct": 3,
+      "active": true
+    },
+    {
+      "ID": 20,
+      "title": " Alert helps find errors by...",
+      "variants": [
+        "displaying current values of variables",
+        "indicating execution path",
+        "pausing execution",
+        "restarting execution",
+        "all of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 21,
+      "title": " What will be the output of the following code?<br><pre>var a=4, b=5;<br>alert(a + +(+(+(+b))));</pre>",
+      "variants": [
+        "13",
+        "12",
+        "9",
+        "11",
+        "nothing of the above"
+      ],
+      "correct": 2,
+      "active": true
+    },
+    {
+      "ID": 22,
+      "title": " What is the result of the string?<br><pre>+'1' + 1 + '1'</pre>",
+      "variants": [
+        "'21'",
+        "'111'",
+        "21",
+        "11",
+        "3"
+      ],
+      "correct": 0,
+      "active": true
+    },
+    {
+      "ID": 23,
+      "title": "Which of the below is used in Java script to insert special characters?",
+      "variants": [
+        "&",
+        "\\",
+        "-",
+        "%",
+        "$"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 24,
+      "title": "Which of the below is used in Java script to insert special characters?",
+      "variants": [
+        "&",
+        "\\",
+        "-",
+        "%",
+        "$"
+      ],
+      "correct": 1,
+      "active": true
+    },
+    {
+      "ID": 25,
+      "title": "Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?",
+      "variants": [
+        "call",
+        "apply",
+        "eval",
+        "make",
+        "run"
+      ],
+      "correct": 2,
+      "active": true
+    }
+  ]
+}
