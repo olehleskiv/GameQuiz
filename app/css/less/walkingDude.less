@@ -1,0 +1,41 @@
+
+    #mainGuy {
+        position:absolute;
+        width:50px;
+        height:80px;
+        background-image:url('../img/people/walker.gif');
+        background-position: -55px -50px;
+        cursor:pointer;
+    }
+    .activeMainGuy { 
+
+            &:before {
+            background: url("../img/people/dialogLeft.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: block;
+            content: attr(title) ": ";
+            font-size: 14px;
+            height: 250px;
+            margin-left: -100px;
+            padding: 30px 40px;
+            text-align: center;
+            margin-top: -240px;
+            width: 400px;
+            span {
+                background: url("../img/arrowKeys.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 40px;
+                display: inline-block;
+                height: 30px;
+                margin-bottom: -15px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1150px) { 
+        #mainGuy {
+            display:none;
+        }
+    }

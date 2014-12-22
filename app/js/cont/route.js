@@ -11,35 +11,48 @@
 
 //
 ///////////////////////////////////////////////
-(function() {
+define(['jquery', 'views/renderResults'], function($, renderAwardsTable, router) { 
 
-	function router(){
+	function router(url){
 		var link = $(this).attr('href');
 		var page;
 
-		link = link.slice(1, link.length);
+		if(link) {
+			var link = link.slice(1, url.length);
+		} else if(url){
+			var url = url.slice(1, url.length);
+		}
 
 		var pages = ['mainPage', 
 					'gamePage', 
 					'addNewQuestion', 
-					'admin',
 					'htmlQuiz',
 					'cssQuiz',
 					'jsQuiz',
 					'oopQuiz',
 					'jqQuiz',
-					'results'
+					'results',
+					'aboutus'
 					];
 
 		for (var i = 0; i < pages.length; i++) {
-			if(pages[i] == link) {
-				page = document.getElementById(pages[i]);
-				page.style.display = 'block';
-			} else {
-				page = document.getElementById(pages[i]);
-				page.style.display = 'none';
-			}
+			page = document.getElementById(pages[i]);
+			page.style.display = 'none';
+
 		}
+			
+			
+
+			if(link){
+				document.getElementById(link).style.display = 'block';
+				window.location.href = window.location.href.split("#")[0] + "#" + encodeURIComponent(link);
+			} else if(url){
+				document.getElementById(url).style.display = 'block';
+				window.location.href = window.location.href.split("#")[0] + "#" + encodeURIComponent(url);
+			}
+
+			$("#bs-example-navbar-collapse-1").removeClass("in").addClass("collapse"); //hide mobile menu
+
 	}
 
 	//top menu
@@ -68,4 +81,12 @@
 	var goToQuizButton = document.getElementById('resultsButton');
 	goToQuizButton.onclick = router;
 
-})();
+
+	router('#mainPage');
+
+
+	//This function renders div blocks for future awards
+	renderAwardsTable();
+
+	return router;
+});

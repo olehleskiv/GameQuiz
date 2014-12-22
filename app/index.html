@@ -5,10 +5,31 @@
 	<title>Learn JS</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   	<link rel="stylesheet" type="text/css" href="css/result.css">
  </head>
  <body>
+<div id="fb-root"></div>
+
+
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId : '309482552592773',
+				status : true, // check login status
+				cookie : true, // enable cookies to allow the server to access the session
+				xfbml : true // parse XFBML
+			});
+		};
+		 
+		(function() {
+			var e = document.createElement('script');
+			e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+			e.async = true;
+			document.getElementById('fb-root').appendChild(e);
+		}());
+
+	</script>
+
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
@@ -26,14 +47,16 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav desctopMenu">
-	        <li><button id="resultsButton" href="#results" type="button" class="btn btn-warning btn-xs">your results</button></li>
+	        <li><button id="resultsButton" href="#results" type="button" class="btn btn-warning btn-xs topLeftButtons">your results</button></li>
+	        <li><button id="resetButton" type="button" class="btn btn-primary btn-xs topLeftButtons">reset results</button></li>
 	      </ul>
 
 	      <ul id="mobileDropDown" class="nav navbar-nav mobileMenu">
 	      	<li><a href="#results" >your results</a></li>
+	      	<li><a type="button" id="mobResetButton" >reset results</a></li>
 	      	<li><a href="#aboutus">About us</a></li>
 			<li><a href="/data/quiz.json">Get JSON</a></li>
-			<li><a href="#admin">Admin</a></li>
+			<li><a href="admin/admin.html">Admin</a></li>
 			<li class="divider"></li>
 			<li><a href="#addNewQuestion">Add new question</a></li>
 	      </ul>
@@ -46,8 +69,8 @@
 	          <button id="dropdownMenu1" href="#" class="btn btn-success navbar-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Menu <span class="caret"></span></button>
 	          <ul id="mainMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 	            <li><a href="#aboutus">About us</a></li>
-				<li><a href="/data/quiz.json">Get JSON</a></li>
-				<li><a href="#admin">Admin</a></li>
+				<li><a href="./data/quiz.json">Get JSON</a></li>
+				<li><a href="admin/admin.html">Admin</a></li>
 				<li class="divider"></li>
 				<li><a href="#addNewQuestion">Add new question</a></li>
 	          </ul>
@@ -57,7 +80,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<div id="mainPage" class="container mainContainer">
+	<div id="mainPage" class="container mainContainer" style="display:none">
 		<div class="row">
 
 		  <div class="col-md-6">
@@ -99,64 +122,39 @@
 
 	<div id="gamePage" class="container" style="display:none">
 
-		<!--Skills-->
-		<div class="row mobileProgress">
-			<p>Your Progress</p>
-			<span id="mobhtmlProgress" class="label label-primary">HTML</span>
-			<span id="mobcssProgress" class="label label-info">CSS</span>
-			<span id="mobjsProgress" class="label label-warning">JavaScript</span>
-			<span id="mobjqProgress" class="label label-danger">jQuery, Ajax</span>
-			<span id="moboopProgress" class="label label-success">OOP</span>
-		</div>
-		<div class="progressStipes">
-			<div class="row">
-			  <div class="col-md-4">
-			  	HTML
-			  	<div class="progress">
-				  <div id="htmlProgress" class="progress-bar progress-bar-success" role="progressbar">
-				    0%
-				  </div>
-				</div>
-			  </div>
-			  <div class="col-md-4">
-			  	CSS
-			  	<div class="progress">
-				  <div id="cssProgress" class="progress-bar progress-bar-info" role="progressbar">
-				    0% 
-				  </div>
-				</div>
-			  </div>
-			  <div class="col-md-4">
-			  	JavaScript
-			  	<div class="progress">
-				  <div id="jsProgress" class="progress-bar progress-bar-warning" role="progressbar">
-				    0%
-				  </div>
-				</div>
-			  </div>
+		<div class="badges">
+			<h5>Pass tests and Collect badges</h5>
+			<div class="badgeContainer" id="htmlBadge" >
+				<p>HTML</p>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
-			<div class="row">
-			  <div class="col-md-4">
-			  	jQuery, Ajax
-			  	<div class="progress">
-				  <div id="jqProgress" class="progress-bar progress-bar-danger" role="progressbar">
-				    0%
-				  </div>
-				</div>
-			  </div>
-			  <div class="col-md-4"></div>
-			  <div class="col-md-4">
-			  	OOP
-			  	<div class="progress">
-				  <div id="oopProgress" class="progress-bar progress-bar-success" role="progressbar">
-				    0%
-				  </div>
-				</div>
-			  </div>
+			<div class="badgeContainer" id="cssBadge">
+				<p>CSS</p>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+			</div>
+			<div class="badgeContainer" id="jsBadge">
+				<p>JS</p>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+			</div>
+			<div class="badgeContainer" id="oopBadge">
+				<p>OOP</p>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+			</div>
+			<div class="badgeContainer" id="jqBadge">
+				<p>jQ/Ajax</p>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 		</div>
-
-
 
 		<!-- game confirm Modal -->
 		<div id="gameConfirm"class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -166,6 +164,8 @@
 		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 		        <h4 class="modal-title" id="gameConfirmTitle"></h4>
 		      </div>
+		      <div id="gameConfirmBody">
+		      </div>
 		      <div class="modal-body">
 		        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 		        <button type="button" id="confirmStart" data-dismiss="modal" class="btn btn-primary">Yes</button>
@@ -174,62 +174,66 @@
 		  </div>
 		</div>
 		
-		<div id="startInstruction">
-			<p>use these keys to move the guy</p>
-			<img alt="arrows" src="img/arrowKeys.png" >
-		</div>
 
 	</div>
 	<div class="container" id="addNewQuestion">
 		<div class="row">
-			<div id="result">
-			</div>
+
+		<div id="result">
+			
+		</div>
+
 		  <section class="col-md-8">
 		  		<h2>Add new question</h2>
 				<form role="form" id="addQuestion">
 				  <div class="form-group">
-				    <label for="exampleInputEmail1">Question</label>
+				    <p><b>Question</b></p>
 				    <textarea class="form-control" name="question" rows="3" placeholder="Question"></textarea>
 				  </div>
-					
-					<p>Answers:
-						(Dont forget to choose the right one)</p>
+
+				 <div class="form-group">
+				    <p><b>code</b></p>
+				    <textarea class="form-control" name="mycode" rows="3" placeholder="code"></textarea>
+				  </div>
+
+					<p><b>Answers:(Dont forget to choose the right one)</b></p>
 				    <div class="input-group variant1">
 				      <span class="input-group-addon">
-				        <input class="" name="correct"  type="radio" value="1">
+				        <input class="" name="correct"  type="radio" value="0">
 				      </span>
 				      <input type="text" class="form-control" id="answer1" name="answer1" placeholder="answer 1">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant2">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="2">
+				        <input name="correct" type="radio" value="1">
 				      </span>
 				      <input type="text" class="form-control" id="answer2" name="answer2" placeholder="answer 2">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant3">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="3">
+				        <input name="correct" type="radio" value="2">
 				      </span>
 				      <input type="text" class="form-control" id="answer3" name="answer3" placeholder="answer 3">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant4">
 				      <span class="input-group-addon">
-				        <input name="correct"  type="radio" value="4">
+				        <input name="correct"  type="radio" value="3">
 				      </span>
 				      <input type="text" class="form-control" id="answer4" name="answer4" placeholder="answer 4">
 				    </div><!-- /input-group -->
 
 					<div class="input-group variant5">
 				      <span class="input-group-addon">
-				        <input name="correct" type="radio" value="5">
+				        <input name="correct" type="radio" value="4">
 				      </span>
 				      <input type="text" class="form-control" id="answer5" name="answer5" placeholder="answer 5">
 				    </div><!-- /input-group -->
+					<br>
 
-				  <p>Category:</p>
+				 	<p><b>Category:</b></p>
 					<div>
 					   <label class="radio-inline">
 						  <input type="radio" name="category" value="html"> HTML
@@ -252,45 +256,111 @@
 					
 				</form>
 		  </section>
-		  <section class="col-md-4">
-		  		<img class="addQuizDude"alt="smart dude" src="img/people/add_quiz.png">
+		  <section id="resultMessageDude" class="col-md-4">
+		  		<div id="errorBlock">Smart guy? Huh...</div>
 		  </section>
 		</div>
 	</div><!-- end add new question container -->
-	<div id="admin">
-		
-	</div><!-- end admin container -->
-	
+
 
 
 	<!-- QUIZ SECTION -->
 	<div class="container" id="htmlQuiz">
-		<h2>HTML quiz here!</h2>
+		<h2 class="quizTitle">HTML quiz</h2>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+			<div class="bang"></div>
+		</div>
+		<div id="htmlOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end html quiz -->
 
 	<div class="container" id="cssQuiz">
-		<h2>CSS quiz here!</h2>
+		<h2 class="quizTitle">CSS quiz</h2>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+			<div class="bang"></div>
+		</div>
+		<div id="cssOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end css quiz -->
 
 	<div class="container" id="jsQuiz">
-		<h2>JS quiz here!</h2>
+		<h2 class="quizTitle">JS quiz</h2>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+			<div class="bang"></div>
+		</div>
+		<div id="jsOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end js quiz -->
 
 	<div class="container" id="oopQuiz">
-		<h2>OOP quiz here!</h2>
+		<h2 class="quizTitle">OOP quiz</h2>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+			<div class="bang"></div>
+		</div>
+		<div id="oopOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end oop quiz -->
 
 	<div class="container" id="jqQuiz">
-		<h2>jQuery/Ajax quiz here!</h2>
+		<h2 class="quizTitle">jQuery/Ajax quiz</h2>
+		<div class="mainKnight"></div>
+		<div class="mainKnight">
+			<div class="messageLeft"></div>
+			<div class="bang"></div>
+		</div>
+		<div id="jqOponent" class="oponent">
+			<div class="messageRight"></div>
+		</div>
 	</div><!-- end jQuery/Ajax quiz -->
 	
 
 
 
 	<div class="container" id="results">
-		<h2>Your results here!</h2>
+		<div class="resHeading">
+		  	<h2>Your results!</h2>
+			<a id="share_button"><img  src="img/share.png" alt="share"></a>
+		</div>
 	</div><!-- end jQuery/Ajax quiz -->
 	
-	<script data-main="js/main.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+		<!-- reset confirm Modal -->
+		<div id="resetConfirm" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+		   <div class="modal-dialog">
+		    <div class="modal-content my-confirm">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="gameConfirmTitle">Are you sure?</h4>
+		      </div>
+		      <div class="modal-body">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+		        <button type="button" id="reset" data-dismiss="modal" class="btn btn-primary">Yes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+	<div id="aboutus" class="container" style="display:none">
+
+		<h4>How this works:</h4>
+		<img class="shitcode" src="img/presentation/shitCode.png">
+		<h3>Architecture:</h3>
+		<h4>Build with Requirejs<img src="img/presentation/requirejs.png"></h4>
+		<img class="sheeme" src="img/presentation/arch.png">
+		<h4>How we configured Grunt:</h4>
+		<img class="sheeme" src="img/presentation/grunt.png">
+		
+	</div>
+	<script data-main="js/main.js" src="js/libs/requirejs/require.js"></script>
+
  </body>
 </html>

@@ -1,10 +1,10 @@
 
-define([
-		 'views/buildingsCreate',
+define([ 'views/buildingsCreate',
 		 'views/mainHero',
-		 'views/treesCreate'
+		 'views/treesCreate',
+		 'views/renderResults'
 		 ], function() {
    
-	return console.log('libs success');
+	return console.log('views success');
 
 });

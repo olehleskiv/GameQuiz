@@ -1,0 +1,67 @@
+ 
+
+    .badges {
+
+        height: 100px;
+        position: absolute;
+        top: 45px;
+        width: 500px;
+        top: 50px; left: 0; right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .badges h5 {
+        position: absolute;
+        width: 100%;
+        color: white;
+        background: rgba(192,192,192,0.60);
+        border-radius: 10px;
+        text-shadow: 1px 1px 3px black;
+    }
+    .badgeContainer {
+        padding-top: 22px;
+        width:100px;
+        height:100%;
+        float:left;
+    }
+    .badgeContainer p {
+        background: none repeat scroll 0 0 #fff;
+        border-radius: 7px;
+        margin: 5px;
+    }
+
+    .resbadgeGood {
+        background-image: url('../img/world/smbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
+    .resbadgeBad {
+        background-image: url('../img/world/defbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
+    @media only screen and (max-width: 410px) {
+        .badges {
+            width: 100%;
+        }
+        .badgeContainer {
+            width: 20%;
+        }
+        .resbadgeBad,
+        .resbadgeGood{
+            height: 30px;
+            width: 17px;
+            float: left;
+        }
+        .badgeContainer p {
+            font-size: 12px;
+        }
+    } 

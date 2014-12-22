@@ -1,0 +1,63 @@
+    @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+
+	@opacitygray: rgba(192,192,192, 0.5);
+
+	.transparent_class {
+	  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	  filter: alpha(opacity=50);
+	  -moz-opacity: 0.5;
+	  -khtml-opacity: 0.5;
+	  opacity: 0.5;
+	}
+	.radius5px {
+	  -webkit-border-radius: 5px; 
+	  -moz-border-radius: 5px; 
+	  border-radius: 5px; 
+	}
+
+   	body {
+        font-family: 'Lato', sans-serif;
+    	background: url('../img/bg.png');
+        /*background: url("../img/bg1.jpg");*/
+    }
+    .topMenu {
+        margin-top: 10px;
+        float: right;
+        margin-left: 15px;
+    }
+    #backButton {
+    	margin-top: 15px;
+    }
+    .my-confirm {
+        top: 100px;
+        text-align: center;
+    }
+    .topLeftButtons {
+        margin-top: 15px;
+    }
+
+    
+    .mobileMenu {
+        display:none;
+        text-align: center;
+    }
+    .form-control {
+        resize:vertical;
+    }
+    .mobileProgress {
+        display:none;
+    }
+    #resetButton {
+        margin-left: 5px;
+    }
+    #mobResetButton {
+        cursor:pointer;
+    }
+    @media only screen and (max-width: 410px) { 
+        .desctopMenu {
+            display:none;
+        }
+        .mobileMenu {
+            display:block;
+        }
+    }

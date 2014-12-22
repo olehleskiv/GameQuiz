@@ -1,5 +1,5 @@
 
-define(['models/Building'], function(Building) { 
+define(['class/Building', 'cont/showRes'], function(Building, showRes) { 
 
 	function cssBuilding(x, y, z, j) {
 
@@ -64,28 +64,48 @@ define(['models/Building'], function(Building) {
 	htmlBuilding.prototype = new Building();
 
 	var htmlBuild = new htmlBuilding(125);
-	htmlBuild.draw();
+	htmlBuild.draw('info');
 
 	cssBuilding.prototype = new Building();
 
 	var cssBuild = new cssBuilding(125, 0);
-	cssBuild.draw();
+	cssBuild.draw('warning');
 
 	javascriptBuilding.prototype = new Building();
 
 	var javascriptBuilding = new javascriptBuilding();
-	javascriptBuilding.draw();
+	javascriptBuilding.draw('success');
 
 	jqueryBuilding.prototype = new Building();
 
 	var jQueryBuild = new jqueryBuilding(-130, 0);
-	jQueryBuild.draw();
+	jQueryBuild.draw('danger');
 
 	oopBuilding.prototype = new Building();
 
 	var oopBuild = new oopBuilding(-180, 20);
-	oopBuild.draw();
+	oopBuild.draw('primary');
 
 
+	$(document).ready(function() {
+		//set js
+		this.js = parseInt(localStorage.getItem('brainJs'));
+		showRes('JS', this.js, 'javascriptBuilding', 'mobjsProgress');
+		
+		//set html
+		this.html = localStorage.getItem('brainHtml');
+		showRes('HTML', this.html, 'htmlBuilding', 'mobhtmlProgress');
 
+		//set css
+		this.css = localStorage.getItem('brainCss');
+		showRes('CSS', this.css, 'cssBuilding', 'mobcssProgress');
+
+		//set oop
+		this.oop = localStorage.getItem('brainOop');
+		showRes('OOP', this.oop, 'oopBuilding', 'moboopProgress');
+
+		//set jq
+		this.jq = localStorage.getItem('brainJq');
+		showRes('Jquery/Ajax', this.jq, 'jqueryBuilding', 'mobjqProgress');
+	});
 });

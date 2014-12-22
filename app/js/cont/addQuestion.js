@@ -1,5 +1,5 @@
 
-(function() {
+define(['jquery'], function($) { 
 
 
 	var submitButton = document.getElementById('sendQuestions');			// get form
@@ -9,6 +9,7 @@
 		$(".errorBlock").remove();										//remove error block(if exists)
 
 		var title = this.form.question.value,							//getting values from the form
+			code = this.form.mycode.value,
 			var1 = this.form.answer1.value,
 			var2 = this.form.answer2.value,
 			var3 = this.form.answer3.value,
@@ -27,11 +28,12 @@
 				message("please enter minimum 2  anwser variants", true);
 			} else
 			if(correct === "") {
-				message("please enter correct answer", true);
+				message("please choose correct answer", true);
 			} else
 			if(category === "") {
 				message("please choose category", true);
 			} else {
+				title = title + "<pre>" + code + "</pre>";
 				send([title, var1, var2, var3, var4, var5, correct, category]);		//if no errors - send
 			}
 	};
@@ -74,21 +76,20 @@
 															//about successfull or unsuccessfull actions
 															//if param "error" = true - it's an error
 
-		var mainAddQuestionForm = document.getElementById('addQuestion');
-		var block = document.createElement('div');
-		if(error) {
-			block.setAttribute("class","alert alert-danger errorBlock");
-		} else {
-			block.setAttribute("class","alert alert-success errorBlock");
-		}
+		var mainAddQuestionDude = document.getElementById('resultMessageDude');
+		var block = document.getElementById('errorBlock');
 
 		var logo = document.createElement('span');
-		logo.setAttribute("class","glyphicon glyphicon-exclamation-sign");
-		logo.setAttribute("aria-hidden","true");
+		if(error) {
+			logo.setAttribute("class","mesError");
+		} else {
+			logo.setAttribute("class","mesSuccess");
+		}
 
-		block.appendChild(logo);
+		
 		block.innerHTML = message;
-		mainAddQuestionForm.insertBefore(block, mainAddQuestionForm.getElementsByTagName('div')[0]);
+		block.appendChild(logo);
+		mainAddQuestionDude.appendChild(block);
 	}
 
 	function changeButtons() {											//function hides submit button
@@ -101,7 +102,9 @@
 		postNew.setAttribute("class","btn btn-primary resetForm");
 		postNew.setAttribute("type","button");
 		postNew.onclick = function() {
-			mainAddQuestionForm.reset();
+			$(".input-group input:radio").attr('disabled',true);			//disable all radio buttons
+			$(".errorBlock").remove();										//remove error block(if exists)
+			mainAddQuestionForm.reset();									//reset the form
 			$(".resetForm").hide();
 			$("#sendQuestions").show();
 		};
@@ -110,4 +113,4 @@
 		mainAddQuestionForm.appendChild(postNewDiv);
 	}
 
-})();
+});

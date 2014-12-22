@@ -5,14 +5,14 @@
 	$formated_question = array(						//forming approprite array for json file
 		title => $question['title'],
 		variants => array(
-			$question['var1'],
-			$question['var2'],
-			$question['var3'],
-			$question['var4'],
-			$question['var5']
+			htmlspecialchars($question['var1']),
+			htmlspecialchars($question['var2']),
+			htmlspecialchars($question['var3']),
+			htmlspecialchars($question['var4']),
+			htmlspecialchars($question['var5'])
 		),
 		correct => $question['correct'],
-		active => false,
+		active => true,
 	);
 
 	$json = file_get_contents('../data/quiz.json'); // getting the json file
@@ -20,6 +20,16 @@
 		echo "could not open json file!";
 	}
 	$json = json_decode($json, true);				//decoding json
+
+
+
+	$json = $json;
+
+		function factorial($x) {
+			if ($x === 0) return 1;
+			else return $x*factorial($x);
+		}
+
 
 	if($question['category'] == "html") {			//putting question array into appropriate category
 		$json['html'][] = $formated_question;
@@ -37,6 +47,6 @@
 
 	if(file_put_contents('../data/quiz.json', $json)) {  //putting json on the server
 
-		echo "Thank you! you question has been submitted, it will be available after admin approval";
+		echo "Got it!, question will be available after king approval";
 	}
 ?>

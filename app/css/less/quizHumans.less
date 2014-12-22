@@ -1,0 +1,163 @@
+ .mainKnight {
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 2%;
+        bottom:10px;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+
+        .messageLeft, .bang {
+            background-image: url("../img/people/dialogLeft.png") ;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            margin-left: 15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+
+            &:after {
+            content: "Lets Rock! I'll gona kick your ass!";
+            }
+        }
+
+        .bang {
+            background-image: url("../img/people/bang.png") ;
+            display: none;
+            &:after {
+            content: none;
+            }
+        }
+
+        
+    }
+
+    .oponent{
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        right: 2%;
+        bottom:10px;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        .messageRight {
+            background-image: url("../img/people/dialogRight.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            margin-left: -15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+        } 
+    }
+
+    #oopOponent {
+        background-image: url("../img/people/oopk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about OOP? Fool!";
+            }
+        }
+    }
+    #htmlOponent {
+        background-image: url("../img/people/htmlk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about HTML? Fool!";
+            }
+        }
+    }
+    #cssOponent {
+        background-image: url("../img/people/cssk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about CSS? Fool!";
+            }
+        }
+    }
+    #jqOponent {
+        background-image: url("../img/people/jqk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about jquery or Ajax? Fool!";
+            }
+        }
+    }
+    #jsOponent {
+        background-image: url("../img/people/jsk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about JavaScript? Fool!";
+            }
+        }
+    }
+
+    
+    @media only screen and (max-width: 410px) { 
+        .mainKnight {
+        width: 25%;
+        height: 170px;
+        top:140px;
+            .messageLeft {
+                margin-left: 5px;
+                margin-top: -100%;
+                padding: 47px 13px;
+                text-align: center;
+                width: 130px;
+                &:after {
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+        }
+        .oponent {
+        width: 25%;
+        height: 170px;
+        top:140px;
+            .messageRight {
+                margin-left: -55px;
+                margin-top: -100%;
+                padding: 47px 13px;
+                text-align: center;
+                width: 130px;
+                &:after {
+                    font-size: 10px;
+                    text-align: center;
+                } 
+            }
+        }
+    }

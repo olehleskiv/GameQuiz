@@ -1,9 +1,9 @@
 
-define([], function(confirmStartQuiz) { 
+define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) { 
 
-	function confirmStartQuiz(name) {									//this function fires when enterBuilding
-																		//function indicates that the hero entered
-																		//the bulding
+	function confirmStartQuiz(name) {						//this function fires when enterBuilding
+															//function indicates that the hero entered
+															//the bulding
 		
 		//before showing the popup we fire this function
 		//it disables the keyboard, for user not to make
@@ -12,12 +12,40 @@ define([], function(confirmStartQuiz) {
 
 		$('#gameConfirm').on('show.bs.modal', function (e) {
 			document.body.setAttribute("onkeydown","return false");						//disable keyboard
+
 			var title = document.getElementById('gameConfirmTitle');
-			title.innerHTML = 'do you want to start ' + name + ' quiz?';
+			title.innerHTML = 'Do you want to start ' + name + ' quiz?';
+			
+			///////////////////////////////////////////////////////////////////
+			/// If the test was already passed- we display results in popup ///
+			///////////////////////////////////////////////////////////////////
+
+			if(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))) != 0) {
+
+				var score = localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))),
+				points = localStorage.getItem(name + "Points"),
+				mesBody = document.getElementById('gameConfirmBody');
+
+				mesBody.innerHTML = "<p>you have already passed this test!, you current score is" + 
+									"<h3><span class=\"label label-success\">" + score + "%</span></h3>" + 
+									"<p>your points: </p><h3><span class=\"label label-warning\" >" + points + "</span></h3>" +
+									"<p>your current result will be overridden</p>";
+			} else {
+				var mesBody = document.getElementById('gameConfirmBody');
+				mesBody.innerHTML = "";
+			}
+
+
 
 			var startButton = document.getElementById('confirmStart');
 			startButton.setAttribute('href','#' + name + 'Quiz');
+			var quizContainer = name + 'Quiz';
+
+			createQuiz(name, quizContainer);
+						
 		});
+
+
 
 		//this function enables the keyboard
 		//after pop up is closed

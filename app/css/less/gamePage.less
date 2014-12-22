@@ -1,0 +1,51 @@
+   
+   #gamePage {
+        background-image: url("../img/world/road1.png");
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: fixed;
+        right: 0;
+        width: 1200px;
+        background-size: 960px;
+        background-repeat: no-repeat;
+        background-position: 50% 45px;
+    }
+    #gameConfirmBody {
+        p {
+            font-size: 150%;
+        }
+    }
+
+    .tree {
+        width: 130px;
+        height: 150px;
+        background-repeat: no-repeat !important;
+    }
+	
+	
+	
+	@media only screen and (max-width: 1150px) { 
+		#gamePage.container {
+			width: 95%;
+			background-size: 80%;
+			background-position: 50% 50%;
+		}
+			
+		.tree {
+            display:none;
+        }	
+			
+	}
+
+	
+
+   @media only screen and (max-width: 410px) { 
+        #gamePage {
+            background: none;
+            height: auto;
+            margin: auto;
+            position: relative;
+            width: 100%;
+        }
+    }

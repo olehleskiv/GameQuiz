@@ -1,15 +1,10 @@
-require.config({
-});
 
-require([ 
-	      'libs/libsMain',
-	      'cont/contMain',
-	      'models/modMain',
-	      'views/viewMain',
-	      ], 
+require(['jquery',
+		 'libs/libsMain',
+	     'cont/contMain',
+	     'class/classMain',
+	     'views/viewMain',
+	      ], function($, router, world, quiz_maker, addQuestion, mainHero) {
 
-	      function($, route, world, quiz_maker, addQuestion, mainHero) {
-   
-	return console.log('success');
-
+	return console.log('requrejs BUILD!');
 });
