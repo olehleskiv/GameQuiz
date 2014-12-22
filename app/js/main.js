@@ -1,5 +1,5 @@
 
-require(['libs/jquery',
+require(['jquery',
 		 'libs/libsMain',
 	     'cont/contMain',
 	     'class/classMain',

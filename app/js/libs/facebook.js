@@ -1,7 +1,5 @@
+define(['jquery'], function($) { 
 
-
-
-	$(document).ready(function(){
 			$('#share_button').click(function(e){
 				e.preventDefault();
 
@@ -23,4 +21,5 @@
 					message: 'Try it your self!'
 				});
 			});
-	});
+
+});
