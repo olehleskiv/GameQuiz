@@ -12,24 +12,35 @@
         background-position: 50% 45px;
     }
 
- 
-
-
     .tree {
         width: 130px;
         height: 150px;
         background-repeat: no-repeat !important;
     }
+	
+	
+	
+	@media only screen and (max-width: 1150px) { 
+		#gamePage.container {
+			width: 95%;
+			background-size: 80%;
+			background-position: 50% 50%;
+		}
+			
+		.tree {
+            display:none;
+        }	
+			
+	}
 
-    @media only screen and (max-width: 410px) { 
+	
+
+   @media only screen and (max-width: 410px) { 
         #gamePage {
             background: none;
             height: auto;
             margin: auto;
             position: relative;
             width: 100%;
-        }
-        .tree {
-            display:none;
         }
     }
