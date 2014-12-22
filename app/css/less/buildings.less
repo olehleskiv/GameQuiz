@@ -13,6 +13,13 @@
       -o-transition:      1s linear;
       transition:         1s linear;  
     }
+    .nonetransformScale {
+      -webkit-transform: none !important;
+      -moz-transform:    none !important;
+      -ms-transform:     none !important;
+      -o-transform:      none !important;
+      transform:         none !important;
+    }
 
     #cssBuilding {
         background-image: url("../img/world/css.png");
@@ -149,4 +156,40 @@
         font-size: 11px;
         line-height: 12px;
         color: black;
+    }
+
+    @media only screen and (max-width: 410px) { 
+        .progress {
+            margin-top: -140px;
+        }
+        #cssBuilding,
+        #oopBuilding,
+        #jqueryBuilding,
+        #javascriptBuilding,
+        #htmlBuilding  {
+            float: none;
+            margin: 0 auto !important;
+            position: relative;
+            .nonetransformScale;
+            width: 100% ;
+            background-size: 80%;
+            max-width: 250px;
+            &:before {
+                display:block;
+            }
+        }
+        #htmlBuilding {
+            margin-top: 150px !important;
+        }
+        #jqueryBuilding {
+            margin-top: 50px !important;
+        }
+        .mobileProgress {
+            margin-top: 100px;
+            text-align: center;
+             display:block;
+        }
+        #javascriptBuilding {
+            background-position: center 50px !important;
+        }
     }
