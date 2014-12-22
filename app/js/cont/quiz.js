@@ -22,11 +22,11 @@ function createQuiz(name, quizContainerId) {
         function init() {
             if (typeof quiz !== "undefined") {
                 
-                var container = document.getElementById('frame'),
-                    pager = document.createElement('p'),
-                    questionTitle = document.createElement('h2'),
-                    variants = document.createElement('ul'),
-                    quizContainer = document.getElementById(quizContainerId);
+                var container = document.getElementById('frame')
+                    ,pager = document.createElement('p')
+                    ,questionTitle = document.createElement('h2')
+                    ,variants = document.createElement('ul')
+                    ,quizContainer = document.getElementById(quizContainerId);
                 
                 if (!container) {
                     var container = document.createElement('div');
@@ -87,8 +87,11 @@ function createQuiz(name, quizContainerId) {
         function randomQuizQuestions(subjectQuiz) {
             var randomQuestionsArray = new Array();
             for (i in subjectQuiz) {
-                randomQuestionsArray.push(subjectQuiz[i]);
+                if (subjectQuiz[i].active == true) {
+                    randomQuestionsArray.push(subjectQuiz[i]);
+                }
             }
+            
             randomQuestionsArray.sort(compareRating);
     
             function compareRating(objectA, objectB) {
@@ -129,11 +132,9 @@ function buttle(name) {
 
             var c = setInterval(function(){
                 $('.mainKnight').css('transform','rotate(-10deg)');
-                $('.mainKnight').css('transform','translateX(20px)');
 
                 setTimeout(function(){
                     $('.mainKnight').css('transform','rotate(10deg)');
-                    $('.mainKnight').css('transform','translateX(-20px)');
                 },
                 200);
             },
@@ -186,16 +187,16 @@ function buttle(name) {
     //a counter for randomQuestionsArray                    //
     //////////////////////////////////////////////////////////
         function nextQuestion() {
-            var questionTitle = document.getElementById('question');
-            if (quiz[currentquestion].active == true) {
-                    questionTitle.innerHTML = quiz[currentquestion].title;
-                }
-            var questionNumber = document.getElementById('pager');
+            var questionTitle = document.getElementById('question')
+              , questionNumber = document.getElementById('pager');
+
+                questionTitle.innerHTML = quiz[currentquestion].title;
                 questionNumber.innerHTML = 'Question ' + (currentquestion + 1) + ' of ' + maxQuest;
-            if (quiz[currentquestion].variants) {
-                addQuestionVariants(quiz[currentquestion].variants);
-            }
-            scoreCount();
+                
+                if (quiz[currentquestion].variants) {
+                    addQuestionVariants(quiz[currentquestion].variants);
+                }
+                scoreCount();
         }
 
     //////////////////////////////////////////////////////////
