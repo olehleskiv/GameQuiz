@@ -36,9 +36,14 @@ define(['jquery'], function($) {
 		}
 
 		function showAwards(level, id) {
-				var awardName = id + level; 
-				var award = document.getElementById(awardName);
-				award.style.background = 'url(img/badges/' + awardName + '.png)';
+				var awardName = id + level 
+				  , award = document.getElementById(awardName)
+				  , levelName = document.createElement('span')
+				  , noBadgeImg = award.firstChild;
+				
+				noBadgeImg.setAttribute('src', 'img/badges/' + awardName + '.png');
+				// levelName.innerText = level + ' Level'; 
+				// award.appendChild(levelName);
 		}
 	}
 

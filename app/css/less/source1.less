@@ -1,0 +1,777 @@
+
+ 
+
+    @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+    
+	@opacitygray: rgba(192,192,192, 0.5);
+
+	.transparent_class {
+	  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	  filter: alpha(opacity=50);
+	  -moz-opacity: 0.5;
+	  -khtml-opacity: 0.5;
+	  opacity: 0.5;
+	}
+	.radius5px {
+	  -webkit-border-radius: 5px; 
+	  -moz-border-radius: 5px; 
+	  border-radius: 5px; 
+	}
+    .transformScale {
+      -webkit-transform: scale(1.1);
+      -moz-transform:    scale(1.1);
+      -ms-transform:     scale(1.1);
+      -o-transform:      scale(1.1);
+      transform:         scale(1.1);
+    }
+    .nonetransformScale {
+      -webkit-transform: none !important;
+      -moz-transform:    none !important;
+      -ms-transform:     none !important;
+      -o-transform:      none !important;
+      transform:         none !important;
+    }
+    .transitionAnimation {
+      -webkit-transition: 1s linear;
+      -moz-transition:    1s linear;
+      -ms-transition:     1s linear;
+      -o-transition:      1s linear;
+      transition:         1s linear;  
+    }
+
+
+
+	body {
+        font-family: 'Lato', sans-serif;
+    	background: url('../img/bg.png');
+        /*background: url("../img/bg1.jpg");*/
+    }
+    .social {
+        a {
+           padding: 10px 8px !important
+        }
+    }
+    #htmlQuiz,
+    #cssQuiz,
+    #jsQuiz,
+    #oopQuiz,
+    #jqQuiz,
+    #results {
+        display:none;
+        margin-top: 100px;
+    }
+    .mainContainer,
+    #htmlQuiz,
+    #cssQuiz,
+    #jsQuiz,
+    #oopQuiz,
+    #jqQuiz,
+    #results {
+    	margin-top: 100px;
+    }
+    .mainImages {
+    	width: 150px;
+        margin: 10px;
+    }
+    .heading {
+        text-align: center;
+        background-image: url('../img/main/ribbon1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 150px;
+        padding-top: 26px;
+        color: white;
+    }
+    .mainInfo {
+        text-align: center;
+        font-size: 250%;
+    }
+    .socilaMblock {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .oopjqueryblocks {
+    	text-align: center;
+    }
+    .imagesRow1 {
+        text-align: center;
+    }
+    .mainImagesOOP {
+        width: 300px;
+        margin: 20px 0;
+    }
+    .startButton {
+    	text-align: center;
+        margin-top: 20px;
+    }
+    .topMenu {
+        margin-top: 10px;
+        float: right;
+        margin-left: 15px;
+    }
+    #backButton {
+    	margin-top: 15px;
+    }
+    #gamePage {
+        background-image: url("../img/world/road1.png");
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: fixed;
+        right: 0;
+        width: 1200px;
+        background-size: 960px;
+        background-repeat: no-repeat;
+        background-position: 50% 45px;
+    }
+    #startInstruction {
+        height: 200px;
+        left: 0;
+        margin: auto;
+        position: fixed;
+        right: 0;
+        width: 300px;
+        z-index: 999;
+        top: 200px;
+        background: @opacitygray;
+        color:white;
+        font-size: 200%;
+        text-align: center;
+        .radius5px
+    }
+    .progressStipes {
+        position: absolute;
+        margin-top: 60px;
+        width: 100%;
+        z-index: 10;
+    }
+    #cssBuilding {
+        background-image: url("../img/world/css.png");
+        float:right;
+        width: 250px;
+        height: 250px;
+        background-size: 250px;
+        background-repeat: no-repeat;
+        z-index: 1;
+        &:before {
+            background-image: url("../img/world/popover.png");
+            content: "CSS quiz!";
+            display: block;
+            height: 50px;
+            width: 100%;
+            height: 128px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            text-align: center;
+            padding-top: 25px;
+        }
+    }
+
+    #htmlBuilding {
+        background-image: url("../img/world/html.png");
+        float:left;
+        width: 250px;
+        height: 250px;
+        background-size: 250px;
+        background-repeat: no-repeat;
+        z-index: 1;
+        &:before {
+            background-image: url("../img/world/popover.png");
+            content: "HTML quiz!";
+            display: block;
+            height: 50px;
+            width: 100%;
+            height: 128px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            text-align: center;
+            padding-top: 25px;
+        }
+    }
+    #javascriptBuilding {
+        background-image: url("../img/world/js.png");
+        margin:auto !important;
+        width: 250px;
+        height: 355px;
+        background-size: 210px;
+        background-repeat: no-repeat;
+        margin-top: 150px !important;
+        z-index: 2;
+        &:before {
+            background-image: url("../img/world/popover.png");
+            content: "JavaScript quiz!";
+            display: block;
+            height: 50px;
+            width: 100%;
+            height: 128px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+    }
+    #oopBuilding {
+        background-image: url("../img/world/oop.png");
+        float:left;
+        width: 250px;
+        height: 250px;
+        background-size: 210px;
+        background-repeat: no-repeat;
+        z-index: 3;
+        &:before {
+            background-image: url("../img/world/popover.png");
+            content: "OOP quiz!";
+            display: block;
+            height: 50px;
+            width: 100%;
+            height: 128px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            text-align: center;
+            padding-top: 25px;
+        }
+        
+    }
+    #jqueryBuilding {
+        background-image: url("../img/world/jquery.png");
+        float:right;
+        width: 250px;
+        height: 250px;
+        background-size: 250px;
+        background-repeat: no-repeat;
+        z-index: 3;
+        &:before {
+            background-image: url("../img/world/popover.png");
+            content: "jQuery/ajax quiz!";
+            display: block;
+            height: 50px;
+            width: 100%;
+            height: 128px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            text-align: center;
+            padding-top: 25px;
+        }
+    }
+    #cssBuilding,
+    #htmlBuilding,
+    #javascriptBuilding,
+    #oopBuilding,
+    #jqueryBuilding {
+        .transitionAnimation;
+        &:hover {
+            cursor: pointer;
+            .transformScale;
+        }
+        &:before {
+            display:none;
+        }
+    }
+    #mainGuy {
+        position:absolute;
+        width:50px;
+        height:80px;
+        background-image:url('../img/people/walker.gif');
+        background-position: -55px -50px;
+    }
+    #addNewQuestion {
+        margin-top: 50px;
+        display:none; 
+        margin-bottom: 100px;  
+    }
+    #resultMessageDude {
+        background-image:url('../img/people/add_quiz.png');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: block;
+        margin-left: 150px;
+        margin-top: 170px;
+        width:180px;
+        height:300px;
+    }
+    #errorBlock {
+        width:200px;
+        background-image: url("../img/people/dialogRight.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 200px;
+        margin-left: -180px;
+        margin-top: -150px;
+        padding: 40px 30px;
+        width: 250px;
+        text-align: center;
+    }
+    .mesError {
+        background-image: url("../img/people/error.png");
+        width: 30px;
+        height: 30px ;
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .mesSuccess {
+        background-image: url("../img/people/success.png");
+        width: 30px;
+        height: 30px ;
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .my-confirm {
+        top: 100px;
+        text-align: center;
+    }
+    .topLeftButtons {
+        margin-top: 15px;
+    }
+    .fb_iframe_widget  {
+        span {
+        display: block !important;
+        }
+    }
+    
+    .mobileMenu {
+        display:none;
+        text-align: center;
+    }
+    .form-control {
+        resize:vertical;
+    }
+    .mobileProgress {
+        display:none;
+    }
+    #resetButton {
+        margin-left: 5px;
+    }
+    #mobResetButton {
+        cursor:pointer;
+    }
+    .tree {
+        width: 130px;
+        height: 150px;
+        background-repeat: no-repeat !important;
+    }
+    #htmlQuiz,
+    #cssQuiz,
+    #jsQuiz,
+    #oopQuiz,
+    #jqQuiz, {
+        background-image: url("../img/html_bg.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        padding-top: 50px;
+    }
+    #cssQuiz {
+        background-image: url("../img/css_bg.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #jsQuiz {
+        background-image: url("../img/js_bg.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+    }
+    #jqQuiz {
+        background-image: url("../img/jq_bg.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+    }
+    #oopQuiz {
+        background-image: url("../img/oop_bg.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;   
+    }
+    #admin {
+        padding-top: 100px;
+    }
+    .quizTitle {
+        background-image: url("../img/main/ribbon2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        height:70px;
+        margin:auto;
+        text-align: center;
+        color:white;
+        margin-top: 15px;
+        padding-top: 23px;
+    }
+    .progress {
+        height: 12px !important;
+    }
+    .progress-bar {
+        font-size: 11px;
+        line-height: 12px;
+        color: black;
+    }
+    .mainKnight {
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 2%;
+        bottom:10px;
+        transition: all 1s ease;
+        .messageLeft {
+            background-image: url("../img/people/dialogLeft.png") ;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            margin-left: 15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+
+            &:after {
+            content: "Lets Rock! I'll gona kick your ass";
+            }
+        }
+        
+    }
+    .oponent{
+        background-image: url("../img/people/mainGuy.png");
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        right: 2%;
+        bottom:10px;
+        transition: all .5s ease;
+        .messageRight {
+            background-image: url("../img/people/dialogRight.png");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "default";
+            display: block;
+            height: 100%;
+            margin-left: -15%;
+            margin-top: -30%;
+            max-height: 200px;
+            min-height: 150px;
+            padding: 20%;
+            text-align: center;
+            width: 100%;
+        } 
+    }
+
+    #oopOponent {
+        background-image: url("../img/people/oopk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about OOP? Fool!";
+            }
+        }
+    }
+    #htmlOponent {
+        background-image: url("../img/people/htmlk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about HTML? Fool!";
+            }
+        }
+    }
+    #cssOponent {
+        background-image: url("../img/people/cssk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about CSS? Fool!";
+            }
+        }
+    }
+    #jqOponent {
+        background-image: url("../img/people/jqk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about jquery or Ajax? Fool!";
+            }
+        }
+    }
+    #jsOponent {
+        background-image: url("../img/people/jsk.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        .messageRight {
+            &:after {
+                content: "So, you think you know something about JavaScript? Fool!";
+            }
+        }
+    }
+    #mainPage {
+        background-image: url("../img/world/castle.png");
+        background-position: 43px 163px;
+        background-size: 500px;
+        background-repeat: no-repeat;
+    }
+    .mainInfo p {
+        background: rgba(192,192,192,0.5);
+        color: white;
+        border-radius: 10px;
+        text-shadow: 0 0 15px black;
+    }
+    #playButton {
+        border: 2px solid white;
+    }
+    .badges {
+
+        height: 100px;
+        position: absolute;
+        top: 45px;
+        width: 500px;
+        top: 50px; left: 0; right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .badges h5 {
+        position: absolute;
+        width: 100%;
+        color: white;
+        background: rgba(192,192,192,0.60);
+        border-radius: 10px;
+        text-shadow: 1px 1px 3px black;
+    }
+    .badgeContainer {
+        padding-top: 22px;
+        width:100px;
+        height:100%;
+        float:left;
+    }
+    .badgeContainer p {
+        background: none repeat scroll 0 0 #fff;
+        border-radius: 7px;
+        margin: 5px;
+    }
+
+    .resbadgeGood {
+        background-image: url('../img/world/smbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
+    .resbadgeBad {
+        background-image: url('../img/world/defbadge.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width:30px;
+        float:left;
+        height:30px;  
+    }
+
+    @media only screen and (max-width: 410px) {
+        .desctopMenu,
+        .tree {
+            display:none;
+        }
+        .mobileMenu {
+            display:block;
+        }
+        .mainContainer, 
+        #htmlQuiz, 
+        #cssQuiz, 
+        #jsQuiz, 
+        #oopQuiz, 
+        #jqQuiz, 
+        #results {
+            margin-top: 50px;
+            background: none;
+            position: relative;
+        }
+        .heading {
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            background-size: 100%;
+            margin: auto;
+        }
+        .mainInfo {
+            font-size: 150%;
+        }
+        .mainImages,
+        .mainImagesOOP {
+            display: none;
+        }
+        .addQuizDude {
+            margin-top: 10px;
+            margin: auto;
+        }
+        #gamePage {
+            background: none;
+            height: auto;
+            margin: auto;
+            position: relative;
+            width: 100%;
+        }
+        #mainGuy,
+        #startInstruction,
+        .testButton,
+        .testButton1,
+        .testButton2,
+        .testButton3,
+        .testButton4,
+        .progressStipes {
+            display:none;
+        }
+
+
+        #cssBuilding,
+        #oopBuilding,
+        #jqueryBuilding,
+        #javascriptBuilding,
+        #htmlBuilding  {
+            float: none;
+            margin: 0 auto !important;
+            position: relative;
+            .nonetransformScale;
+            width: 100% ;
+            background-size: 80%;
+            max-width: 250px;
+            &:before {
+                display:block;
+            }
+        }
+        #htmlBuilding {
+            margin-top: 150px !important;
+        }
+        #jqueryBuilding {
+            margin-top: 50px !important;
+        }
+        .mobileProgress {
+            margin-top: 100px;
+            text-align: center;
+             display:block;
+        }
+        #javascriptBuilding {
+            background-position: center 50px !important;
+        }
+        .quizTitle {
+            background-size: 230px;
+        }
+        .progress {
+            margin-top: -140px;
+        }
+        .mobileProgress {
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        #frame {
+            margin: 125px auto !important;
+        }
+        .quizTitle {
+             margin-top: 0;
+        }
+        .mainKnight {
+        width: 25%;
+        height: 170px;
+        top:155px;
+        .messageLeft {
+            margin-left: 0px;
+            margin-top: -100%;
+            padding: 47px 13px;
+            text-align: center;
+            width: 120px;
+            &:after {
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+        }
+        .oponent {
+        width: 25%;
+        height: 170px;
+        top:155px;
+        .messageRight {
+            margin-left: -50px;
+            margin-top: -100%;
+            padding: 47px 13px;
+            text-align: center;
+            width: 120px;
+            &:after {
+                font-size: 10px;
+                text-align: center;
+            } 
+        }
+        }
+        #resultMessageDude {
+            background-image:url('../img/people/add_quiz.png');
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: block;
+            margin:auto;
+            margin-top: 150px;
+            width:180px;
+            height:300px;
+        }
+        #errorBlock {
+            height: 140px;
+            margin: -75% auto auto;
+            padding: 20px 10px;
+            position: absolute;
+            right: 0;
+            width: 200px;
+        }
+        #mainPage {
+            background-image: url("../img/world/castle.png");
+            background-position: center bottom +20px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .socilaMblock {
+            margin-top: 250px;
+            text-align: center;
+        }
+        .badges {
+            width: 100%;
+        }
+        .badgeContainer {
+            width: 20%;
+        }
+        .resbadgeBad {
+            height: 30px;
+            width: 17px;
+            float: left;
+        }
+        .badgeContainer p {
+            font-size: 12px;
+        }
+    }
