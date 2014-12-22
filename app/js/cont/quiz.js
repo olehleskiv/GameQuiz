@@ -129,13 +129,15 @@ function buttle(name) {
 
             var c = setInterval(function(){
                 $('.mainKnight').css('transform','rotate(-10deg)');
+                $('.mainKnight').css('transform','translateX(20px)');
 
                 setTimeout(function(){
                     $('.mainKnight').css('transform','rotate(10deg)');
+                    $('.mainKnight').css('transform','translateX(-20px)');
                 },
-                100);
+                200);
             },
-            200);
+            400);
 
         },
         1000);
@@ -144,7 +146,7 @@ function buttle(name) {
         opponent.style.right = '70%';
         setTimeout(function(){
             opponent.style.right = '2%';
-        }, 1000);
+        }, 700);
         //frame.style.display = 'none';
         setTimeout(function() {
             //frame.style.display = 'block';
@@ -156,11 +158,11 @@ function buttle(name) {
                 setTimeout(function(){
                     opponent.style.transform = 'rotate(10deg)';
                 },
-                100);
+                200);
             },
-            200);
+            400);
         },
-        500);
+        700);
     }
 
 }
