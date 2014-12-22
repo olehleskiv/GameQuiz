@@ -1,7 +1,7 @@
 define(['jquery'], function($) { 
 	
 	function renderAwardsTable() {
-		var container = document.getElementById('results');
+		var container = document.getElementById('badge-table');
 
 		var quizArray = ['htmlBadge' , 'cssBadge' , 'jsBadge' , 'jqBadge' , 'oopBadge']; 
 		var badges = ['Rookie', 'Middle', 'Master'];
