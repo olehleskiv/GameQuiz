@@ -1,0 +1,148 @@
+
+
+	@nice-blue: #5B83AD;
+	@light-blue: @nice-blue + #111;
+
+	#header {
+	  color: @light-blue;
+	}
+
+	strong {
+      font-weight:700;
+  }
+  #frame {
+    background: none repeat scroll 0 0 rgba(233, 242, 176, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 1% auto;
+    max-width: 50%;
+    padding: 1%;
+    z-index: 10;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #question{
+    margin-top: 1px;
+  }
+
+  #pager {
+      font:bold 1em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
+      color:#999;
+      margin: 0;
+  }
+
+  #choice-block {
+      display:block;
+      list-style:none;
+      margin:0;
+      padding:0;
+  }
+  .choice-box {
+      width: 90%; 
+      display:block;
+      text-align:center;
+      margin:8px auto;
+      padding:10px 0;
+      font-size: 1.2em;
+      cursor:pointer;
+      background: rgba(247, 135, 101, 0.95);
+
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+  }
+
+  .choice:hover{
+  	background: rgba(62, 193, 90, 0.95);
+    font-weight: bold;
+  }
+
+  .result{
+  	text-align: center;
+    font-size: 1.8em;
+  }
+
+  .go-to-map-button {
+    width: 50%;
+    display: block;
+    background: #52b752;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .go-to-map-button:hover{
+    color: #FFF;
+    background: #5489f2;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+ .no-badge {
+    display: inline-block;
+    width: 19%;
+    height: 200px;
+    background-position: top center;
+    background-size: cover;
+    margin: 2%;
+    color: #777;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 2%;
+  }
+
+  .no-badge > img {
+    max-width: 100%;
+  }
+  .no-badge > span {
+    position: relative;
+    top: 0px;
+    left: 89px;
+    display: table-cell;
+  }
+
+  .result-names {
+    display: block;
+    width: 73px;
+    height: 75px;
+    float: left;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #777;
+    width: 30%;
+    line-height: 115px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+
+
+  @media only screen and (max-width: 410px) {
+
+    #frame {
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+        padding: 1%;
+        position: relative;
+        right: 0;
+        top: 50px;
+        z-index: 10;
+    }
+    #question {
+      font-size: 20px;
+      margin: 10px;
+    }
+}
+ 
