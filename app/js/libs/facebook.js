@@ -1,9 +1,20 @@
 
 
-	(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0&appId=309482552592773";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
+
+	$(document).ready(function(){
+			$('#share_button').click(function(e){
+				e.preventDefault();
+
+				this.htmlpoints = localStorage.getItem('htmlPoints');
+
+				FB.ui({
+					method: 'feed',
+					name: 'LearnFrontEnd',
+					link: 'http://learnfrontend.tk',
+					picture: 'http://learnfrontend.tk/img/badges/htmlBadgeMiddle.png',
+					caption: 'LearnFrontEnd',
+					description: 'I just got' + this.htmlpoints + 'points',
+					message: ''
+				});
+			});
+	});

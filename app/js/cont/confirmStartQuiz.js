@@ -13,8 +13,12 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 		$('#gameConfirm').on('show.bs.modal', function (e) {
 			document.body.setAttribute("onkeydown","return false");						//disable keyboard
 
-			console.log(name.slice(0, 1).toUpperCase() + name.slice(1));			
-			console.log(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))));
+			var title = document.getElementById('gameConfirmTitle');
+			title.innerHTML = 'Do you want to start ' + name + ' quiz?';
+			
+			///////////////////////////////////////////////////////////////////
+			/// If the test was already passed- we display results in popup ///
+			///////////////////////////////////////////////////////////////////
 
 			if(localStorage.getItem('brain' + (name.slice(0, 1).toUpperCase() + name.slice(1))) != 0) {
 
@@ -30,12 +34,13 @@ define(['jquery', 'cont/quiz'], function($, createQuiz, confirmStartQuiz) {
 				var mesBody = document.getElementById('gameConfirmBody');
 				mesBody.innerHTML = "";
 			}
-			var title = document.getElementById('gameConfirmTitle');
-			title.innerHTML = 'Do you want to start ' + name + ' quiz?';
+
+
 
 			var startButton = document.getElementById('confirmStart');
 			startButton.setAttribute('href','#' + name + 'Quiz');
 			var quizContainer = name + 'Quiz';
+
 			createQuiz(name, quizContainer);
 						
 		});

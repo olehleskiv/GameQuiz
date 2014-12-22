@@ -31,7 +31,8 @@ define(['jquery', 'views/renderResults'], function($, renderAwardsTable, router)
 					'jsQuiz',
 					'oopQuiz',
 					'jqQuiz',
-					'results'
+					'results',
+					'aboutus'
 					];
 
 		for (var i = 0; i < pages.length; i++) {

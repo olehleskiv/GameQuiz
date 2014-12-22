@@ -8,6 +8,28 @@
   	<link rel="stylesheet" type="text/css" href="css/result.css">
  </head>
  <body>
+<div id="fb-root"></div>
+
+
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId : '309482552592773',
+				status : true, // check login status
+				cookie : true, // enable cookies to allow the server to access the session
+				xfbml : true // parse XFBML
+			});
+		};
+		 
+		(function() {
+			var e = document.createElement('script');
+			e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+			e.async = true;
+			document.getElementById('fb-root').appendChild(e);
+		}());
+
+	</script>
+
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
@@ -81,7 +103,7 @@
 			</div>
 
 		  <div class="col-md-6">
-		  	<div class="imagesRow1">
+		  	<div>
 			  	<img class="mainImages" alt="html" src="img/html.png">
 			  	<img class="mainImages" alt="css" src="img/css.png">
 			  	<img class="mainImages" alt="javascript" src="img/js.png">
@@ -104,33 +126,33 @@
 			<h5>Pass tests and Collect badges</h5>
 			<div class="badgeContainer" id="htmlBadge" >
 				<p>HTML</p>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 			<div class="badgeContainer" id="cssBadge">
 				<p>CSS</p>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 			<div class="badgeContainer" id="jsBadge">
 				<p>JS</p>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 			<div class="badgeContainer" id="oopBadge">
 				<p>OOP</p>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 			<div class="badgeContainer" id="jqBadge">
 				<p>jQ/Ajax</p>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
+				<div class="resbadge" ></div>
 			</div>
 		</div>
 
@@ -285,9 +307,7 @@
 
 	<div class="container" id="jqQuiz">
 		<h2 class="quizTitle">jQuery/Ajax quiz</h2>
-		<div class="mainKnight">
-			<div class="messageLeft"></div>
-		</div>
+		<div class="mainKnight"></div>
 		<div id="jqOponent" class="oponent">
 			<div class="messageRight"></div>
 		</div>
@@ -297,7 +317,10 @@
 
 
 	<div class="container" id="results">
-		<h2>Your results here!</h2>
+		<div class="heading">
+		  	<h2>Your results!</h2>
+			<a id="share_button"><img  src="img/share.png" alt="share"></a>
+		</div>
 	</div><!-- end jQuery/Ajax quiz -->
 	
 		<!-- reset confirm Modal -->
@@ -316,6 +339,20 @@
 		  </div>
 		</div>
 
+
+
+	<div id="aboutus" class="container" style="display:none">
+
+		<h4>How this works:</h4>
+		<img class="shitcode" src="img/presentation/shitCode.png">
+		<h3>Architecture:</h3>
+		<h4>Build with Requirejs<img src="img/presentation/requirejs.png"></h4>
+		<img class="sheeme" src="img/presentation/arch.png">
+		<h4>How we confired Grunt:</h4>
+		<img class="sheeme" src="img/presentation/grunt.png">
+		
+	</div>
 	<script data-main="js/main.js" src="js/libs/requirejs/require.js"></script>
+
  </body>
 </html>

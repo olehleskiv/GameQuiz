@@ -7,7 +7,7 @@ require.config({
 require(['libs/jquery',
 		 'libs/libsMain',
 	     'cont/contMain',
-	     'class/modMain',
+	     'class/classMain',
 	     'views/viewMain',
 	      ], function($, router, world, quiz_maker, addQuestion, mainHero) {
 

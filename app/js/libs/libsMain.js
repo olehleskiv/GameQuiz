@@ -1,5 +1,5 @@
 
-define([ 'libs/jquery',
+define([
 		 'libs/bootstrap.min',
 		 'libs/underscore/underscore',
 		 'libs/facebook', 
