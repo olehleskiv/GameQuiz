@@ -37,6 +37,7 @@ define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz', 'cont/renderUserR
             backToWorldButton.className = 'go-to-map-button';
             
             backToWorldButton.addEventListener("click", function(){
+                renderUserResultsTable(name, maxQuest);
                 router('#gamePage');
             });
 

@@ -19,10 +19,15 @@ define(['jquery','cont/renderUserResultsTable'], function($, renderUserResultsTa
 			renderUserResultsTable('oop');
 		}
 	}
+	
 	$(document).ready(function() {
 		renderFirstTimeResults();
 		console.log('loh');
 	});
+
+
+	renderFirstTimeResults();
+
 
 return renderFirstTimeResults;
 
