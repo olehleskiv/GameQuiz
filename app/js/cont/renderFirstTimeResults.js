@@ -19,7 +19,7 @@ define(['cont/renderUserResultsTable'], function($, renderUserResultsTable){
 		}
 	}
 
-renderFirstTimeResults();
+	renderFirstTimeResults();
 
 return renderFirstTimeResults;
 
