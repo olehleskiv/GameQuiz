@@ -1296,7 +1296,7 @@
       "active": true
     }
   ],
-    "jq": [
+  "jq": [
     {
       "ID": 1,
       "title": "What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();</pre>",
