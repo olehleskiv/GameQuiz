@@ -1,4 +1,5 @@
-define(['cont/renderUserResultsTable'], function($, renderUserResultsTable){
+
+define(['jquery','cont/renderUserResultsTable'], function($, renderUserResultsTable){
 
 	function renderFirstTimeResults() {
 
@@ -18,8 +19,10 @@ define(['cont/renderUserResultsTable'], function($, renderUserResultsTable){
 			renderUserResultsTable('oop');
 		}
 	}
-
-renderFirstTimeResults();
+	$(document).ready(function() {
+		renderFirstTimeResults();
+		console.log('loh');
+	});
 
 return renderFirstTimeResults;
 

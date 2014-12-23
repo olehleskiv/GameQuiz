@@ -1,7 +1,8 @@
 
-define(['views/mainHero',
+define(['jquery',
+		'views/mainHero',
 		'cont/showBadges',
-		'cont/renderUserResultsTable'], function(mainHero, 
+		'cont/renderUserResultsTable'], function($,mainHero, 
 												showBadges,
 												renderUserResultsTable) {
 

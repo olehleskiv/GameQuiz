@@ -26,12 +26,24 @@ function saveQuizResults(name, currentquestion, choice, correct, maxQuest){
             }
         }
    }
-    
-   setQuizName (name, 'js');
-   setQuizName (name, 'html');
-   setQuizName (name, 'css');
-   setQuizName (name, 'jq');
-   setQuizName (name, 'oop');
+
+    if(name == 'html') {
+      setQuizName (name, 'html');
+    }
+    if(name == 'js') {
+      setQuizName (name, 'js');
+    }
+    if(name == 'css') {
+       setQuizName (name, 'css');
+    }
+    if(name == 'jq') {
+        setQuizName (name, 'jq');
+    }
+    if(name == 'oop') {
+       setQuizName (name, 'oop');
+    }
+  
+   
    
   }
 

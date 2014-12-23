@@ -9,7 +9,8 @@ define([
 		 'cont/quiz',
 		 'cont/displayResults',
 		 'cont/battle',
-		 'cont/accordion'], function() {
+		 'cont/accordion','cont/renderUserResultsTable',
+		 'cont/renderFirstTimeResults'], function() {
 
 	return console.log('controllers success');
 
