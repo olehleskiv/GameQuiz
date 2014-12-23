@@ -19,5 +19,8 @@ define(['cont/renderUserResultsTable'], function($, renderUserResultsTable){
 		}
 	}
 
+renderFirstTimeResults();
+
 return renderFirstTimeResults;
+
 });

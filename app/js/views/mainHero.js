@@ -21,6 +21,7 @@ define(['class/Human'], function(Human) {
 	document.body.setAttribute("onkeydown","mainDude.move(event.keyCode,5);");
 	document.body.setAttribute("onkeyup", "mainDude.stop();");
 	
+
 	mainDude.showMessage();
 	return mainDude;
 	

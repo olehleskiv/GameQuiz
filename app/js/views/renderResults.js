@@ -15,7 +15,7 @@ define(['jquery'], function($) {
 			for (var j = 0; j < badges.length; j++) {
 				var div = document.createElement('div');
 				var noBadgeImg = document.createElement('img');
-				noBadgeImg.setAttribute('id', 'noBadgeImg');
+				noBadgeImg.setAttribute('class', 'noBadgeImg');
 				noBadgeImg.setAttribute('src', 'img/badges/no-badge.png');
 
 				div.setAttribute('id', quizArray[i] + badges[j]);
