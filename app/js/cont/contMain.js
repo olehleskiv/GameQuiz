@@ -8,7 +8,8 @@ define([
 		 'cont/zIndexCheck',
 		 'cont/quiz',
 		 'cont/displayResults',
-		 'cont/battle'], function() {
+		 'cont/battle',
+		 'cont/accordion'], function() {
 
 	return console.log('controllers success');
 
