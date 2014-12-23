@@ -5,7 +5,6 @@ define(['jquery', 'underscore'], function($, _ ) {
 
         var localAnswers = '{' + localStorage.getItem(name) + '}'
           , localObject = JSON.parse(localAnswers);
-        console.log(localObject);
 
         var tableTemplate = '<tbody>'+
             '<tr>'+

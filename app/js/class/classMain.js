@@ -4,6 +4,5 @@ define([ 'class/Building',
 		 'class/Tree'
 		 ], function() {
    
-	return console.log('models success');
 
 });

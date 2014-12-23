@@ -5,6 +5,5 @@ define([
 		 'libs/facebook', 
 		 'libs/twitter'], function() {
   		
-  		return console.log('libs success')
 
 });

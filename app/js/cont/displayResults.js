@@ -67,8 +67,7 @@ define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz', 'cont/renderUserR
 
                 var storageId = name + 'Points'
                     , oldPoints = localStorage.getItem(storageId);
-                console.log(storageId);
-                console.log("old" + oldPoints + "new" + playerPoints);
+                    
                 if (playerPoints > oldPoints) {
                     localStorage.setItem(storageId, playerPoints);
                 }

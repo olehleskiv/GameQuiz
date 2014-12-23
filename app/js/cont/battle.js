@@ -7,7 +7,6 @@ define(['jquery', 'cont/quiz'], function($, createQuiz) {
         var opponentId = name + 'Oponent';
         var opponent = document.getElementById(opponentId);
         var frame = document.getElementById('frame');
-        console.log(opponentId);
         
     
         if (choice == quiz[currentquestion].correct){

@@ -22,7 +22,6 @@ define(['jquery','cont/renderUserResultsTable'], function($, renderUserResultsTa
 	
 	$(document).ready(function() {
 		renderFirstTimeResults();
-		console.log('loh');
 	});
 
 

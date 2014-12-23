@@ -5,6 +5,5 @@ define([ 'views/buildingsCreate',
 		 'views/renderResults'
 		 ], function() {
    
-	return console.log('views success');
 
 });
