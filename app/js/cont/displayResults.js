@@ -17,6 +17,7 @@ define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz', 'cont/renderUserR
                 , result = document.createElement('h2')
                 , points = document.createElement('p')
                 , backToWorldButton = document.createElement('a')
+                , backToResults = document.createElement('a')
                 , res = Math.round(score / maxQuest * 100);
                 
             questionTitle.innerHTML = 'You got ' + score + ' out of ' + maxQuest + ' correct.';
@@ -36,14 +37,23 @@ define(['jquery', 'views/mainHero', 'cont/route', 'cont/quiz', 'cont/renderUserR
             backToWorldButton.className = 'go-to-map-button';
             
             backToWorldButton.addEventListener("click", function(){
+                router('#gamePage');
+            });
+
+            backToResults.setAttribute('href', '#results');
+            backToResults.innerHTML = 'Go to results';
+            backToResults.className = 'go-to-map-button';
+
+            backToResults.addEventListener("click", function(){
                 renderUserResultsTable(name, maxQuest);
-                //router('#gamePage');
                 router('#results');
             });
+
 
             questionTitle.appendChild(result);
             questionTitle.appendChild(points);
             questionTitle.appendChild(backToWorldButton);
+            questionTitle.appendChild(backToResults);
 
             setPointsToLocalStorage();
             
