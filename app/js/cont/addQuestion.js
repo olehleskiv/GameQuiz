@@ -33,26 +33,27 @@ define(['jquery'], function($) {
 			if(category === "") {
 				message("please choose category", true);
 			} else {
-				title = title + "<pre>" + code + "</pre>";
-				send([title, var1, var2, var3, var4, var5, correct, category]);		//if no errors - send
+				send([title, code, var1, var2, var3, var4, var5, correct, category]);		//if no errors - send
 			}
 	};
 
 	function send(params){  				//send to php function
 
 		var title = params[0],				//forming parameters
-			var1  = params[1],
-			var2  = params[2],
-			var3  = params[3],
-			var4  = params[4],
-			var5  = params[5],
-			correct = params[6],
-			category = params[7];
+			code  = params[1],				//forming parameters
+			var1  = params[2],
+			var2  = params[3],
+			var3  = params[4],
+			var4  = params[5],
+			var5  = params[6],
+			correct = params[7],
+			category = params[8];
 
 		       $.ajax({										//ajax send to php
 		                type: "POST",
 		                url: "php/add_question.php",		//php file on server
 		                data:   "title="+title+				//data transferred
+		                		"&code="+code+
 				         		"&var1="+var1+
 				         		"&var2="+var2+
 				         		"&var3="+var3+

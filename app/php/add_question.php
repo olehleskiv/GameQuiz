@@ -2,17 +2,24 @@
 
 	$question = $_POST;								//getting data from POST array
 
+	$title = htmlspecialchars(str_replace("\"","'",$question['title']));
+
+	$code =  "<pre>".htmlspecialchars(str_replace("\"","'",$question['code']))."</pre>";
+
+	$title = $title."".$code;
+
+
 	$formated_question = array(						//forming approprite array for json file
-		title => $question['title'],
+		title => $title,
 		variants => array(
-			htmlspecialchars($question['var1']),
-			htmlspecialchars($question['var2']),
-			htmlspecialchars($question['var3']),
-			htmlspecialchars($question['var4']),
-			htmlspecialchars($question['var5'])
+			htmlspecialchars(str_replace("\"","'",$question['var1'])),
+			htmlspecialchars(str_replace("\"","'",$question['var2'])),
+			htmlspecialchars(str_replace("\"","'",$question['var3'])),
+			htmlspecialchars(str_replace("\"","'",$question['var4'])),
+			htmlspecialchars(str_replace("\"","'",$question['var5']))
 		),
 		correct => $question['correct'],
-		active => true,
+		active => false,
 	);
 
 	$json = file_get_contents('../data/quiz.json'); // getting the json file
