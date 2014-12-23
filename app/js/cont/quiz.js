@@ -133,7 +133,10 @@ function createQuiz(name, quizContainerId) {
 
                 saveQuizResults(name, currentquestion, choiceText, correctText, maxQuest);
 
-                battle(name, choice, quiz, currentquestion);
+                //Hack for IE9 not to show animation battle
+                if (!(document.all && !window.atob)) {
+                    battle(name, choice, quiz, currentquestion);
+                }
                 processQuestion();
             })
         }
