@@ -67,7 +67,7 @@ var quizURL = '../../data/quiz.json';
         
         header.innerHTML = name + ' quiz';
 
-        linkToTable.setAttribute('name', name + 'quiz');
+        linkToTable.setAttribute('name', name + 'Quiz');
 
         table.className = 'table';
         table.setAttribute('id', name);
