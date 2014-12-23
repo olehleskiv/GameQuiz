@@ -11,6 +11,13 @@
 			header("location:adminPage.php");
 		}
 
-	else echo 'Bad login or pass!';
+	else echo '
+	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+		<h1>Bad login or password!</h1>
+		<div class="crown-image">
+			<img src="../../img/main/error-mesage.png">
+		</div>
+		<a href="../admin.html" class="button">Try again</a>
+	';
 
 ?>

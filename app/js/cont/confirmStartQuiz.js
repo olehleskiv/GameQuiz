@@ -70,7 +70,7 @@ define(['jquery', 'cont/quiz', 'views/mainHero'], function($, createQuiz, confir
 		//after popup is closed we move the main hero 30px lover
 		//to make him visible
 		var mainDude = this.mainDude;
-		mainDude.humanBody.stepsTop += 30;
+		mainDude.humanBody.stepsTop += 10;
 		mainDude.humanBody.human.style.top = mainDude.humanBody.stepsTop + "px";
 	}
 	

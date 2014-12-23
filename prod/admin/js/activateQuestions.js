@@ -22,7 +22,7 @@ var quizURL = '../../data/quiz.json';
         var name = quizName,
             objectArray = objectQuizArray;
 
-        var tableTemplate = '<thead>'+
+        var tableTemplate = '<tbody>'+
             '<tr>'+
                 '<th>ID</th>'+
                 '<th>Question</th>'+
@@ -31,7 +31,6 @@ var quizURL = '../../data/quiz.json';
                 '<th>Status</th>'+
                 '<th>Activate</th>'+
             '</tr>'+
-        '</thead>'+
 
         '<% for (var i = 0; i < object.length; i++) { %>'+
             '<% var themeQuiz = object[i]; %>'+
@@ -56,26 +55,41 @@ var quizURL = '../../data/quiz.json';
                     '<td><input type="checkbox" checked name="'+ name + '_' + '<%= i %>" class="active"/></td>'+
                     '<% } %>'+
              '</tr>'+
-        '<% } %>';
+        '<% } %>' +
+        '</tbody>';
 
-        var form = document.getElementById('quiz-form'),
-            table = document.createElement('table'),
-            compiledTemplate = _.template(tableTemplate),
-            readyHtml = compiledTemplate({ object : objectArray }),
-            header = document.createElement('h1');
-            header.innerHTML = name + ' quiz';
+        var form = document.getElementById('quiz-form')
+            , table = document.createElement('table')
+            , linkToTable = document.createElement('a')
+            , compiledTemplate = _.template(tableTemplate)
+            , readyHtml = compiledTemplate({ object : objectArray })
+            , header = document.createElement('h1');
+        
+        header.innerHTML = name + ' quiz';
+
+        linkToTable.setAttribute('name', name + 'Quiz');
 
         table.className = 'table';
         table.setAttribute('id', name);
         table.className = 'responstable';
-        table.innerHTML = readyHtml;
+    
+    //Huck for IE9 to append content into table
+        var tempDiv = document.createElement("DIV");
+        tempDiv.innerHTML = '<table>' + readyHtml + '</table>';
+        table.appendChild(tempDiv.firstChild.firstChild);
 
+        //table.innerHTML = readyHtml;                  // works only for normal browsers
+
+        form.appendChild(linkToTable);
         form.appendChild(header);
         form.appendChild(table);
     }
 });
 
 
+////////////////////////////////////////////////////////////
+//Function for "Go to top" button
+////////////////////////////////////////////////////////////
 $(document).ready(function(){
     //Check to see if the window is top if not then display button
     $(window).scroll(function(){
