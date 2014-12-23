@@ -1296,7 +1296,7 @@
       "active": true
     }
   ],
-  "jq": [
+    "jq": [
     {
       "ID": 1,
       "title": "What is the result of the function?<br><pre>(function(){<br>return typeof arguments;<br>})();</pre>",
@@ -1481,7 +1481,7 @@
     },
     {
       "ID": 15,
-      "title": "What is the result of the code?<br><pre>if (\"a\" in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
+      "title": "What is the result of the code?<br><pre>if ('a' in window)) {<br>var a = 1;<br>}<br>alert(a);</pre>",
       "variants": [
         "1",
         "null",
@@ -1601,7 +1601,7 @@
       "title": "Which of the below is used in Java script to insert special characters?",
       "variants": [
         "&",
-        "\\",
+        "backslash",
         "-",
         "%",
         "$"
@@ -1611,19 +1611,6 @@
     },
     {
       "ID": 24,
-      "title": "Which of the below is used in Java script to insert special characters?",
-      "variants": [
-        "&",
-        "\\",
-        "-",
-        "%",
-        "$"
-      ],
-      "correct": 1,
-      "active": true
-    },
-    {
-      "ID": 25,
       "title": "Which of the following method is used to evaluate a string of Java Script code in the context of the specified object?",
       "variants": [
         "call",

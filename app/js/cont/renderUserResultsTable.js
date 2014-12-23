@@ -2,8 +2,8 @@ define(['jquery', 'underscore'], function($, _ ) {
 
 /////////////////////////////////////////////////////////////////////////
     function renderUserResultsTable(name) {
-        var localAnswers = '{' + localStorage.getItem(name) + '}';
-        var localObject = JSON.parse(localAnswers);
+        var localAnswers = '{' + localStorage.getItem(name) + '}'
+          , localObject = JSON.parse(localAnswers);
         console.log(localObject);
 
         var tableTemplate = '<tbody>'+

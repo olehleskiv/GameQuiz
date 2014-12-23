@@ -10,7 +10,7 @@ function saveQuizResults(name, currentquestion, choice, correct, maxQuest){
             '\"' + 'correctAnswer' + '\"' + ':' + '\"' + correct + '\"' +
         '}';
 
-        if (currentquestion == maxQuest-1) {
+        if (currentquestion == maxQuest - 1) {
             var question =  object; 
         } else {
             var question =  object + ',';
