@@ -35,12 +35,22 @@ define(['jquery',
 				showBadges('oopPoints','oopBadge');
 
 
-				//remove tables from local storadge
-				localStorage.removeItem('html');
-				localStorage.removeItem('js');
-				localStorage.removeItem('css');
-				localStorage.removeItem('jq');
-				localStorage.removeItem('oop');
+				//remove tables from local 
+				if (localStorage.getItem('html')) {
+					localStorage.removeItem('html');
+				}
+				if (localStorage.getItem('js')) {
+					localStorage.removeItem('js');
+				}
+				if (localStorage.getItem('css')) {
+					localStorage.removeItem('css');
+				}
+				if (localStorage.getItem('jq')) {
+					localStorage.removeItem('jq');
+				}
+				if (localStorage.getItem('oop')) {
+					localStorage.removeItem('oop');
+				}
 
 
 				//remove tables
@@ -97,7 +107,7 @@ define(['jquery',
 			}
 
 
-			renderUserResultsTable();
+			//renderUserResultsTable();
 		}
 
 	var confirmReset = document.getElementById('resetButton');
