@@ -58,9 +58,9 @@ function createQuiz(name, quizContainerId) {
                 quizContainer.appendChild(container);
                 
                 addQuestionVariants(quiz[currentquestion].variants);
-               // if (localStorage.getItem(name)) {
-               //     localStorage.removeItem(name);
-               // }
+               if (localStorage.getItem(name)) {
+                   localStorage.removeItem(name);
+               }
 
                 scoreCount();
                 

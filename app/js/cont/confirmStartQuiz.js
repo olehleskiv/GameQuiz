@@ -48,7 +48,10 @@ define(['jquery', 'cont/quiz', 'views/mainHero'], function($, createQuiz, confir
 			startButton.setAttribute('href','#' + name + 'Quiz');
 			var quizContainer = name + 'Quiz';
 
-			createQuiz(name, quizContainer);
+			startButton.addEventListener("click", function(){
+				createQuiz(name, quizContainer);
+			});
+			
 						
 		});
 
